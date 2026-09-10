@@ -12,7 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://c5yhv6ijd4n0g" path="res://Art/UI_Exports/RescueApp/RescueWindowBG.png" id="10_e6ljc"]
 [ext_resource type="Texture2D" uid="uid://dgurly0qlvwpl" path="res://Art/UI_Exports/RescueApp/RescueUI.png" id="11_sqaj2"]
 [ext_resource type="Texture2D" uid="uid://psiloyf4li7g" path="res://Art/UI_Exports/ExpandApp/ExpandWindowBG.png" id="12_8ptuv"]
+[ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="12_b3akq"]
 [ext_resource type="Texture2D" uid="uid://drp8e20hjg2ex" path="res://Art/UI_Exports/FundraiserApp/FundraiserWindowBG.png" id="13_df4cu"]
+[ext_resource type="Texture2D" uid="uid://cbba2owlie7gv" path="res://Art/UI_Exports/RescueApp/RescueYesButton.png" id="13_jv7rh"]
+[ext_resource type="Texture2D" uid="uid://bhxdgga281bx8" path="res://Art/UI_Exports/RescueApp/RescueNoButton.png" id="14_4bj7o"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n8b2h"]
 texture = ExtResource("1_ja51f")
@@ -37,6 +40,26 @@ texture_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x8qmx"]
 texture = ExtResource("7_yvt5d")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="FontVariation" id="FontVariation_dfmt8"]
+base_font = ExtResource("12_b3akq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ygkgy"]
+texture = ExtResource("13_jv7rh")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="FontVariation" id="FontVariation_xfmfb"]
+base_font = ExtResource("12_b3akq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ui2y6"]
+texture = ExtResource("14_4bj7o")
 texture_margin_left = 10.0
 texture_margin_top = 10.0
 texture_margin_right = 10.0
@@ -139,6 +162,47 @@ layout_mode = 2
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 texture = ExtResource("11_sqaj2")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScreenContainer/RescueWindow/NinePatchRect/MarginContainer/VBoxContainer/NinePatchRect" unique_id=1850751010]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScreenContainer/RescueWindow/NinePatchRect/MarginContainer/VBoxContainer/NinePatchRect/MarginContainer" unique_id=1244010540]
+custom_minimum_size = Vector2(175, 75)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = 4
+
+[node name="YesButton" type="Button" parent="ScreenContainer/RescueWindow/NinePatchRect/MarginContainer/VBoxContainer/NinePatchRect/MarginContainer/HBoxContainer" unique_id=973155605]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_dfmt8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ygkgy")
+text = "Yes"
+
+[node name="NoButton" type="Button" parent="ScreenContainer/RescueWindow/NinePatchRect/MarginContainer/VBoxContainer/NinePatchRect/MarginContainer/HBoxContainer" unique_id=677050709]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_xfmfb")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ui2y6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ui2y6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ui2y6")
+text = "No"
 
 [node name="ExpandWindow" type="MarginContainer" parent="ScreenContainer" unique_id=1987274271]
 visible = false
