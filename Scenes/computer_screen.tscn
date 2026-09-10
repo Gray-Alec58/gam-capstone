@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://sxtqn1b318ap" path="res://Art/UI_Exports/FundraiserApp/FundraiserIcon.png" id="8_35gut"]
 [ext_resource type="Texture2D" uid="uid://dt844j2edivar" path="res://Art/UI_Exports/ResearchApp/ResearchWindowBG.png" id="9_1fm7g"]
 [ext_resource type="Texture2D" uid="uid://c5yhv6ijd4n0g" path="res://Art/UI_Exports/RescueApp/RescueWindowBG.png" id="10_e6ljc"]
+[ext_resource type="Texture2D" uid="uid://mjmsgcdybsyj" path="res://Art/UI_Exports/ResearchApp/ResearchAnimalButton.png" id="10_jv7rh"]
 [ext_resource type="Texture2D" uid="uid://dgurly0qlvwpl" path="res://Art/UI_Exports/RescueApp/RescueUI.png" id="11_sqaj2"]
 [ext_resource type="Texture2D" uid="uid://psiloyf4li7g" path="res://Art/UI_Exports/ExpandApp/ExpandWindowBG.png" id="12_8ptuv"]
 [ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="12_b3akq"]
@@ -40,6 +41,13 @@ texture_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x8qmx"]
 texture = ExtResource("7_yvt5d")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dfmt8"]
+texture = ExtResource("10_jv7rh")
 texture_margin_left = 10.0
 texture_margin_top = 10.0
 texture_margin_right = 10.0
@@ -123,27 +131,16 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_x8qmx")
 icon = ExtResource("8_35gut")
 
 [node name="ResearchWindow" type="MarginContainer" parent="ScreenContainer" unique_id=2097095101]
-visible = false
 custom_minimum_size = Vector2(900, 500)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
 
-[node name="NinePatchRect" type="NinePatchRect" parent="ScreenContainer/ResearchWindow" unique_id=141317038]
+[node name="WindowBackground" type="NinePatchRect" parent="ScreenContainer/ResearchWindow" unique_id=141317038]
 layout_mode = 2
 texture = ExtResource("9_1fm7g")
 
-[node name="RescueWindow" type="MarginContainer" parent="ScreenContainer" unique_id=1478634671]
-custom_minimum_size = Vector2(900, 500)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-
-[node name="NinePatchRect" type="NinePatchRect" parent="ScreenContainer/RescueWindow" unique_id=2096491896]
-layout_mode = 2
-texture = ExtResource("10_e6ljc")
-
-[node name="MarginContainer" type="MarginContainer" parent="ScreenContainer/RescueWindow/NinePatchRect" unique_id=795569399]
+[node name="MarginContainer" type="MarginContainer" parent="ScreenContainer/ResearchWindow/WindowBackground" unique_id=195663205]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -155,15 +152,53 @@ theme_override_constants/margin_top = 45
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScreenContainer/RescueWindow/NinePatchRect/MarginContainer" unique_id=1825840766]
+[node name="VBoxContainer" type="VBoxContainer" parent="ScreenContainer/ResearchWindow/WindowBackground/MarginContainer" unique_id=1232018907]
 layout_mode = 2
 
-[node name="NinePatchRect" type="NinePatchRect" parent="ScreenContainer/RescueWindow/NinePatchRect/MarginContainer/VBoxContainer" unique_id=331962802]
+[node name="HBoxContainer" type="HBoxContainer" parent="ScreenContainer/ResearchWindow/WindowBackground/MarginContainer/VBoxContainer" unique_id=110094435]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Button" type="Button" parent="ScreenContainer/ResearchWindow/WindowBackground/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1331333845]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_dfmt8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dfmt8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_dfmt8")
+
+[node name="RescueWindow" type="MarginContainer" parent="ScreenContainer" unique_id=1478634671]
+visible = false
+custom_minimum_size = Vector2(900, 500)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="WindowBackground" type="NinePatchRect" parent="ScreenContainer/RescueWindow" unique_id=2096491896]
+layout_mode = 2
+texture = ExtResource("10_e6ljc")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScreenContainer/RescueWindow/WindowBackground" unique_id=795569399]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 45
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 20
+
+[node name="ResearchAnimalList" type="VBoxContainer" parent="ScreenContainer/RescueWindow/WindowBackground/MarginContainer" unique_id=1825840766]
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList" unique_id=331962802]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 texture = ExtResource("11_sqaj2")
 
-[node name="MarginContainer" type="MarginContainer" parent="ScreenContainer/RescueWindow/NinePatchRect/MarginContainer/VBoxContainer/NinePatchRect" unique_id=1850751010]
+[node name="MarginContainer" type="MarginContainer" parent="ScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/NinePatchRect" unique_id=1850751010]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -175,14 +210,14 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 5
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ScreenContainer/RescueWindow/NinePatchRect/MarginContainer/VBoxContainer/NinePatchRect/MarginContainer" unique_id=1244010540]
+[node name="AdoptButtonContainer" type="HBoxContainer" parent="ScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/NinePatchRect/MarginContainer" unique_id=1244010540]
 custom_minimum_size = Vector2(175, 75)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
 theme_override_constants/separation = 4
 
-[node name="YesButton" type="Button" parent="ScreenContainer/RescueWindow/NinePatchRect/MarginContainer/VBoxContainer/NinePatchRect/MarginContainer/HBoxContainer" unique_id=973155605]
+[node name="YesButton" type="Button" parent="ScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/NinePatchRect/MarginContainer/AdoptButtonContainer" unique_id=973155605]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -192,7 +227,7 @@ theme_override_fonts/font = SubResource("FontVariation_dfmt8")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ygkgy")
 text = "Yes"
 
-[node name="NoButton" type="Button" parent="ScreenContainer/RescueWindow/NinePatchRect/MarginContainer/VBoxContainer/NinePatchRect/MarginContainer/HBoxContainer" unique_id=677050709]
+[node name="NoButton" type="Button" parent="ScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/NinePatchRect/MarginContainer/AdoptButtonContainer" unique_id=677050709]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 size_flags_horizontal = 4
