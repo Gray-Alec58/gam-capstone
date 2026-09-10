@@ -1,0 +1,163 @@
+[gd_scene format=3 uid="uid://7w8pm2qskeex"]
+
+[ext_resource type="Texture2D" uid="uid://jne18acwqbka" path="res://Art/UI_Exports/ResearchApp/ResearchButton.png" id="1_ja51f"]
+[ext_resource type="Texture2D" uid="uid://m58rrxr6ynxo" path="res://Art/UI_Exports/ResearchApp/ResearchIcon.png" id="2_itncf"]
+[ext_resource type="Texture2D" uid="uid://b53jige2ulpbl" path="res://Art/UI_Exports/RescueApp/RescueButton.png" id="3_fsh8q"]
+[ext_resource type="Texture2D" uid="uid://c56tsopfgi3wg" path="res://Art/UI_Exports/RescueApp/RescueIcon.png" id="4_b3akq"]
+[ext_resource type="Texture2D" uid="uid://dgqw6k3cj1xwc" path="res://Art/UI_Exports/ExpandApp/ExpandButton.png" id="5_jv7rh"]
+[ext_resource type="Texture2D" uid="uid://btxwfh7urjcg1" path="res://Art/UI_Exports/ExpandApp/ExpandIcon.png" id="6_4bj7o"]
+[ext_resource type="Texture2D" uid="uid://b21qg2wh8cviy" path="res://Art/UI_Exports/FundraiserApp/FundraiserButton.png" id="7_yvt5d"]
+[ext_resource type="Texture2D" uid="uid://sxtqn1b318ap" path="res://Art/UI_Exports/FundraiserApp/FundraiserIcon.png" id="8_35gut"]
+[ext_resource type="Texture2D" uid="uid://dt844j2edivar" path="res://Art/UI_Exports/ResearchApp/ResearchWindowBG.png" id="9_1fm7g"]
+[ext_resource type="Texture2D" uid="uid://c5yhv6ijd4n0g" path="res://Art/UI_Exports/RescueApp/RescueWindowBG.png" id="10_e6ljc"]
+[ext_resource type="Texture2D" uid="uid://dgurly0qlvwpl" path="res://Art/UI_Exports/RescueApp/RescueUI.png" id="11_sqaj2"]
+[ext_resource type="Texture2D" uid="uid://psiloyf4li7g" path="res://Art/UI_Exports/ExpandApp/ExpandWindowBG.png" id="12_8ptuv"]
+[ext_resource type="Texture2D" uid="uid://drp8e20hjg2ex" path="res://Art/UI_Exports/FundraiserApp/FundraiserWindowBG.png" id="13_df4cu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n8b2h"]
+texture = ExtResource("1_ja51f")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rbco8"]
+texture = ExtResource("3_fsh8q")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ndgsj"]
+texture = ExtResource("5_jv7rh")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x8qmx"]
+texture = ExtResource("7_yvt5d")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[node name="ComputerScreen" type="Control" unique_id=26936767]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScreenContainer" type="MarginContainer" parent="." unique_id=3034331]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 15
+
+[node name="AppContainer" type="VBoxContainer" parent="ScreenContainer" unique_id=505309947]
+custom_minimum_size = Vector2(100, 550)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="ResearchApp" type="Button" parent="ScreenContainer/AppContainer" unique_id=1622237718]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_n8b2h")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_n8b2h")
+theme_override_styles/hover = SubResource("StyleBoxTexture_n8b2h")
+icon = ExtResource("2_itncf")
+icon_alignment = 1
+
+[node name="RescueApp" type="Button" parent="ScreenContainer/AppContainer" unique_id=1081295618]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_rbco8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rbco8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rbco8")
+icon = ExtResource("4_b3akq")
+icon_alignment = 1
+
+[node name="BuildApp" type="Button" parent="ScreenContainer/AppContainer" unique_id=776850226]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_ndgsj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ndgsj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ndgsj")
+icon = ExtResource("6_4bj7o")
+icon_alignment = 1
+
+[node name="FundraiseApp" type="Button" parent="ScreenContainer/AppContainer" unique_id=38679812]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_x8qmx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_x8qmx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_x8qmx")
+icon = ExtResource("8_35gut")
+
+[node name="ResearchWindow" type="MarginContainer" parent="ScreenContainer" unique_id=2097095101]
+visible = false
+custom_minimum_size = Vector2(900, 500)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScreenContainer/ResearchWindow" unique_id=141317038]
+layout_mode = 2
+texture = ExtResource("9_1fm7g")
+
+[node name="RescueWindow" type="MarginContainer" parent="ScreenContainer" unique_id=1478634671]
+custom_minimum_size = Vector2(900, 500)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScreenContainer/RescueWindow" unique_id=2096491896]
+layout_mode = 2
+texture = ExtResource("10_e6ljc")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScreenContainer/RescueWindow/NinePatchRect" unique_id=795569399]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 45
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScreenContainer/RescueWindow/NinePatchRect/MarginContainer" unique_id=1825840766]
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScreenContainer/RescueWindow/NinePatchRect/MarginContainer/VBoxContainer" unique_id=331962802]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+texture = ExtResource("11_sqaj2")
+
+[node name="ExpandWindow" type="MarginContainer" parent="ScreenContainer" unique_id=1987274271]
+visible = false
+custom_minimum_size = Vector2(900, 500)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScreenContainer/ExpandWindow" unique_id=1947140960]
+layout_mode = 2
+texture = ExtResource("12_8ptuv")
+
+[node name="FundraiseWindow" type="MarginContainer" parent="ScreenContainer" unique_id=506375394]
+visible = false
+custom_minimum_size = Vector2(900, 500)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ScreenContainer/FundraiseWindow" unique_id=598850034]
+layout_mode = 2
+texture = ExtResource("13_df4cu")
