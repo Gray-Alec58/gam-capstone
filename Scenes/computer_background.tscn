@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dkkh4kltexgbk"]
+
+[ext_resource type="Texture2D" uid="uid://ce3tuamjogcnh" path="res://Art/UI_Exports/Computer_Background.png" id="1_vlyqg"]
+[ext_resource type="PackedScene" uid="uid://7w8pm2qskeex" path="res://Scenes/computer_screen.tscn" id="2_tc2va"]
+
+[node name="ComputerBackground" type="Node2D" unique_id=1284504752]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1181391964]
+position = Vector2(576.25006, 324)
+scale = Vector2(0.5997396, 0.6)
+texture = ExtResource("1_vlyqg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Background" unique_id=1725042299]
+
+[node name="ComputerScreen" parent="Background/CanvasLayer" unique_id=26936767 instance=ExtResource("2_tc2va")]

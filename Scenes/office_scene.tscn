@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://xh0dirwa0e74"]
+
+[ext_resource type="Texture2D" uid="uid://b0yao7opcsfd6" path="res://Art/OfficeBackground.png" id="1_lj5is"]
+
+[node name="OfficeScene" type="Node2D" unique_id=1301874127]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1174923474]
+z_index = -1
+position = Vector2(576.25006, 324)
+scale = Vector2(0.59973955, 0.6)
+texture = ExtResource("1_lj5is")
