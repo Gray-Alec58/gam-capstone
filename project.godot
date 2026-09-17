@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GAM_Capstone"
-run/main_scene="uid://dkkh4kltexgbk"
+run/main_scene="uid://xh0dirwa0e74"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

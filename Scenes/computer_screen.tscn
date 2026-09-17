@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://7w8pm2qskeex"]
 
-[ext_resource type="Script" uid="uid://2fb2i5vbw4na" path="res://Scenes/app_container.gd" id="1_8ptuv"]
+[ext_resource type="Script" uid="uid://c6sae4lnjlex7" path="res://Scenes/full_screen_container.gd" id="1_8ptuv"]
 [ext_resource type="Texture2D" uid="uid://jne18acwqbka" path="res://Art/UI_Exports/ResearchApp/ResearchButton.png" id="1_ja51f"]
+[ext_resource type="Script" uid="uid://bigmwsp1l3ejd" path="res://Scenes/computer_screen.gd" id="1_ntevp"]
 [ext_resource type="Texture2D" uid="uid://m58rrxr6ynxo" path="res://Art/UI_Exports/ResearchApp/ResearchIcon.png" id="2_itncf"]
 [ext_resource type="Texture2D" uid="uid://b53jige2ulpbl" path="res://Art/UI_Exports/RescueApp/RescueButton.png" id="3_fsh8q"]
 [ext_resource type="Texture2D" uid="uid://c56tsopfgi3wg" path="res://Art/UI_Exports/RescueApp/RescueIcon.png" id="4_b3akq"]
@@ -24,6 +25,17 @@
 [ext_resource type="Texture2D" uid="uid://b7wlllgppjcnj" path="res://Art/UI_Exports/ResearchApp/ResearchWindow2/LockIcon.png" id="16_820yq"]
 [ext_resource type="Texture2D" uid="uid://y6e5qi1uqo1m" path="res://Art/UI_Exports/ResearchApp/ResearchWindow2/AnimalFactUi.png" id="17_mak5i"]
 [ext_resource type="Texture2D" uid="uid://d38cxckouklf1" path="res://Art/ChickenUI.png" id="18_k5qay"]
+[ext_resource type="Texture2D" uid="uid://bn416rf81q3ir" path="res://Art/UI_Exports/ExpandApp/BuildButton.png" id="24_afqta"]
+[ext_resource type="Texture2D" uid="uid://iaoeot8o0yvx" path="res://Art/UI_Exports/ExpandApp/BuildIcon.png" id="25_avqr3"]
+[ext_resource type="Texture2D" uid="uid://b31omhrgbkgn5" path="res://Art/UI_Exports/ExpandApp/DemolishButton.png" id="26_ntevp"]
+[ext_resource type="Texture2D" uid="uid://cd73ecv1w3wf1" path="res://Art/UI_Exports/ExpandApp/DemolishIcon.png" id="27_fa8ox"]
+[ext_resource type="Texture2D" uid="uid://bulueihw5oqmi" path="res://Art/UI_Exports/ExpandApp/UpgradeButton.png" id="28_mj3y6"]
+[ext_resource type="Texture2D" uid="uid://b455ca8k6dw0b" path="res://Art/UI_Exports/ExpandApp/UpgradeIcon.png" id="29_3ia82"]
+[ext_resource type="Texture2D" uid="uid://d33j47wd4tlip" path="res://Art/UI_Exports/FundraiserApp/LivestreamUi.png" id="31_svqil"]
+[ext_resource type="Texture2D" uid="uid://bgesf7ym0e0e0" path="res://Art/UI_Exports/FundraiserApp/ChatUi.png" id="32_g3uet"]
+[ext_resource type="Texture2D" uid="uid://wtkq5hnftouy" path="res://Art/UI_Exports/FundraiserApp/DonationsUI.png" id="33_q7d4u"]
+[ext_resource type="Texture2D" uid="uid://cfpp31pfs3le4" path="res://Art/UI_Exports/FundraiserApp/EnclosureUI.png" id="34_lehph"]
+[ext_resource type="Texture2D" uid="uid://dp8b6eo68xeyr" path="res://Art/UI_Exports/ExitButton.png" id="35_avqr3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n8b2h"]
 texture = ExtResource("1_ja51f")
@@ -94,6 +106,37 @@ texture_margin_top = 10.0
 texture_margin_right = 10.0
 texture_margin_bottom = 10.0
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ofqy"]
+texture = ExtResource("24_afqta")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5fshx"]
+texture = ExtResource("26_ntevp")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kxbuo"]
+texture = ExtResource("28_mj3y6")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5khfc"]
+texture = ExtResource("34_lehph")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0subj"]
+texture = ExtResource("35_avqr3")
+
 [node name="ComputerScreen" type="Control" unique_id=26936767]
 layout_mode = 3
 anchors_preset = 15
@@ -101,8 +144,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ntevp")
 
-[node name="FullScreenContainer" type="MarginContainer" parent="." unique_id=3034331]
+[node name="FullScreenContainer" type="MarginContainer" parent="." unique_id=3034331 node_paths=PackedStringArray("ResearchWindow1", "ResearchWindow2", "RescueWindow", "ExpandWindow", "FundraiseWindow")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -113,22 +157,18 @@ theme_override_constants/margin_left = 25
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 25
 theme_override_constants/margin_bottom = 50
+script = ExtResource("1_8ptuv")
+ResearchWindow1 = NodePath("ResearchWindow1")
+ResearchWindow2 = NodePath("ResearchWindow2")
+RescueWindow = NodePath("RescueWindow")
+ExpandWindow = NodePath("ExpandWindow")
+FundraiseWindow = NodePath("FundraiseWindow")
 
-[node name="AppContainer" type="VBoxContainer" parent="FullScreenContainer" unique_id=505309947 node_paths=PackedStringArray("research", "rescue", "build", "fundraise", "researchWindow1", "researchWindow2", "rescueWindow", "expandWindow", "fundraiseWindow")]
+[node name="AppContainer" type="VBoxContainer" parent="FullScreenContainer" unique_id=505309947]
 custom_minimum_size = Vector2(100, 550)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
-script = ExtResource("1_8ptuv")
-research = NodePath("ResearchApp")
-rescue = NodePath("RescueApp")
-build = NodePath("BuildApp")
-fundraise = NodePath("FundraiseApp")
-researchWindow1 = NodePath("../ResearchWindow1")
-researchWindow2 = NodePath("../ResearchWindow2")
-rescueWindow = NodePath("../RescueWindow")
-expandWindow = NodePath("../ExpandWindow")
-fundraiseWindow = NodePath("../FundraiseWindow")
 
 [node name="ResearchApp" type="Button" parent="FullScreenContainer/AppContainer" unique_id=1622237718]
 layout_mode = 2
@@ -547,12 +587,13 @@ theme_override_constants/margin_bottom = 20
 [node name="ResearchAnimalList" type="VBoxContainer" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer" unique_id=1825840766]
 layout_mode = 2
 
-[node name="NinePatchRect" type="NinePatchRect" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList" unique_id=331962802]
+[node name="RescueAnimalInfo" type="NinePatchRect" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList" unique_id=331962802]
+visible = false
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 texture = ExtResource("11_sqaj2")
 
-[node name="MarginContainer" type="MarginContainer" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/NinePatchRect" unique_id=1850751010]
+[node name="MarginContainer" type="MarginContainer" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo" unique_id=1850751010]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -564,14 +605,14 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 5
 
-[node name="AdoptButtonContainer" type="HBoxContainer" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/NinePatchRect/MarginContainer" unique_id=1244010540]
+[node name="AdoptButtonContainer" type="HBoxContainer" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer" unique_id=1244010540]
 custom_minimum_size = Vector2(175, 75)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
 theme_override_constants/separation = 4
 
-[node name="YesButton" type="Button" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/NinePatchRect/MarginContainer/AdoptButtonContainer" unique_id=973155605]
+[node name="YesButton" type="Button" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer/AdoptButtonContainer" unique_id=973155605]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -581,7 +622,7 @@ theme_override_fonts/font = SubResource("FontVariation_dfmt8")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ygkgy")
 text = "Yes"
 
-[node name="NoButton" type="Button" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/NinePatchRect/MarginContainer/AdoptButtonContainer" unique_id=677050709]
+[node name="NoButton" type="Button" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer/AdoptButtonContainer" unique_id=677050709]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -604,6 +645,74 @@ size_flags_vertical = 4
 layout_mode = 2
 texture = ExtResource("12_8ptuv")
 
+[node name="MarginContainer" type="MarginContainer" parent="FullScreenContainer/ExpandWindow/NinePatchRect" unique_id=1506030426]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 45
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FullScreenContainer/ExpandWindow/NinePatchRect/MarginContainer" unique_id=1931603672]
+custom_minimum_size = Vector2(750, 350)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="ButtonContainer" type="HBoxContainer" parent="FullScreenContainer/ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer" unique_id=344157299]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 50
+
+[node name="BuildButton" type="Button" parent="FullScreenContainer/ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/ButtonContainer" unique_id=609604887]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_b3akq")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ofqy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1ofqy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1ofqy")
+text = "BUILD"
+icon = ExtResource("25_avqr3")
+icon_alignment = 1
+expand_icon = true
+
+[node name="DemolishButton" type="Button" parent="FullScreenContainer/ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/ButtonContainer" unique_id=1149744517]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_b3akq")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_5fshx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5fshx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5fshx")
+text = "Demolish"
+icon = ExtResource("27_fa8ox")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button" type="Button" parent="FullScreenContainer/ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer" unique_id=891155681]
+custom_minimum_size = Vector2(250, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_kxbuo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kxbuo")
+theme_override_styles/hover = SubResource("StyleBoxTexture_kxbuo")
+text = "UPGRADE"
+icon = ExtResource("29_3ia82")
+icon_alignment = 1
+expand_icon = true
+
 [node name="FundraiseWindow" type="MarginContainer" parent="FullScreenContainer" unique_id=506375394]
 visible = false
 custom_minimum_size = Vector2(900, 500)
@@ -615,8 +724,107 @@ size_flags_vertical = 4
 layout_mode = 2
 texture = ExtResource("13_df4cu")
 
-[connection signal="pressed" from="FullScreenContainer/AppContainer/ResearchApp" to="FullScreenContainer/AppContainer" method="_on_research_app_pressed"]
-[connection signal="pressed" from="FullScreenContainer/AppContainer/RescueApp" to="FullScreenContainer/AppContainer" method="_on_rescue_app_pressed"]
-[connection signal="pressed" from="FullScreenContainer/AppContainer/BuildApp" to="FullScreenContainer/AppContainer" method="_on_build_app_pressed"]
-[connection signal="pressed" from="FullScreenContainer/AppContainer/FundraiseApp" to="FullScreenContainer/AppContainer" method="_on_fundraise_app_pressed"]
-[connection signal="pressed" from="FullScreenContainer/ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/TopButtonContainer/FarmAnimals" to="FullScreenContainer/AppContainer" method="_on_farm_animals_button_pressed"]
+[node name="MarginContainer" type="MarginContainer" parent="FullScreenContainer/FundraiseWindow/NinePatchRect" unique_id=843673311]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 45
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 20
+
+[node name="LeftStreamContainer" type="VBoxContainer" parent="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer" unique_id=564792940]
+custom_minimum_size = Vector2(550, 350)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="LiveStreamWindow" type="NinePatchRect" parent="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer/LeftStreamContainer" unique_id=1591848304]
+custom_minimum_size = Vector2(550, 250)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("31_svqil")
+
+[node name="ChatWindow" type="NinePatchRect" parent="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer/LeftStreamContainer" unique_id=1908588335]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("32_g3uet")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer" unique_id=475910866]
+custom_minimum_size = Vector2(300, 350)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="DonationWindow" type="NinePatchRect" parent="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer/VBoxContainer" unique_id=621863207]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("33_q7d4u")
+
+[node name="EnclosureButton1" type="Button" parent="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer/VBoxContainer" unique_id=1117149453]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_b3akq")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_5khfc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5khfc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5khfc")
+text = "ENCLOSURE 1"
+
+[node name="EnclosureButton2" type="Button" parent="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer/VBoxContainer" unique_id=903943085]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_b3akq")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_5khfc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5khfc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5khfc")
+text = "ENCLOSURE 2"
+
+[node name="EnclosureButton3" type="Button" parent="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer/VBoxContainer" unique_id=671032451]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_b3akq")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_5khfc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5khfc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5khfc")
+text = "ENCLOSURE 3"
+
+[node name="EnclosureButton4" type="Button" parent="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer/VBoxContainer" unique_id=1100502888]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_b3akq")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_5khfc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5khfc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5khfc")
+text = "ENCLOSURE 4"
+
+[node name="ExitButton" type="Button" parent="." unique_id=2117790614]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -8.0
+offset_right = 4.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_0subj")
+
+[connection signal="pressed" from="FullScreenContainer/AppContainer/ResearchApp" to="FullScreenContainer" method="_on_research_app_pressed"]
+[connection signal="pressed" from="FullScreenContainer/AppContainer/RescueApp" to="FullScreenContainer" method="_on_rescue_app_pressed"]
+[connection signal="pressed" from="FullScreenContainer/AppContainer/BuildApp" to="FullScreenContainer" method="_on_build_app_pressed"]
+[connection signal="pressed" from="FullScreenContainer/AppContainer/FundraiseApp" to="FullScreenContainer" method="_on_fundraise_app_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/TopButtonContainer/FarmAnimals" to="FullScreenContainer" method="_on_farm_animals_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
