@@ -6,25 +6,37 @@
 [ext_resource type="Texture2D" uid="uid://m58rrxr6ynxo" path="res://Art/UI_Exports/ResearchApp/ResearchIcon.png" id="2_itncf"]
 [ext_resource type="Texture2D" uid="uid://b53jige2ulpbl" path="res://Art/UI_Exports/RescueApp/RescueButton.png" id="3_fsh8q"]
 [ext_resource type="Texture2D" uid="uid://c56tsopfgi3wg" path="res://Art/UI_Exports/RescueApp/RescueIcon.png" id="4_b3akq"]
+[ext_resource type="Texture2D" uid="uid://d2raekvhdvey0" path="res://Art/UI_Exports/ResearchApp/ResearchNormal.png" id="5_3ia82"]
 [ext_resource type="Texture2D" uid="uid://dgqw6k3cj1xwc" path="res://Art/UI_Exports/ExpandApp/ExpandButton.png" id="5_jv7rh"]
 [ext_resource type="Texture2D" uid="uid://btxwfh7urjcg1" path="res://Art/UI_Exports/ExpandApp/ExpandIcon.png" id="6_4bj7o"]
+[ext_resource type="Texture2D" uid="uid://be4tmw4r8s3hs" path="res://Art/UI_Exports/ResearchApp/ResearchClick.png" id="6_svqil"]
+[ext_resource type="Texture2D" uid="uid://wp6nitls2l51" path="res://Art/UI_Exports/ResearchApp/ResearchHover.png" id="7_g3uet"]
 [ext_resource type="Texture2D" uid="uid://b21qg2wh8cviy" path="res://Art/UI_Exports/FundraiserApp/FundraiserButton.png" id="7_yvt5d"]
 [ext_resource type="Texture2D" uid="uid://sxtqn1b318ap" path="res://Art/UI_Exports/FundraiserApp/FundraiserIcon.png" id="8_35gut"]
 [ext_resource type="Texture2D" uid="uid://dt844j2edivar" path="res://Art/UI_Exports/ResearchApp/ResearchWindowBG.png" id="9_1fm7g"]
 [ext_resource type="Texture2D" uid="uid://c5yhv6ijd4n0g" path="res://Art/UI_Exports/RescueApp/RescueWindowBG.png" id="10_e6ljc"]
 [ext_resource type="Texture2D" uid="uid://mjmsgcdybsyj" path="res://Art/UI_Exports/ResearchApp/ResearchAnimalButton.png" id="10_jv7rh"]
+[ext_resource type="Texture2D" uid="uid://bvgcybt3rgik3" path="res://Art/UI_Exports/RescueApp/RescueNormal.png" id="10_xmxri"]
+[ext_resource type="Texture2D" uid="uid://b4j5xh55cpa4b" path="res://Art/UI_Exports/RescueApp/RescueClick.png" id="11_j3hoa"]
 [ext_resource type="Texture2D" uid="uid://dgurly0qlvwpl" path="res://Art/UI_Exports/RescueApp/RescueUI.png" id="11_sqaj2"]
 [ext_resource type="Texture2D" uid="uid://psiloyf4li7g" path="res://Art/UI_Exports/ExpandApp/ExpandWindowBG.png" id="12_8ptuv"]
 [ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="12_b3akq"]
+[ext_resource type="Texture2D" uid="uid://bp2gha1vhajc5" path="res://Art/UI_Exports/RescueApp/RescueHover.png" id="12_qsnkp"]
 [ext_resource type="Texture2D" uid="uid://drp8e20hjg2ex" path="res://Art/UI_Exports/FundraiserApp/FundraiserWindowBG.png" id="13_df4cu"]
 [ext_resource type="Texture2D" uid="uid://cbba2owlie7gv" path="res://Art/UI_Exports/RescueApp/RescueYesButton.png" id="13_jv7rh"]
 [ext_resource type="Texture2D" uid="uid://d1eukqsgfc8aq" path="res://Art/UI_Exports/ResearchApp/ResearchWindow2/ClickToResearchButton.png" id="13_vo06u"]
 [ext_resource type="Texture2D" uid="uid://bhxdgga281bx8" path="res://Art/UI_Exports/RescueApp/RescueNoButton.png" id="14_4bj7o"]
 [ext_resource type="Texture2D" uid="uid://8hb26t7crroi" path="res://Art/UI_Exports/ResearchApp/ResearchWindow2/ProgressBar.png" id="14_u1iig"]
+[ext_resource type="Texture2D" uid="uid://bamnw2pepvb8v" path="res://Art/UI_Exports/ExpandApp/ExpandNormal.png" id="15_ffl3h"]
 [ext_resource type="Texture2D" uid="uid://hbnyaow6hgqh" path="res://Art/UI_Exports/ResearchApp/ResearchWindow2/AnimalButton.png" id="15_vfmy3"]
+[ext_resource type="Texture2D" uid="uid://cel23hv46urri" path="res://Art/UI_Exports/ExpandApp/ExpandClick.png" id="16_4wy8y"]
 [ext_resource type="Texture2D" uid="uid://b7wlllgppjcnj" path="res://Art/UI_Exports/ResearchApp/ResearchWindow2/LockIcon.png" id="16_820yq"]
+[ext_resource type="Texture2D" uid="uid://w6chahe3k0dp" path="res://Art/UI_Exports/ExpandApp/ExpandHover.png" id="17_bjoxt"]
 [ext_resource type="Texture2D" uid="uid://y6e5qi1uqo1m" path="res://Art/UI_Exports/ResearchApp/ResearchWindow2/AnimalFactUi.png" id="17_mak5i"]
 [ext_resource type="Texture2D" uid="uid://d38cxckouklf1" path="res://Art/ChickenUI.png" id="18_k5qay"]
+[ext_resource type="Texture2D" uid="uid://ddbllop8bms4m" path="res://Art/UI_Exports/FundraiserApp/FundraiserNormal.png" id="20_ik20o"]
+[ext_resource type="Texture2D" uid="uid://clcqg817x6c4w" path="res://Art/UI_Exports/FundraiserApp/FundraiserClick.png" id="21_vib8a"]
+[ext_resource type="Texture2D" uid="uid://b1pm0eb2s6hvd" path="res://Art/UI_Exports/FundraiserApp/FundraiserHover.png" id="22_x0hwp"]
 [ext_resource type="Texture2D" uid="uid://bn416rf81q3ir" path="res://Art/UI_Exports/ExpandApp/BuildButton.png" id="24_afqta"]
 [ext_resource type="Texture2D" uid="uid://iaoeot8o0yvx" path="res://Art/UI_Exports/ExpandApp/BuildIcon.png" id="25_avqr3"]
 [ext_resource type="Texture2D" uid="uid://b31omhrgbkgn5" path="res://Art/UI_Exports/ExpandApp/DemolishButton.png" id="26_ntevp"]
@@ -178,6 +190,17 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_n8b2h")
 icon = ExtResource("2_itncf")
 icon_alignment = 1
 
+[node name="ResearchTextureButton" type="TextureButton" parent="FullScreenContainer/AppContainer/ResearchApp" unique_id=1001687078]
+layout_mode = 0
+offset_top = -4.0
+offset_right = 150.0
+offset_bottom = 131.0
+texture_normal = ExtResource("5_3ia82")
+texture_pressed = ExtResource("6_svqil")
+texture_hover = ExtResource("7_g3uet")
+ignore_texture_size = true
+stretch_mode = 5
+
 [node name="RescueApp" type="Button" parent="FullScreenContainer/AppContainer" unique_id=1081295618]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_rbco8")
@@ -185,6 +208,16 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_rbco8")
 theme_override_styles/hover = SubResource("StyleBoxTexture_rbco8")
 icon = ExtResource("4_b3akq")
 icon_alignment = 1
+
+[node name="RescueTextureButton" type="TextureButton" parent="FullScreenContainer/AppContainer/RescueApp" unique_id=1657409499]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 135.0
+texture_normal = ExtResource("10_xmxri")
+texture_pressed = ExtResource("11_j3hoa")
+texture_hover = ExtResource("12_qsnkp")
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="BuildApp" type="Button" parent="FullScreenContainer/AppContainer" unique_id=776850226]
 layout_mode = 2
@@ -194,12 +227,32 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_ndgsj")
 icon = ExtResource("6_4bj7o")
 icon_alignment = 1
 
+[node name="BuildTextureButton" type="TextureButton" parent="FullScreenContainer/AppContainer/BuildApp" unique_id=280470128]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 135.0
+texture_normal = ExtResource("15_ffl3h")
+texture_pressed = ExtResource("16_4wy8y")
+texture_hover = ExtResource("17_bjoxt")
+ignore_texture_size = true
+stretch_mode = 5
+
 [node name="FundraiseApp" type="Button" parent="FullScreenContainer/AppContainer" unique_id=38679812]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_x8qmx")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_x8qmx")
 theme_override_styles/hover = SubResource("StyleBoxTexture_x8qmx")
 icon = ExtResource("8_35gut")
+
+[node name="FundraiseTextureButton" type="TextureButton" parent="FullScreenContainer/AppContainer/FundraiseApp" unique_id=862157612]
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 135.0
+texture_normal = ExtResource("20_ik20o")
+texture_pressed = ExtResource("21_vib8a")
+texture_hover = ExtResource("22_x0hwp")
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="ResearchWindow1" type="MarginContainer" parent="FullScreenContainer" unique_id=2097095101]
 visible = false
@@ -823,8 +876,12 @@ grow_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_0subj")
 
 [connection signal="pressed" from="FullScreenContainer/AppContainer/ResearchApp" to="FullScreenContainer" method="_on_research_app_pressed"]
+[connection signal="pressed" from="FullScreenContainer/AppContainer/ResearchApp/ResearchTextureButton" to="FullScreenContainer" method="_on_research_texture_button_pressed"]
 [connection signal="pressed" from="FullScreenContainer/AppContainer/RescueApp" to="FullScreenContainer" method="_on_rescue_app_pressed"]
+[connection signal="pressed" from="FullScreenContainer/AppContainer/RescueApp/RescueTextureButton" to="FullScreenContainer" method="_on_rescue_texture_button_pressed"]
 [connection signal="pressed" from="FullScreenContainer/AppContainer/BuildApp" to="FullScreenContainer" method="_on_build_app_pressed"]
+[connection signal="pressed" from="FullScreenContainer/AppContainer/BuildApp/BuildTextureButton" to="FullScreenContainer" method="_on_build_texture_button_pressed"]
 [connection signal="pressed" from="FullScreenContainer/AppContainer/FundraiseApp" to="FullScreenContainer" method="_on_fundraise_app_pressed"]
+[connection signal="pressed" from="FullScreenContainer/AppContainer/FundraiseApp/FundraiseTextureButton" to="FullScreenContainer" method="_on_fundraise_texture_button_pressed"]
 [connection signal="pressed" from="FullScreenContainer/ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/TopButtonContainer/FarmAnimals" to="FullScreenContainer" method="_on_farm_animals_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
