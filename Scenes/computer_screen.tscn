@@ -29,7 +29,9 @@
 [ext_resource type="Texture2D" uid="uid://d38cxckouklf1" path="res://Art/ChickenUI.png" id="18_k5qay"]
 [ext_resource type="Texture2D" uid="uid://hjhase4hckgs" path="res://Art/UI_Exports/ResearchApp/ResearchAnimalHover.png" id="19_sj23p"]
 [ext_resource type="Texture2D" uid="uid://ddbllop8bms4m" path="res://Art/UI_Exports/FundraiserApp/FundraiserNormal.png" id="20_ik20o"]
+[ext_resource type="Texture2D" uid="uid://5ot6oap2in5n" path="res://Art/UI_Exports/ResearchApp/ResearchWindow2/ClicktoResearchClick.png" id="21_j3hoa"]
 [ext_resource type="Texture2D" uid="uid://clcqg817x6c4w" path="res://Art/UI_Exports/FundraiserApp/FundraiserClick.png" id="21_vib8a"]
+[ext_resource type="Texture2D" uid="uid://bb4waucjg1l58" path="res://Art/UI_Exports/ResearchApp/ResearchWindow2/ClicktoResearchHover.png" id="22_qsnkp"]
 [ext_resource type="Texture2D" uid="uid://b1pm0eb2s6hvd" path="res://Art/UI_Exports/FundraiserApp/FundraiserHover.png" id="22_x0hwp"]
 [ext_resource type="Texture2D" uid="uid://bn1dpsfygsfv8" path="res://Art/UI_Exports/ExpandApp/BuildNormal.png" id="31_l6eyl"]
 [ext_resource type="Texture2D" uid="uid://d33j47wd4tlip" path="res://Art/UI_Exports/FundraiserApp/LivestreamUi.png" id="31_svqil"]
@@ -54,13 +56,6 @@ texture_margin_left = 10.0
 texture_margin_top = 10.0
 texture_margin_right = 10.0
 texture_margin_bottom = 10.0
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xfmfb"]
-texture = ExtResource("13_vo06u")
-texture_margin_left = 5.0
-texture_margin_top = 5.0
-texture_margin_right = 5.0
-texture_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6fdxm"]
 texture = ExtResource("15_vfmy3")
@@ -129,7 +124,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 
-[node name="ResearchTextureButton" type="TextureButton" parent="FullScreenContainer/AppContainer" unique_id=1001687078]
+[node name="ResearchTextB" type="TextureButton" parent="FullScreenContainer/AppContainer" unique_id=1001687078]
 layout_mode = 2
 size_flags_vertical = 3
 texture_normal = ExtResource("5_3ia82")
@@ -138,7 +133,7 @@ texture_hover = ExtResource("7_g3uet")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="RescueTextureButton" type="TextureButton" parent="FullScreenContainer/AppContainer" unique_id=1657409499]
+[node name="RescueTextB" type="TextureButton" parent="FullScreenContainer/AppContainer" unique_id=1657409499]
 layout_mode = 2
 size_flags_vertical = 3
 texture_normal = ExtResource("10_xmxri")
@@ -147,7 +142,7 @@ texture_hover = ExtResource("12_qsnkp")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="BuildTextureButton" type="TextureButton" parent="FullScreenContainer/AppContainer" unique_id=280470128]
+[node name="BuildTextB" type="TextureButton" parent="FullScreenContainer/AppContainer" unique_id=280470128]
 layout_mode = 2
 size_flags_vertical = 3
 texture_normal = ExtResource("15_ffl3h")
@@ -156,7 +151,7 @@ texture_hover = ExtResource("17_bjoxt")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="FundraiseTextureButton" type="TextureButton" parent="FullScreenContainer/AppContainer" unique_id=862157612]
+[node name="FundraiseTextB" type="TextureButton" parent="FullScreenContainer/AppContainer" unique_id=862157612]
 layout_mode = 2
 size_flags_vertical = 3
 texture_normal = ExtResource("20_ik20o")
@@ -209,7 +204,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 50
 
-[node name="FarmAnimalTextureButton" type="TextureButton" parent="FullScreenContainer/ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/TopButtonContainer" unique_id=108365076]
+[node name="FarmAnimalTextB" type="TextureButton" parent="FullScreenContainer/ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/TopButtonContainer" unique_id=108365076]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 texture_normal = ExtResource("10_jv7rh")
@@ -218,7 +213,7 @@ texture_hover = ExtResource("19_sj23p")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="FullScreenContainer/ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/TopButtonContainer/FarmAnimalTextureButton" unique_id=694433894]
+[node name="Label" type="Label" parent="FullScreenContainer/ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/TopButtonContainer/FarmAnimalTextB" unique_id=694433894]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -382,18 +377,34 @@ theme_override_fonts/font = ExtResource("12_b3akq")
 theme_override_font_sizes/font_size = 32
 text = "FARM ANIMALS"
 
-[node name="ResearchPointButton" type="Button" parent="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/LeftResearchContainer" unique_id=1385982707]
-custom_minimum_size = Vector2(300, 200)
+[node name="ResearchPointTexB" type="TextureButton" parent="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/LeftResearchContainer" unique_id=195192191]
+custom_minimum_size = Vector2(290, 210)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+texture_normal = ExtResource("13_vo06u")
+texture_pressed = ExtResource("21_j3hoa")
+texture_hover = ExtResource("22_qsnkp")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/LeftResearchContainer/ResearchPointTexB" unique_id=640880322]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("12_b3akq")
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxTexture_xfmfb")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_xfmfb")
-theme_override_styles/hover = SubResource("StyleBoxTexture_xfmfb")
-text = "Research"
+text = "Click to Research"
 
 [node name="TempProgressBar" type="NinePatchRect" parent="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/LeftResearchContainer" unique_id=1134257170]
 custom_minimum_size = Vector2(150, 30)
@@ -412,17 +423,33 @@ theme_override_constants/separation = 5
 [node name="TopAnimalButtonContainer" type="HBoxContainer" parent="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer" unique_id=643931776]
 layout_mode = 2
 
-[node name="AnimalButton1" type="Button" parent="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer/TopAnimalButtonContainer" unique_id=1048017619]
-custom_minimum_size = Vector2(115, 115)
+[node name="AnimalTextB1" type="TextureButton" parent="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer/TopAnimalButtonContainer" unique_id=881504195]
+custom_minimum_size = Vector2(117, 115)
 layout_mode = 2
+texture_normal = ExtResource("10_jv7rh")
+texture_pressed = ExtResource("18_hfv7u")
+texture_hover = ExtResource("19_sj23p")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer/TopAnimalButtonContainer/AnimalTextB1" unique_id=374888204]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -18.0
+offset_right = 37.5
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("12_b3akq")
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxTexture_6fdxm")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_6fdxm")
-theme_override_styles/hover = SubResource("StyleBoxTexture_6fdxm")
-text = "Chicken"
-icon_alignment = 1
+text = "Chicken
+"
 
 [node name="AnimalButton2" type="Button" parent="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer/TopAnimalButtonContainer" unique_id=1904150729]
 custom_minimum_size = Vector2(115, 115)
@@ -651,7 +678,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 50
 
-[node name="BuildTextureButton" type="TextureButton" parent="FullScreenContainer/ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/ButtonContainer" unique_id=63423036]
+[node name="BuildTextB" type="TextureButton" parent="FullScreenContainer/ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/ButtonContainer" unique_id=63423036]
 custom_minimum_size = Vector2(275, 250)
 layout_mode = 2
 texture_normal = ExtResource("31_l6eyl")
@@ -660,7 +687,7 @@ texture_hover = ExtResource("33_xmxri")
 ignore_texture_size = true
 stretch_mode = 4
 
-[node name="Label" type="Label" parent="FullScreenContainer/ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/ButtonContainer/BuildTextureButton" unique_id=1046115710]
+[node name="Label" type="Label" parent="FullScreenContainer/ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/ButtonContainer/BuildTextB" unique_id=1046115710]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -678,7 +705,7 @@ theme_override_fonts/font = ExtResource("12_b3akq")
 theme_override_font_sizes/font_size = 56
 text = "Build"
 
-[node name="DemolishTextureButton" type="TextureButton" parent="FullScreenContainer/ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/ButtonContainer" unique_id=350186717]
+[node name="DemolishTextB" type="TextureButton" parent="FullScreenContainer/ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/ButtonContainer" unique_id=350186717]
 custom_minimum_size = Vector2(275, 250)
 layout_mode = 2
 texture_normal = ExtResource("34_j3hoa")
@@ -687,7 +714,7 @@ texture_hover = ExtResource("36_ffl3h")
 ignore_texture_size = true
 stretch_mode = 4
 
-[node name="Label" type="Label" parent="FullScreenContainer/ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/ButtonContainer/DemolishTextureButton" unique_id=697384355]
+[node name="Label" type="Label" parent="FullScreenContainer/ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/ButtonContainer/DemolishTextB" unique_id=697384355]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -705,7 +732,7 @@ theme_override_fonts/font = ExtResource("12_b3akq")
 theme_override_font_sizes/font_size = 54
 text = "Demolish"
 
-[node name="UpgradeTextureButton" type="TextureButton" parent="FullScreenContainer/ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer" unique_id=738998001]
+[node name="UpgradeTextB" type="TextureButton" parent="FullScreenContainer/ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer" unique_id=738998001]
 custom_minimum_size = Vector2(250, 75)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -716,7 +743,7 @@ texture_hover = ExtResource("39_j3hoa")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="FullScreenContainer/ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/UpgradeTextureButton" unique_id=1937542204]
+[node name="Label" type="Label" parent="FullScreenContainer/ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/UpgradeTextB" unique_id=1937542204]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -828,7 +855,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_5khfc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_5khfc")
 text = "ENCLOSURE 4"
 
-[node name="ExitTextureButton" type="TextureButton" parent="." unique_id=1997126746]
+[node name="ExitTextB" type="TextureButton" parent="." unique_id=1997126746]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -846,9 +873,9 @@ texture_hover = ExtResource("42_lehph")
 ignore_texture_size = true
 stretch_mode = 5
 
-[connection signal="pressed" from="FullScreenContainer/AppContainer/ResearchTextureButton" to="FullScreenContainer" method="_on_research_texture_button_pressed"]
-[connection signal="pressed" from="FullScreenContainer/AppContainer/RescueTextureButton" to="FullScreenContainer" method="_on_rescue_texture_button_pressed"]
-[connection signal="pressed" from="FullScreenContainer/AppContainer/BuildTextureButton" to="FullScreenContainer" method="_on_build_texture_button_pressed"]
-[connection signal="pressed" from="FullScreenContainer/AppContainer/FundraiseTextureButton" to="FullScreenContainer" method="_on_fundraise_texture_button_pressed"]
-[connection signal="pressed" from="FullScreenContainer/ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/TopButtonContainer/FarmAnimalTextureButton" to="FullScreenContainer" method="_on_farm_animal_texture_button_pressed"]
-[connection signal="pressed" from="ExitTextureButton" to="." method="_on_exit_texture_button_pressed"]
+[connection signal="pressed" from="FullScreenContainer/AppContainer/ResearchTextB" to="FullScreenContainer" method="_on_research_texture_button_pressed"]
+[connection signal="pressed" from="FullScreenContainer/AppContainer/RescueTextB" to="FullScreenContainer" method="_on_rescue_texture_button_pressed"]
+[connection signal="pressed" from="FullScreenContainer/AppContainer/BuildTextB" to="FullScreenContainer" method="_on_build_texture_button_pressed"]
+[connection signal="pressed" from="FullScreenContainer/AppContainer/FundraiseTextB" to="FullScreenContainer" method="_on_fundraise_texture_button_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/TopButtonContainer/FarmAnimalTextB" to="FullScreenContainer" method="_on_farm_animal_texture_button_pressed"]
+[connection signal="pressed" from="ExitTextB" to="." method="_on_exit_texture_button_pressed"]
