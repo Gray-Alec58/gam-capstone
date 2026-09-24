@@ -1,3 +1,31 @@
 [gd_scene format=3 uid="uid://crgu1urlvakw4"]
 
+[ext_resource type="Texture2D" uid="uid://d3vbaf18jbi6k" path="res://Art/UI_Exports/Map/MapBG.png" id="1_7duho"]
+[ext_resource type="Texture2D" uid="uid://bdxopu0c4746y" path="res://Art/UI_Exports/Map/StarterPlot.png" id="2_u7qk0"]
+[ext_resource type="Texture2D" uid="uid://fxfmmhaj8t07" path="res://Art/UI_Exports/Map/StarterPlotClick.png" id="3_c1ti1"]
+[ext_resource type="Texture2D" uid="uid://bgqwq4mwednog" path="res://Art/UI_Exports/Map/StarterPlotHover.png" id="4_en0lh"]
+
 [node name="MapLayoutScene" type="Node2D" unique_id=1997719588]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=601928638]
+position = Vector2(576.25, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_7duho")
+
+[node name="StarterPlotTextB" type="TextureButton" parent="Sprite2D" unique_id=1237425232]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -1398.7499
+offset_top = -978.3334
+offset_right = -542.08325
+offset_bottom = -538.3334
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("2_u7qk0")
+texture_pressed = ExtResource("3_c1ti1")
+texture_hover = ExtResource("4_en0lh")
+ignore_texture_size = true
+stretch_mode = 4

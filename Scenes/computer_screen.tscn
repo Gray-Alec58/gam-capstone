@@ -643,7 +643,6 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_ui2y6")
 text = "No"
 
 [node name="ExpandWindow" type="MarginContainer" parent="FullScreenContainer" unique_id=1987274271]
-visible = false
 custom_minimum_size = Vector2(900, 500)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -878,4 +877,5 @@ stretch_mode = 5
 [connection signal="pressed" from="FullScreenContainer/AppContainer/BuildTextB" to="FullScreenContainer" method="_on_build_texture_button_pressed"]
 [connection signal="pressed" from="FullScreenContainer/AppContainer/FundraiseTextB" to="FullScreenContainer" method="_on_fundraise_texture_button_pressed"]
 [connection signal="pressed" from="FullScreenContainer/ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/TopButtonContainer/FarmAnimalTextB" to="FullScreenContainer" method="_on_farm_animal_texture_button_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/ButtonContainer/BuildTextB" to="FullScreenContainer" method="_on_build_text_b_pressed"]
 [connection signal="pressed" from="ExitTextB" to="." method="_on_exit_texture_button_pressed"]

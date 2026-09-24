@@ -40,3 +40,7 @@ func _on_farm_animal_texture_button_pressed() -> void:
 	RescueWindow.visible = false
 	ExpandWindow.visible = false
 	FundraiseWindow.visible = false
+
+#When build button is pressed
+func _on_build_text_b_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/map_layout_scene.tscn")
