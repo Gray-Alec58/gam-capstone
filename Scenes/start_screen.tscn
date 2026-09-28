@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://ddkswpsnmco8s"]
+
+[ext_resource type="Script" uid="uid://dri4vdx3357en" path="res://Scenes/Scripts/start_screen.gd" id="1_60ddj"]
+[ext_resource type="Texture2D" uid="uid://ce3tuamjogcnh" path="res://Art/UI_Exports/Computer_Background.png" id="2_5e717"]
+[ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="3_mtlf8"]
+
+[node name="StartScreen" type="Node2D" unique_id=330657146]
+script = ExtResource("1_60ddj")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1419812566]
+z_index = -1
+position = Vector2(960, 540)
+texture = ExtResource("2_5e717")
+
+[node name="MenuContainer" type="MarginContainer" parent="Background" unique_id=1957658034]
+custom_minimum_size = Vector2(750, 500)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = -960.0
+offset_bottom = -540.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/MenuContainer" unique_id=1138938953]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 15
+
+[node name="StartButton" type="Button" parent="Background/MenuContainer/VBoxContainer" unique_id=1459144259]
+custom_minimum_size = Vector2(250, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_mtlf8")
+theme_override_font_sizes/font_size = 42
+text = "START"
+
+[node name="ExitButton" type="Button" parent="Background/MenuContainer/VBoxContainer" unique_id=182485893]
+custom_minimum_size = Vector2(250, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_mtlf8")
+theme_override_font_sizes/font_size = 42
+text = "EXIT"
+
+[connection signal="pressed" from="Background/MenuContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Background/MenuContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

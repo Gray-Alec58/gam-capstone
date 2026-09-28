@@ -10,8 +10,8 @@ size = Vector2(267, 157)
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1174923474]
 z_index = -1
-position = Vector2(576.25006, 324)
-scale = Vector2(0.59973955, 0.6)
+position = Vector2(960.25, 539.99994)
+scale = Vector2(0.99973947, 0.99999994)
 texture = ExtResource("1_lj5is")
 
 [node name="Computer" type="Area2D" parent="Background" unique_id=238663247]
