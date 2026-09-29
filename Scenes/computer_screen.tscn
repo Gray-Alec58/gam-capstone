@@ -643,6 +643,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_ui2y6")
 text = "No"
 
 [node name="ExpandWindow" type="MarginContainer" parent="FullScreenContainer" unique_id=1987274271]
+visible = false
 custom_minimum_size = Vector2(900, 500)
 layout_mode = 2
 size_flags_horizontal = 8
