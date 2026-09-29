@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://3oou6046lhpe" path="res://Scenes/Scripts/computer.gd" id="2_idq54"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ofqy"]
-size = Vector2(267, 157)
+size = Vector2(356.0614, 201.50003)
 
 [node name="OfficeScene" type="Node2D" unique_id=1301874127]
 
@@ -20,7 +20,7 @@ scale = Vector2(1.6673905, 1.6666666)
 script = ExtResource("2_idq54")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Computer" unique_id=1461915325]
-position = Vector2(708.5, 346.5)
+position = Vector2(645.2265, 271.25003)
 shape = SubResource("RectangleShape2D_1ofqy")
 
 [connection signal="input_event" from="Background/Computer" to="Background/Computer" method="_on_input_event"]
