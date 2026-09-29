@@ -14,8 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Background" type="Sprite2D" parent="." unique_id=450052982]
-position = Vector2(576.25, 324)
-scale = Vector2(0.6, 0.6)
+position = Vector2(960.25, 540)
 texture = ExtResource("1_q41gs")
 
 [node name="BuildSlotContainer" type="MarginContainer" parent="Background" unique_id=705368958]

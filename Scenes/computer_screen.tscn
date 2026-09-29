@@ -761,4 +761,5 @@ stretch_mode = 5
 [connection signal="pressed" from="FullScreenContainer/AppContainer/FundraiseTextB" to="FullScreenContainer" method="_on_fundraise_texture_button_pressed"]
 [connection signal="pressed" from="FullScreenContainer/ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/TopButtonContainer/FarmAnimalTextB" to="FullScreenContainer" method="_on_farm_animal_texture_button_pressed"]
 [connection signal="pressed" from="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/LeftResearchContainer/ResearchPointTexB" to="." method="_on_research_point_tex_b_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/ButtonContainer/BuildTextB" to="FullScreenContainer" method="_on_build_text_b_pressed"]
 [connection signal="pressed" from="ExitTextB" to="." method="_on_exit_texture_button_pressed"]

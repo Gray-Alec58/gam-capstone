@@ -9,8 +9,7 @@
 [node name="Map_Scene" type="Node2D" unique_id=1997719588]
 
 [node name="MapBG" type="Sprite2D" parent="." unique_id=601928638]
-position = Vector2(576.25, 324)
-scale = Vector2(0.6, 0.6)
+position = Vector2(960.25, 540)
 texture = ExtResource("1_dj52n")
 script = ExtResource("2_wphop")
 
