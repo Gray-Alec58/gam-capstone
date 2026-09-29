@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://crgu1urlvakw4"]
+
+[ext_resource type="Texture2D" uid="uid://d3vbaf18jbi6k" path="res://Art/UI_Exports/Map/MapBG.png" id="1_dj52n"]
+[ext_resource type="Script" uid="uid://jlg1pjebjsv6" path="res://Scenes/map_bg.gd" id="2_wphop"]
+[ext_resource type="Texture2D" uid="uid://bdxopu0c4746y" path="res://Art/UI_Exports/Map/StarterPlot.png" id="2_yvtcl"]
+[ext_resource type="Texture2D" uid="uid://fxfmmhaj8t07" path="res://Art/UI_Exports/Map/StarterPlotClick.png" id="3_wphop"]
+[ext_resource type="Texture2D" uid="uid://bgqwq4mwednog" path="res://Art/UI_Exports/Map/StarterPlotHover.png" id="4_jm3e7"]
+
+[node name="Map_Scene" type="Node2D" unique_id=1997719588]
+
+[node name="MapBG" type="Sprite2D" parent="." unique_id=601928638]
+position = Vector2(576.25, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_dj52n")
+script = ExtResource("2_wphop")
+
+[node name="StarterPlotTextB" type="TextureButton" parent="MapBG" unique_id=1237425232]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -1398.7499
+offset_top = -978.3334
+offset_right = -542.08325
+offset_bottom = -538.3334
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("2_yvtcl")
+texture_pressed = ExtResource("3_wphop")
+texture_hover = ExtResource("4_jm3e7")
+ignore_texture_size = true
+stretch_mode = 4
+
+[connection signal="pressed" from="MapBG/StarterPlotTextB" to="MapBG" method="_on_starter_plot_text_b_pressed"]
