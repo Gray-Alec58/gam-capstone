@@ -2,9 +2,50 @@
 
 [ext_resource type="Texture2D" uid="uid://b0yao7opcsfd6" path="res://Art/OfficeBackground.png" id="1_lj5is"]
 [ext_resource type="Script" uid="uid://3oou6046lhpe" path="res://Scenes/Scripts/computer.gd" id="2_idq54"]
+[ext_resource type="Texture2D" uid="uid://bqfnwgqmlwf14" path="res://Art/tailspritesheet.png" id="3_grqjj"]
+[ext_resource type="Texture2D" uid="uid://k2e1mvqu4seo" path="res://Art/BallSprite2D.png" id="4_s0r6g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ofqy"]
 size = Vector2(356.0614, 201.50003)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0r6g"]
+atlas = ExtResource("3_grqjj")
+region = Rect2(0, 0, 1921, 1081)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rs28u"]
+atlas = ExtResource("3_grqjj")
+region = Rect2(1921, 0, 1921, 1081)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tnddm"]
+atlas = ExtResource("3_grqjj")
+region = Rect2(0, 1081, 1921, 1081)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pxgx"]
+atlas = ExtResource("3_grqjj")
+region = Rect2(1921, 1081, 1921, 1081)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rvnnr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0r6g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rs28u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tnddm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pxgx")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nv111"]
+size = Vector2(960.0014, 647.6664)
 
 [node name="OfficeScene" type="Node2D" unique_id=1301874127]
 
@@ -22,5 +63,26 @@ script = ExtResource("2_idq54")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Computer" unique_id=1461915325]
 position = Vector2(645.2265, 271.25003)
 shape = SubResource("RectangleShape2D_1ofqy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1315921727]
+position = Vector2(985.75, 524.75)
+scale = Vector2(1.0210828, 1.0245143)
+sprite_frames = SubResource("SpriteFrames_rvnnr")
+autoplay = "default"
+frame_progress = 0.12000312
+
+[node name="Node2D" type="Node2D" parent="." unique_id=488365269]
+
+[node name="BallSprite" type="Sprite2D" parent="Node2D" unique_id=168695529]
+position = Vector2(1574, 722)
+scale = Vector2(0.2989583, 0.29953703)
+texture = ExtResource("4_s0r6g")
+
+[node name="BallArea" type="Area2D" parent="Node2D/BallSprite" unique_id=1747358155]
+
+[node name="BallCollision" type="CollisionShape2D" parent="Node2D/BallSprite/BallArea" unique_id=859041373]
+position = Vector2(-5.0185547, 16.692383)
+scale = Vector2(1.0000001, 1)
+shape = SubResource("RectangleShape2D_nv111")
 
 [connection signal="input_event" from="Background/Computer" to="Background/Computer" method="_on_input_event"]
