@@ -26,10 +26,16 @@
 [ext_resource type="Texture2D" uid="uid://h0vshu0lev6o" path="res://Art/UI_Exports/ResearchApp/ResearchAnimalClick.png" id="18_hfv7u"]
 [ext_resource type="Texture2D" uid="uid://hjhase4hckgs" path="res://Art/UI_Exports/ResearchApp/ResearchAnimalHover.png" id="19_sj23p"]
 [ext_resource type="Texture2D" uid="uid://ddbllop8bms4m" path="res://Art/UI_Exports/FundraiserApp/FundraiserNormal.png" id="20_ik20o"]
+[ext_resource type="Script" uid="uid://qukjmbpemdhm" path="res://Scenes/Scripts/research_window_2.gd" id="20_l6eyl"]
 [ext_resource type="Texture2D" uid="uid://5ot6oap2in5n" path="res://Art/UI_Exports/ResearchApp/ResearchWindow2/ClicktoResearchClick.png" id="21_j3hoa"]
 [ext_resource type="Texture2D" uid="uid://clcqg817x6c4w" path="res://Art/UI_Exports/FundraiserApp/FundraiserClick.png" id="21_vib8a"]
 [ext_resource type="Texture2D" uid="uid://bb4waucjg1l58" path="res://Art/UI_Exports/ResearchApp/ResearchWindow2/ClicktoResearchHover.png" id="22_qsnkp"]
 [ext_resource type="Texture2D" uid="uid://b1pm0eb2s6hvd" path="res://Art/UI_Exports/FundraiserApp/FundraiserHover.png" id="22_x0hwp"]
+[ext_resource type="Texture2D" uid="uid://pgurlerf3n2t" path="res://Art/UI_Exports/popupui/PopUpBG.png" id="26_j3hoa"]
+[ext_resource type="Texture2D" uid="uid://d38cxckouklf1" path="res://Art/ChickenUI.png" id="26_qsnkp"]
+[ext_resource type="Texture2D" uid="uid://ckijv5vshure4" path="res://Art/UI_Exports/popupui/YesButton.png" id="27_qsnkp"]
+[ext_resource type="Texture2D" uid="uid://cd0kx1a2kjtpt" path="res://Art/UI_Exports/popupui/NoButton.png" id="28_ffl3h"]
+[ext_resource type="Script" uid="uid://k0subthvjv58" path="res://Scenes/rescue_window.gd" id="30_ffl3h"]
 [ext_resource type="Texture2D" uid="uid://bn1dpsfygsfv8" path="res://Art/UI_Exports/ExpandApp/BuildNormal.png" id="31_l6eyl"]
 [ext_resource type="Texture2D" uid="uid://d33j47wd4tlip" path="res://Art/UI_Exports/FundraiserApp/LivestreamUi.png" id="31_svqil"]
 [ext_resource type="Texture2D" uid="uid://wao31hgc1oj7" path="res://Art/UI_Exports/ExpandApp/BuildClick.png" id="32_aiqxx"]
@@ -52,6 +58,20 @@ texture_margin_left = 15.0
 texture_margin_top = 15.0
 texture_margin_right = 15.0
 texture_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ofqy"]
+texture = ExtResource("27_qsnkp")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5fshx"]
+texture = ExtResource("28_ffl3h")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
 
 [sub_resource type="FontVariation" id="FontVariation_dfmt8"]
 base_font = ExtResource("12_b3akq")
@@ -296,12 +316,16 @@ texture_hover = ExtResource("19_sj23p")
 ignore_texture_size = true
 stretch_mode = 3
 
-[node name="ResearchWindow2" type="MarginContainer" parent="FullScreenContainer" unique_id=95248280]
+[node name="ResearchWindow2" type="MarginContainer" parent="FullScreenContainer" unique_id=95248280 node_paths=PackedStringArray("animal_button_1", "confirm_popup", "fact_popup")]
 visible = false
 custom_minimum_size = Vector2(1500, 800)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
+script = ExtResource("20_l6eyl")
+animal_button_1 = NodePath("WindowBackground/ScreenContainer/RightReserachContainer/TopAnimalButtonContainer/AnimalButton1")
+confirm_popup = NodePath("WindowBackground/ScreenContainer/ConfirmUI")
+fact_popup = NodePath("WindowBackground/ScreenContainer/RightReserachContainer/AnimalFactbase")
 
 [node name="WindowBackground" type="NinePatchRect" parent="FullScreenContainer/ResearchWindow2" unique_id=1100412874]
 layout_mode = 2
@@ -396,6 +420,7 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxTexture_6fdxm")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_6fdxm")
 theme_override_styles/hover = SubResource("StyleBoxTexture_6fdxm")
+text = "CHICKEN"
 icon = ExtResource("16_820yq")
 icon_alignment = 1
 
@@ -408,6 +433,7 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxTexture_6fdxm")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_6fdxm")
 theme_override_styles/hover = SubResource("StyleBoxTexture_6fdxm")
+text = "PIG"
 icon = ExtResource("16_820yq")
 icon_alignment = 1
 
@@ -489,12 +515,120 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_6fdxm")
 icon = ExtResource("16_820yq")
 icon_alignment = 1
 
-[node name="RescueWindow" type="MarginContainer" parent="FullScreenContainer" unique_id=1478634671]
+[node name="AnimalFactbase" type="NinePatchRect" parent="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer" unique_id=597698048]
 visible = false
+custom_minimum_size = Vector2(600, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = ExtResource("10_jv7rh")
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="AnimalFactContainer" type="MarginContainer" parent="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer/AnimalFactbase" unique_id=1607531326]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 150
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 15
+
+[node name="AnimalPic" type="Sprite2D" parent="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer/AnimalFactbase/AnimalFactContainer" unique_id=467424827]
+position = Vector2(-18, -7)
+scale = Vector2(0.06077043, 0.054514345)
+texture = ExtResource("26_qsnkp")
+centered = false
+
+[node name="AnimalFact" type="Label" parent="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer/AnimalFactbase/AnimalFactContainer" unique_id=1237138953]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(425, 125)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_b3akq")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ConfirmUI" type="NinePatchRect" parent="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer" unique_id=2095288314]
+visible = false
+custom_minimum_size = Vector2(400, 250)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("26_j3hoa")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="MarginContainer" type="MarginContainer" parent="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/ConfirmUI" unique_id=757146724]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/ConfirmUI/MarginContainer" unique_id=391384803]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="QuestionUI" type="Label" parent="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/ConfirmUI/MarginContainer/VBoxContainer" unique_id=789579471]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_b3akq")
+theme_override_font_sizes/font_size = 38
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/ConfirmUI/MarginContainer/VBoxContainer" unique_id=1290024137]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="YesButton" type="Button" parent="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/ConfirmUI/MarginContainer/VBoxContainer/HBoxContainer" unique_id=43273664]
+custom_minimum_size = Vector2(150, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_b3akq")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ofqy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1ofqy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1ofqy")
+text = "YES"
+
+[node name="NoButton" type="Button" parent="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/ConfirmUI/MarginContainer/VBoxContainer/HBoxContainer" unique_id=817518525]
+custom_minimum_size = Vector2(150, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_b3akq")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_5fshx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5fshx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5fshx")
+text = "NO"
+
+[node name="RescueWindow" type="MarginContainer" parent="FullScreenContainer" unique_id=1478634671]
 custom_minimum_size = Vector2(1500, 800)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
+script = ExtResource("30_ffl3h")
 
 [node name="WindowBackground" type="NinePatchRect" parent="FullScreenContainer/RescueWindow" unique_id=2096491896]
 layout_mode = 2
@@ -508,16 +642,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 45
+theme_override_constants/margin_top = 65
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 20
 
 [node name="ResearchAnimalList" type="VBoxContainer" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer" unique_id=1825840766]
 layout_mode = 2
+theme_override_constants/separation = 4
 
 [node name="RescueAnimalInfo" type="NinePatchRect" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList" unique_id=331962802]
+unique_name_in_owner = true
 visible = false
-custom_minimum_size = Vector2(0, 100)
+custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 texture = ExtResource("11_sqaj2")
 
@@ -528,10 +664,41 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 10
+theme_override_constants/margin_left = 150
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 5
+
+[node name="AnimalPicture" type="Sprite2D" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer" unique_id=734688585]
+position = Vector2(-24.999992, -15.000004)
+scale = Vector2(0.06662111, 0.056470025)
+texture = ExtResource("26_qsnkp")
+centered = false
+
+[node name="AnimalInfoContainer" type="HBoxContainer" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer" unique_id=468138559]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 200
+
+[node name="AnimalPriceLabel" type="Label" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer/AnimalInfoContainer" unique_id=2135404766]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_b3akq")
+theme_override_font_sizes/font_size = 32
+text = "Name: McChicken
+From: Owner can no longer take take 
+care of chicken due to moving"
+
+[node name="AnimalInfoLabel" type="Label" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer/AnimalInfoContainer" unique_id=1364979746]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_b3akq")
+theme_override_font_sizes/font_size = 64
+text = "Price: 5g"
+horizontal_alignment = 1
 
 [node name="AdoptButtonContainer" type="HBoxContainer" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer" unique_id=1244010540]
 custom_minimum_size = Vector2(175, 75)
@@ -541,22 +708,24 @@ size_flags_vertical = 4
 theme_override_constants/separation = 4
 
 [node name="YesButton" type="Button" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer/AdoptButtonContainer" unique_id=973155605]
-custom_minimum_size = Vector2(75, 75)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("FontVariation_dfmt8")
+theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxTexture_ygkgy")
 text = "Yes"
 
 [node name="NoButton" type="Button" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer/AdoptButtonContainer" unique_id=677050709]
-custom_minimum_size = Vector2(75, 75)
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("FontVariation_xfmfb")
+theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxTexture_ui2y6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ui2y6")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ui2y6")
@@ -760,6 +929,11 @@ stretch_mode = 5
 [connection signal="pressed" from="FullScreenContainer/AppContainer/BuildTextB" to="FullScreenContainer" method="_on_build_texture_button_pressed"]
 [connection signal="pressed" from="FullScreenContainer/AppContainer/FundraiseTextB" to="FullScreenContainer" method="_on_fundraise_texture_button_pressed"]
 [connection signal="pressed" from="FullScreenContainer/ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/TopButtonContainer/FarmAnimalTextB" to="FullScreenContainer" method="_on_farm_animal_texture_button_pressed"]
-[connection signal="pressed" from="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/LeftResearchContainer/ResearchPointTexB" to="." method="_on_research_point_tex_b_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/LeftResearchContainer/ResearchPointTexB" to="FullScreenContainer/ResearchWindow2" method="_on_research_point_tex_b_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer/TopAnimalButtonContainer/AnimalButton1" to="FullScreenContainer/ResearchWindow2" method="_on_animal_button_1_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/ConfirmUI/MarginContainer/VBoxContainer/HBoxContainer/YesButton" to="FullScreenContainer/ResearchWindow2" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/ConfirmUI/MarginContainer/VBoxContainer/HBoxContainer/NoButton" to="FullScreenContainer/ResearchWindow2" method="_on_no_button_pressed"]
+[connection signal="pressed" from="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer/AdoptButtonContainer/YesButton" to="FullScreenContainer/RescueWindow" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer/AdoptButtonContainer/NoButton" to="FullScreenContainer/RescueWindow" method="_on_no_button_pressed"]
 [connection signal="pressed" from="FullScreenContainer/ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/ButtonContainer/BuildTextB" to="FullScreenContainer" method="_on_build_text_b_pressed"]
 [connection signal="pressed" from="ExitTextB" to="." method="_on_exit_texture_button_pressed"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://3qdmnfiycv3u" path="res://Art/UI_Exports/BuildingScene/ExBuiIdTab.png" id="1_q41gs"]
 [ext_resource type="Texture2D" uid="uid://2r4dx8kbw3cj" path="res://Art/UI_Exports/BuildingScene/BuildSlotNorm.png" id="2_k6xkw"]
-[ext_resource type="Script" uid="uid://dn5gb63bpxul5" path="res://Scenes/build_scene_container.gd" id="2_tbc8r"]
+[ext_resource type="Script" uid="uid://dn5gb63bpxul5" path="res://Scenes/Scripts/build_scene_container.gd" id="2_tbc8r"]
 [ext_resource type="Texture2D" uid="uid://b63niww63ix3x" path="res://Art/UI_Exports/BuildingScene/BuildSlotClick.png" id="3_r7usn"]
 [ext_resource type="Texture2D" uid="uid://b853dckij2b7o" path="res://Art/UI_Exports/BuildingScene/BuildSlotHover.png" id="4_c2wch"]
 [ext_resource type="Texture2D" uid="uid://ocseojrdjuko" path="res://Art/UI_Exports/BuildingScene/BuildTabBG.png" id="5_x2psr"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cmad28aext0y1" path="res://Art/UI_Exports/Map/BackArrowNorm.png" id="11_14tuw"]
 [ext_resource type="Texture2D" uid="uid://e158mk1dsqjb" path="res://Art/UI_Exports/Map/BackArrowClick.png" id="12_nvbxt"]
 [ext_resource type="Texture2D" uid="uid://qjlwaujtrhww" path="res://Art/UI_Exports/Map/BackArrowHover.png" id="13_rffyn"]
+
 
 [node name="BuildingUi" type="Control" unique_id=805416022]
 layout_mode = 3
