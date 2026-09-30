@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://e158mk1dsqjb" path="res://Art/UI_Exports/Map/BackArrowClick.png" id="12_nvbxt"]
 [ext_resource type="Texture2D" uid="uid://qjlwaujtrhww" path="res://Art/UI_Exports/Map/BackArrowHover.png" id="13_rffyn"]
 
-
 [node name="BuildingUi" type="Control" unique_id=805416022]
 layout_mode = 3
 anchors_preset = 15
