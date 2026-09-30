@@ -10,3 +10,5 @@ var chicken_unlocked: bool = false
 func unlock_chicken() -> void:
 	chicken_unlocked = true
 	chicken_unlocked_changed.emit()
+
+var previous_scene_path: String = ""

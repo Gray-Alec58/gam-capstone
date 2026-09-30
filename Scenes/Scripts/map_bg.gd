@@ -6,4 +6,7 @@ func _on_starter_plot_text_b_pressed() -> void:
 
 
 func _on_back_arrow_text_b_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/computer_background.tscn")
+	if GlobalScript.previous_scene_path !="":
+		get_tree().change_scene_to_file(GlobalScript.previous_scene_path)
+	else:
+		get_tree().change_scene_to_file("res://Scenes/computer_background.tscn")

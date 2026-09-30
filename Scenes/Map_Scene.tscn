@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://e158mk1dsqjb" path="res://Art/UI_Exports/Map/BackArrowClick.png" id="7_w2b8q"]
 [ext_resource type="Texture2D" uid="uid://qjlwaujtrhww" path="res://Art/UI_Exports/Map/BackArrowHover.png" id="8_cv880"]
 
-
 [node name="Map_Scene" type="Node2D" unique_id=1997719588]
 
 [node name="MapBG" type="Sprite2D" parent="." unique_id=601928638]

@@ -624,6 +624,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_5fshx")
 text = "NO"
 
 [node name="RescueWindow" type="MarginContainer" parent="FullScreenContainer" unique_id=1478634671]
+visible = false
 custom_minimum_size = Vector2(1500, 800)
 layout_mode = 2
 size_flags_horizontal = 8
