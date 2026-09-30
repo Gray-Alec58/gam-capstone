@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://b5rnqd365132v" path="res://Art/UI_Exports/BuildingScene/BuildItemNorm.png" id="7_mkcib"]
 [ext_resource type="Texture2D" uid="uid://bexfkbsr3dnj5" path="res://Art/UI_Exports/BuildingScene/BuildItemClick.png" id="8_1inf0"]
 [ext_resource type="Texture2D" uid="uid://bm57fn8ocngtb" path="res://Art/UI_Exports/BuildingScene/BuildItemHover.png" id="9_14tuw"]
+[ext_resource type="Texture2D" uid="uid://cmad28aext0y1" path="res://Art/UI_Exports/Map/BackArrowNorm.png" id="11_14tuw"]
+[ext_resource type="Texture2D" uid="uid://e158mk1dsqjb" path="res://Art/UI_Exports/Map/BackArrowClick.png" id="12_nvbxt"]
+[ext_resource type="Texture2D" uid="uid://qjlwaujtrhww" path="res://Art/UI_Exports/Map/BackArrowHover.png" id="13_rffyn"]
 
 [node name="BuildingUi" type="Control" unique_id=805416022]
 layout_mode = 3
@@ -35,6 +38,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 0
 theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 10
 script = ExtResource("2_tbc8r")
 
 [node name="BuildtabContainer" type="MarginContainer" parent="Background/BuildSceneContainer" unique_id=747126346]
@@ -163,4 +167,15 @@ theme_override_fonts/font = ExtResource("6_tbc8r")
 theme_override_font_sizes/font_size = 100
 text = "Starter Plot"
 
+[node name="BackArrowTextB" type="TextureButton" parent="Background/BuildSceneContainer" unique_id=174822572]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+offset_transform_enabled = true
+offset_transform_position = Vector2(-25, -25)
+texture_normal = ExtResource("11_14tuw")
+texture_pressed = ExtResource("12_nvbxt")
+texture_hover = ExtResource("13_rffyn")
+
 [connection signal="pressed" from="Background/BuildSceneContainer/BuildSlotContainer/VBoxContainer/BuildSlot1TextB" to="Background/BuildSceneContainer" method="_on_build_slot_1_text_b_pressed"]
+[connection signal="pressed" from="Background/BuildSceneContainer/BackArrowTextB" to="Background/BuildSceneContainer" method="_on_back_arrow_text_b_pressed"]
