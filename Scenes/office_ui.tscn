@@ -1,5 +1,16 @@
 [gd_scene format=3 uid="uid://dy30jg28ep16d"]
 
+[ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="1_dyv43"]
+[ext_resource type="Script" uid="uid://biualx634hvum" path="res://Scenes/Scripts/office_ui.gd" id="1_tjp44"]
+[ext_resource type="Texture2D" uid="uid://mjmsgcdybsyj" path="res://Art/UI_Exports/ResearchApp/ResearchAnimalButton.png" id="2_tjp44"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ofqy"]
+texture = ExtResource("2_tjp44")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
 [node name="OfficeUI" type="Control" unique_id=1844209491]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +18,46 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_tjp44")
+
+[node name="OfficeUIContainer" type="MarginContainer" parent="." unique_id=1076444110]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OfficeUIContainer" unique_id=173315675]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = 500
+
+[node name="GoldLabel" type="Label" parent="OfficeUIContainer/HBoxContainer" unique_id=1499934049]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7419234, 0.5789323, 0.23495722, 1)
+theme_override_colors/font_outline_color = Color(0.23703721, 0.17634973, 0.043878317, 1)
+theme_override_constants/outline_size = 42
+theme_override_fonts/font = ExtResource("1_dyv43")
+theme_override_font_sizes/font_size = 80
+text = "gold"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButton" type="Button" parent="OfficeUIContainer/HBoxContainer" unique_id=267222431]
+custom_minimum_size = Vector2(125, 125)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_dyv43")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ofqy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1ofqy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1ofqy")
+text = "MENU"

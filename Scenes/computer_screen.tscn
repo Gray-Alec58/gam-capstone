@@ -35,7 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://d38cxckouklf1" path="res://Art/ChickenUI.png" id="26_qsnkp"]
 [ext_resource type="Texture2D" uid="uid://ckijv5vshure4" path="res://Art/UI_Exports/popupui/YesButton.png" id="27_qsnkp"]
 [ext_resource type="Texture2D" uid="uid://cd0kx1a2kjtpt" path="res://Art/UI_Exports/popupui/NoButton.png" id="28_ffl3h"]
-[ext_resource type="Script" uid="uid://k0subthvjv58" path="res://Scenes/rescue_window.gd" id="30_ffl3h"]
+[ext_resource type="Script" uid="uid://k0subthvjv58" path="res://Scenes/Scripts/rescue_window.gd" id="30_ffl3h"]
 [ext_resource type="Texture2D" uid="uid://bn1dpsfygsfv8" path="res://Art/UI_Exports/ExpandApp/BuildNormal.png" id="31_l6eyl"]
 [ext_resource type="Texture2D" uid="uid://d33j47wd4tlip" path="res://Art/UI_Exports/FundraiserApp/LivestreamUi.png" id="31_svqil"]
 [ext_resource type="Texture2D" uid="uid://wao31hgc1oj7" path="res://Art/UI_Exports/ExpandApp/BuildClick.png" id="32_aiqxx"]
@@ -88,6 +88,20 @@ base_font = ExtResource("12_b3akq")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ui2y6"]
 texture = ExtResource("14_4bj7o")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kxbuo"]
+texture = ExtResource("27_qsnkp")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5khfc"]
+texture = ExtResource("28_ffl3h")
 texture_margin_left = 10.0
 texture_margin_top = 10.0
 texture_margin_right = 10.0
@@ -624,7 +638,6 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_5fshx")
 text = "NO"
 
 [node name="RescueWindow" type="MarginContainer" parent="FullScreenContainer" unique_id=1478634671]
-visible = false
 custom_minimum_size = Vector2(1500, 800)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -731,6 +744,71 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_ui2y6")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ui2y6")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ui2y6")
 text = "No"
+
+[node name="ConfirmUI" type="NinePatchRect" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer" unique_id=1234473843]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(350, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("26_j3hoa")
+patch_margin_left = 15
+patch_margin_top = 15
+patch_margin_right = 15
+patch_margin_bottom = 15
+
+[node name="MarginContainer" type="MarginContainer" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ConfirmUI" unique_id=701994034]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ConfirmUI/MarginContainer" unique_id=1611766819]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="QuestionLabel" type="Label" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ConfirmUI/MarginContainer/VBoxContainer" unique_id=1816174376]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_b3akq")
+theme_override_font_sizes/font_size = 36
+text = "Purchase Animal?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ConfirmUI/MarginContainer/VBoxContainer" unique_id=9515878]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 35
+
+[node name="BuyButton" type="Button" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ConfirmUI/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1298979128]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_b3akq")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxTexture_kxbuo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kxbuo")
+theme_override_styles/hover = SubResource("StyleBoxTexture_kxbuo")
+text = "YES"
+
+[node name="NoBuyButton" type="Button" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ConfirmUI/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1856631789]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_b3akq")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxTexture_5khfc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5khfc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5khfc")
+text = "NO"
 
 [node name="ExpandWindow" type="MarginContainer" parent="FullScreenContainer" unique_id=1987274271]
 visible = false
@@ -936,5 +1014,7 @@ stretch_mode = 5
 [connection signal="pressed" from="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/ConfirmUI/MarginContainer/VBoxContainer/HBoxContainer/NoButton" to="FullScreenContainer/ResearchWindow2" method="_on_no_button_pressed"]
 [connection signal="pressed" from="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer/AdoptButtonContainer/YesButton" to="FullScreenContainer/RescueWindow" method="_on_yes_button_pressed"]
 [connection signal="pressed" from="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer/AdoptButtonContainer/NoButton" to="FullScreenContainer/RescueWindow" method="_on_no_button_pressed"]
+[connection signal="pressed" from="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ConfirmUI/MarginContainer/VBoxContainer/HBoxContainer/BuyButton" to="FullScreenContainer/RescueWindow" method="_on_buy_button_pressed"]
+[connection signal="pressed" from="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ConfirmUI/MarginContainer/VBoxContainer/HBoxContainer/NoBuyButton" to="FullScreenContainer/RescueWindow" method="_on_no_buy_button_pressed"]
 [connection signal="pressed" from="FullScreenContainer/ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/ButtonContainer/BuildTextB" to="FullScreenContainer" method="_on_build_text_b_pressed"]
 [connection signal="pressed" from="ExitTextB" to="." method="_on_exit_texture_button_pressed"]

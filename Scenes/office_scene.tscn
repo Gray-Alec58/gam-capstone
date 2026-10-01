@@ -2,8 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://b0yao7opcsfd6" path="res://Art/OfficeBackground.png" id="1_lj5is"]
 [ext_resource type="Script" uid="uid://3oou6046lhpe" path="res://Scenes/Scripts/computer.gd" id="2_idq54"]
+[ext_resource type="PackedScene" uid="uid://dy30jg28ep16d" path="res://Scenes/office_ui.tscn" id="2_tnddm"]
 [ext_resource type="Texture2D" uid="uid://3qdmnfiycv3u" path="res://Art/UI_Exports/BuildingScene/ExBuiIdTab.png" id="3_s0r6g"]
 [ext_resource type="Script" uid="uid://ntfnre6lblwy" path="res://Scenes/Scripts/map_exit_area_2d.gd" id="4_rs28u"]
+[ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="5_2pxgx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ofqy"]
 size = Vector2(356.0614, 201.50003)
@@ -19,27 +21,63 @@ position = Vector2(960.25, 539.99994)
 scale = Vector2(0.99973947, 0.99999994)
 texture = ExtResource("1_lj5is")
 
-[node name="Computer" type="Area2D" parent="Background" unique_id=238663247]
-position = Vector2(-960.83386, -540)
-scale = Vector2(1.6673905, 1.6666666)
+[node name="MarginContainer" type="MarginContainer" parent="Background" unique_id=1087832805]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -960.50024
+offset_top = -540.0
+offset_right = -967.0017
+offset_bottom = -1419.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="OfficeUI" parent="Background/MarginContainer" unique_id=1844209491 instance=ExtResource("2_tnddm")]
+layout_mode = 2
+
+[node name="Computer" type="Area2D" parent="." unique_id=238663247]
+position = Vector2(-0.33355713, 0)
+scale = Vector2(1.6669561, 1.6666665)
 script = ExtResource("2_idq54")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Computer" unique_id=1461915325]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer" unique_id=1461915325]
 position = Vector2(645.2265, 271.25003)
 shape = SubResource("RectangleShape2D_1ofqy")
 
 [node name="MapExit" type="Sprite2D" parent="." unique_id=802230950]
-position = Vector2(1685, 253)
+position = Vector2(1679, 383)
 scale = Vector2(0.20338544, 0.24953705)
 texture = ExtResource("3_s0r6g")
 
+[node name="Label" type="Label" parent="MapExit" unique_id=963132044]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -980.0
+offset_top = -551.5
+offset_right = -940.0
+offset_bottom = -528.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_2pxgx")
+theme_override_font_sizes/font_size = 250
+text = "MAP"
+
 [node name="MapExitArea2D" type="Area2D" parent="MapExit" unique_id=844726637]
+position = Vector2(44.25095, 705.306)
 script = ExtResource("4_rs28u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MapExit/MapExitArea2D" unique_id=545513655]
-position = Vector2(0, 2.0039063)
+position = Vector2(-44.250954, -705.30615)
 scale = Vector2(0.99999964, 0.9999994)
 shape = SubResource("RectangleShape2D_5fshx")
 
-[connection signal="input_event" from="Background/Computer" to="Background/Computer" method="_on_input_event"]
+[connection signal="input_event" from="Computer" to="Computer" method="_on_input_event"]
 [connection signal="input_event" from="MapExit/MapExitArea2D" to="MapExit/MapExitArea2D" method="_on_input_event"]

@@ -12,3 +12,10 @@ func unlock_chicken() -> void:
 	chicken_unlocked_changed.emit()
 
 var previous_scene_path: String = ""
+
+#money tracker
+signal gold_changed
+var gold: int = 500
+func gold_decrease(x: int) -> void:
+	gold -= x
+	gold_changed.emit()
