@@ -49,6 +49,7 @@
 [ext_resource type="Texture2D" uid="uid://dwwadpmdp8g61" path="res://Art/UI_Exports/ExpandApp/UpgradeHover.png" id="39_j3hoa"]
 [ext_resource type="Texture2D" uid="uid://q0irlwa3k0bl" path="res://Art/UI_Exports/ExitClick.png" id="41_q7d4u"]
 [ext_resource type="Texture2D" uid="uid://djteu1twus77t" path="res://Art/UI_Exports/ExitHover.png" id="42_lehph"]
+[ext_resource type="PackedScene" uid="uid://cgphkvhwdctqb" path="res://Audio/Music/background_audio_stream_player.tscn" id="50_qsnkp"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dfmt8"]
 texture = ExtResource("10_jv7rh")
@@ -872,6 +873,9 @@ texture_pressed = ExtResource("41_q7d4u")
 texture_hover = ExtResource("42_lehph")
 ignore_texture_size = true
 stretch_mode = 5
+
+[node name="BackgroundAudioStreamPlayer" parent="." unique_id=1162872117 instance=ExtResource("50_qsnkp")]
+volume_db = -5.0
 
 [connection signal="pressed" from="FullScreenContainer/AppContainer/ResearchTextB" to="FullScreenContainer" method="_on_research_texture_button_pressed"]
 [connection signal="pressed" from="FullScreenContainer/AppContainer/RescueTextB" to="FullScreenContainer" method="_on_rescue_texture_button_pressed"]
