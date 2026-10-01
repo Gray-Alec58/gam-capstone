@@ -9,7 +9,11 @@ func _ready() -> void:
 	display_rescue()
 
 func display_rescue() -> void:
-	chicken_rescue_window.visible = GlobalScript.chicken_unlocked
+	if (GlobalScript.have_enclosure):
+		%NeedEnclosureWindow.visible = false
+		chicken_rescue_window.visible = GlobalScript.chicken_unlocked
+	else:
+		%NeedEnclosureWindow.visible = true
 
 func _on_yes_button_pressed() -> void:
 	confirm_window.visible = true
@@ -18,6 +22,7 @@ func _on_no_button_pressed() -> void:
 	question_label.text = "Too bad. Purchase Animal?"
 func _on_buy_button_pressed() -> void:
 	confirm_window.visible = false
+	chicken_rescue_window.visible = false
 	GlobalScript.gold -= 5
 func _on_no_buy_button_pressed() -> void:
 	confirm_window.visible = false

@@ -638,6 +638,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_5fshx")
 text = "NO"
 
 [node name="RescueWindow" type="MarginContainer" parent="FullScreenContainer" unique_id=1478634671]
+visible = false
 custom_minimum_size = Vector2(1500, 800)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -809,6 +810,42 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_5khfc")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_5khfc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_5khfc")
 text = "NO"
+
+[node name="NeedEnclosureWindow" type="NinePatchRect" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer" unique_id=1554362926]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(600, 450)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("26_j3hoa")
+patch_margin_left = 15
+patch_margin_top = 15
+patch_margin_right = 15
+patch_margin_bottom = 15
+
+[node name="MarginContainer" type="MarginContainer" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/NeedEnclosureWindow" unique_id=1846268099]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="Label" type="Label" parent="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/NeedEnclosureWindow/MarginContainer" unique_id=767157619]
+custom_minimum_size = Vector2(550, 400)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("12_b3akq")
+theme_override_font_sizes/font_size = 64
+text = "You need to build an enclosure before you can rescue an animal."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="ExpandWindow" type="MarginContainer" parent="FullScreenContainer" unique_id=1987274271]
 visible = false

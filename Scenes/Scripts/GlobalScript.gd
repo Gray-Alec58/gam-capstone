@@ -19,3 +19,7 @@ var gold: int = 500
 func gold_decrease(x: int) -> void:
 	gold -= x
 	gold_changed.emit()
+
+var have_enclosure: bool = false
+func built_enclosure() -> void:
+	have_enclosure = true
