@@ -40,8 +40,8 @@ func _on_animal_button_1_pressed() -> void:
 		fact_popup.visible = true
 		
 func _on_yes_button_pressed() -> void:
-	if(GlobalScript.points >= 1): #change to five after testing
-		GlobalScript.points -= 1 #change to five after testing
+	if(GlobalScript.points >= 5): #change to five after testing
+		GlobalScript.points -= 5 #change to five after testing
 		GlobalScript.unlock_chicken()
 		point_label.text = "Research Points: " + str(GlobalScript.points)
 		animal_button_1.icon = null
