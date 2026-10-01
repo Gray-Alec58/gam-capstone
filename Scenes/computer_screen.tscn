@@ -49,6 +49,10 @@
 [ext_resource type="Texture2D" uid="uid://dwwadpmdp8g61" path="res://Art/UI_Exports/ExpandApp/UpgradeHover.png" id="39_j3hoa"]
 [ext_resource type="Texture2D" uid="uid://q0irlwa3k0bl" path="res://Art/UI_Exports/ExitClick.png" id="41_q7d4u"]
 [ext_resource type="Texture2D" uid="uid://djteu1twus77t" path="res://Art/UI_Exports/ExitHover.png" id="42_lehph"]
+[ext_resource type="AudioStream" uid="uid://dj0v6wxx8ays0" path="res://Audio/Sound effects/Click One.mp3" id="47_ffl3h"]
+[ext_resource type="AudioStream" uid="uid://g3rd1clv0j2b" path="res://Audio/Sound effects/Click Two.mp3" id="48_bjoxt"]
+[ext_resource type="AudioStream" uid="uid://h72gw6flwvd2" path="res://Audio/Sound effects/Click three.mp3" id="49_ik20o"]
+[ext_resource type="Script" uid="uid://d3gronsqjb4l4" path="res://Scenes/click_sound.gd" id="53_x0hwp"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dfmt8"]
 texture = ExtResource("10_jv7rh")
@@ -90,6 +94,12 @@ texture_margin_left = 10.0
 texture_margin_top = 10.0
 texture_margin_right = 10.0
 texture_margin_bottom = 10.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ffl3h"]
+streams_count = 3
+stream_0/stream = ExtResource("47_ffl3h")
+stream_1/stream = ExtResource("48_bjoxt")
+stream_2/stream = ExtResource("49_ik20o")
 
 [node name="ComputerScreen" type="Control" unique_id=26936767]
 layout_mode = 3
@@ -855,6 +865,10 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_5khfc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_5khfc")
 text = "ENCLOSURE 4"
 
+[node name="Click_sound" type="AudioStreamPlayer" parent="FullScreenContainer" unique_id=912189890]
+stream = SubResource("AudioStreamRandomizer_ffl3h")
+script = ExtResource("53_x0hwp")
+
 [node name="ExitTextB" type="TextureButton" parent="." unique_id=1997126746]
 layout_mode = 1
 anchors_preset = 7
@@ -873,9 +887,30 @@ texture_hover = ExtResource("42_lehph")
 ignore_texture_size = true
 stretch_mode = 5
 
+[connection signal="button_down" from="FullScreenContainer/AppContainer/ResearchTextB" to="." method="_on_research_text_b_button_down"]
 [connection signal="pressed" from="FullScreenContainer/AppContainer/ResearchTextB" to="FullScreenContainer" method="_on_research_texture_button_pressed"]
+[connection signal="pressed" from="FullScreenContainer/AppContainer/ResearchTextB" to="FullScreenContainer/Click_sound" method="_on_research_text_b_pressed"]
+[connection signal="pressed" from="FullScreenContainer/AppContainer/RescueTextB" to="." method="_on_rescue_text_b_pressed"]
 [connection signal="pressed" from="FullScreenContainer/AppContainer/RescueTextB" to="FullScreenContainer" method="_on_rescue_texture_button_pressed"]
 [connection signal="pressed" from="FullScreenContainer/AppContainer/BuildTextB" to="FullScreenContainer" method="_on_build_texture_button_pressed"]
 [connection signal="pressed" from="FullScreenContainer/AppContainer/FundraiseTextB" to="FullScreenContainer" method="_on_fundraise_texture_button_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/TopButtonContainer/FarmAnimalTextB" to="." method="_on_farm_animal_text_b_pressed"]
 [connection signal="pressed" from="FullScreenContainer/ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/TopButtonContainer/FarmAnimalTextB" to="FullScreenContainer" method="_on_farm_animal_texture_button_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/TopButtonContainer/Misc2" to="FullScreenContainer" method="_on_misc_2_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/TopButtonContainer/Misc3" to="." method="_on_misc_3_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/TopButtonContainer/Misc4" to="FullScreenContainer" method="_on_misc_4_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/TopButtonContainer/Misc5" to="FullScreenContainer" method="_on_misc_5_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/BottomButtonContainer/Misc1" to="FullScreenContainer" method="_on_misc_1_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/BottomButtonContainer/Misc2" to="FullScreenContainer" method="_on_misc_2_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/BottomButtonContainer/Misc3" to="FullScreenContainer" method="_on_misc_3_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer/TopAnimalButtonContainer/AnimalTextB1" to="." method="_on_animal_text_b_1_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer/TopAnimalButtonContainer/AnimalButton2" to="FullScreenContainer" method="_on_animal_button_2_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer/TopAnimalButtonContainer/AnimalButton3" to="FullScreenContainer" method="_on_animal_button_3_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer/TopAnimalButtonContainer/AnimalButton4" to="FullScreenContainer" method="_on_animal_button_4_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer/ButtonAnimalButtonContainer/AnimalButton1" to="FullScreenContainer" method="_on_animal_button_1_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer/ButtonAnimalButtonContainer/AnimalButton2" to="FullScreenContainer" method="_on_animal_button_2_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer/ButtonAnimalButtonContainer/AnimalButton3" to="FullScreenContainer" method="_on_animal_button_3_pressed"]
+[connection signal="pressed" from="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer/AdoptButtonContainer/YesButton" to="." method="_on_yes_button_pressed"]
+[connection signal="pressed" from="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer/AdoptButtonContainer/YesButton" to="FullScreenContainer" method="_on_yes_button_pressed"]
+[connection signal="pressed" from="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer/AdoptButtonContainer/NoButton" to="FullScreenContainer" method="_on_no_button_pressed"]
 [connection signal="pressed" from="ExitTextB" to="." method="_on_exit_texture_button_pressed"]
