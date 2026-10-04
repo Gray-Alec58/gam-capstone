@@ -9,3 +9,12 @@ func _ready() -> void:
 
 func display_gold() -> void:
 	gold_label.text = "GOLD : " + str(GlobalScript.gold)
+
+func _on_menu_button_pressed() -> void:
+	%MenuWindow.visible = true
+
+func _on_exit_button_pressed() -> void:
+	get_tree().quit()
+
+func _on_close_menu_button_pressed() -> void:
+	%MenuWindow.visible = false

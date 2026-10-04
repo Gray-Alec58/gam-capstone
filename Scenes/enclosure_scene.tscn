@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ld2kb5wnl2vv"]
+
+[ext_resource type="Texture2D" uid="uid://3qdmnfiycv3u" path="res://Art/UI_Exports/BuildingScene/ExBuiIdTab.png" id="1_3xpdh"]
+
+[node name="EnclosureScene" type="Node2D" unique_id=2146583077]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=494484013]
+z_index = -1
+position = Vector2(960.25, 540)
+texture = ExtResource("1_3xpdh")

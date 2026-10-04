@@ -3,6 +3,11 @@
 [ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="1_dyv43"]
 [ext_resource type="Script" uid="uid://biualx634hvum" path="res://Scenes/Scripts/office_ui.gd" id="1_tjp44"]
 [ext_resource type="Texture2D" uid="uid://mjmsgcdybsyj" path="res://Art/UI_Exports/ResearchApp/ResearchAnimalButton.png" id="2_tjp44"]
+[ext_resource type="Texture2D" uid="uid://y6e5qi1uqo1m" path="res://Art/UI_Exports/ResearchApp/ResearchWindow2/AnimalFactUi.png" id="4_1sq2d"]
+[ext_resource type="Texture2D" uid="uid://drhpo4a0fogej" path="res://Art/UI_Exports/AppWindowButtons/XButton.png" id="5_gqs03"]
+[ext_resource type="Texture2D" uid="uid://cl7her220nsjq" path="res://Art/UI_Exports/StartMenu/ExitButtonNorm.png" id="6_telyj"]
+[ext_resource type="Texture2D" uid="uid://dc6p00sj4tsmq" path="res://Art/UI_Exports/StartMenu/ExitButtonClick.png" id="7_gct34"]
+[ext_resource type="Texture2D" uid="uid://4iwnttlhpxki" path="res://Art/UI_Exports/StartMenu/ExitButtonHover.png" id="8_1mcr0"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ofqy"]
 texture = ExtResource("2_tjp44")
@@ -10,6 +15,30 @@ texture_margin_left = 10.0
 texture_margin_top = 10.0
 texture_margin_right = 10.0
 texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2kmgm"]
+texture = ExtResource("5_gqs03")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kxbuo"]
+texture = ExtResource("6_telyj")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5khfc"]
+texture = ExtResource("7_gct34")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0subj"]
+texture = ExtResource("8_1mcr0")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
 
 [node name="OfficeUI" type="Control" unique_id=1844209491]
 layout_mode = 3
@@ -20,24 +49,25 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tjp44")
 
-[node name="OfficeUIContainer" type="MarginContainer" parent="." unique_id=1076444110]
-custom_minimum_size = Vector2(0, 150)
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1164235452]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 15
 anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 15
-theme_override_constants/margin_right = 15
-theme_override_constants/margin_bottom = 15
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
 
-[node name="HBoxContainer" type="HBoxContainer" parent="OfficeUIContainer" unique_id=173315675]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=173315675]
 layout_mode = 2
 size_flags_horizontal = 8
-size_flags_vertical = 4
+size_flags_vertical = 0
 theme_override_constants/separation = 500
 
-[node name="GoldLabel" type="Label" parent="OfficeUIContainer/HBoxContainer" unique_id=1499934049]
+[node name="GoldLabel" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1499934049]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.7419234, 0.5789323, 0.23495722, 1)
@@ -49,7 +79,7 @@ text = "gold"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MenuButton" type="Button" parent="OfficeUIContainer/HBoxContainer" unique_id=267222431]
+[node name="MenuButton" type="Button" parent="MarginContainer/HBoxContainer" unique_id=267222431]
 custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -61,3 +91,73 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_1ofqy")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_1ofqy")
 theme_override_styles/hover = SubResource("StyleBoxTexture_1ofqy")
 text = "MENU"
+
+[node name="MenuWindow" type="NinePatchRect" parent="MarginContainer" unique_id=1885412971]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_1sq2d")
+patch_margin_left = 15
+patch_margin_top = 15
+patch_margin_right = 15
+patch_margin_bottom = 15
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MenuWindow" unique_id=190297413]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="CloseMenuButton" type="Button" parent="MarginContainer/MenuWindow/MarginContainer" unique_id=2014364436]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_2kmgm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2kmgm")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2kmgm")
+
+[node name="ButtonContainer" type="VBoxContainer" parent="MarginContainer/MenuWindow/MarginContainer" unique_id=839197532]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 15
+
+[node name="SettingsButton" type="Button" parent="MarginContainer/MenuWindow/MarginContainer/ButtonContainer" unique_id=1022888017]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_dyv43")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxTexture_kxbuo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5khfc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0subj")
+text = "SETTINGS"
+
+[node name="ExitButton" type="Button" parent="MarginContainer/MenuWindow/MarginContainer/ButtonContainer" unique_id=613116421]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_dyv43")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxTexture_kxbuo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5khfc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0subj")
+text = "EXIT"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="MarginContainer/MenuWindow/MarginContainer/CloseMenuButton" to="." method="_on_close_menu_button_pressed"]
+[connection signal="pressed" from="MarginContainer/MenuWindow/MarginContainer/ButtonContainer/ExitButton" to="." method="_on_exit_button_pressed"]
