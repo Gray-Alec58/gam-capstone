@@ -49,6 +49,6 @@ func _on_farm_animal_texture_button_pressed() -> void:
 
 #When build button is pressed goes to map scene
 func _on_build_text_b_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Map_Scene.tscn")
+	get_tree().change_scene_to_file("res://GameFiles/Scenes/Map_Scene.tscn")
 	
 	

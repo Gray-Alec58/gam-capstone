@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dy30jg28ep16d"]
 
 [ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="1_dyv43"]
-[ext_resource type="Script" uid="uid://biualx634hvum" path="res://Scenes/Scripts/office_ui.gd" id="1_tjp44"]
+[ext_resource type="Script" uid="uid://biualx634hvum" path="res://GameFiles/Scripts/office_ui.gd" id="1_tjp44"]
 [ext_resource type="Texture2D" uid="uid://mjmsgcdybsyj" path="res://Art/UI_Exports/ResearchApp/ResearchAnimalButton.png" id="2_tjp44"]
 [ext_resource type="Texture2D" uid="uid://y6e5qi1uqo1m" path="res://Art/UI_Exports/ResearchApp/ResearchWindow2/AnimalFactUi.png" id="4_1sq2d"]
 [ext_resource type="Texture2D" uid="uid://drhpo4a0fogej" path="res://Art/UI_Exports/AppWindowButtons/XButton.png" id="5_gqs03"]
@@ -51,11 +51,12 @@ script = ExtResource("1_tjp44")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1164235452]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 1
+anchor_left = 1.0
 anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = -815.0
+offset_bottom = 185.0
+grow_horizontal = 0
 theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
@@ -92,11 +93,15 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_1ofqy")
 theme_override_styles/hover = SubResource("StyleBoxTexture_1ofqy")
 text = "MENU"
 
-[node name="MenuWindow" type="NinePatchRect" parent="MarginContainer" unique_id=1885412971]
+[node name="MenuWindow" type="NinePatchRect" parent="." unique_id=1885412971]
 unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(600, 400)
-layout_mode = 2
+layout_mode = 0
+offset_left = 660.0
+offset_top = 340.0
+offset_right = 1260.0
+offset_bottom = 740.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("4_1sq2d")
@@ -105,7 +110,7 @@ patch_margin_top = 15
 patch_margin_right = 15
 patch_margin_bottom = 15
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MenuWindow" unique_id=190297413]
+[node name="MarginContainer" type="MarginContainer" parent="MenuWindow" unique_id=190297413]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -117,7 +122,7 @@ theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="CloseMenuButton" type="Button" parent="MarginContainer/MenuWindow/MarginContainer" unique_id=2014364436]
+[node name="CloseMenuButton" type="Button" parent="MenuWindow/MarginContainer" unique_id=2014364436]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -126,13 +131,13 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_2kmgm")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2kmgm")
 theme_override_styles/hover = SubResource("StyleBoxTexture_2kmgm")
 
-[node name="ButtonContainer" type="VBoxContainer" parent="MarginContainer/MenuWindow/MarginContainer" unique_id=839197532]
+[node name="ButtonContainer" type="VBoxContainer" parent="MenuWindow/MarginContainer" unique_id=839197532]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 15
 
-[node name="SettingsButton" type="Button" parent="MarginContainer/MenuWindow/MarginContainer/ButtonContainer" unique_id=1022888017]
+[node name="SettingsButton" type="Button" parent="MenuWindow/MarginContainer/ButtonContainer" unique_id=1022888017]
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -145,7 +150,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_5khfc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_0subj")
 text = "SETTINGS"
 
-[node name="ExitButton" type="Button" parent="MarginContainer/MenuWindow/MarginContainer/ButtonContainer" unique_id=613116421]
+[node name="ExitButton" type="Button" parent="MenuWindow/MarginContainer/ButtonContainer" unique_id=613116421]
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -159,5 +164,5 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_0subj")
 text = "EXIT"
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
-[connection signal="pressed" from="MarginContainer/MenuWindow/MarginContainer/CloseMenuButton" to="." method="_on_close_menu_button_pressed"]
-[connection signal="pressed" from="MarginContainer/MenuWindow/MarginContainer/ButtonContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="MenuWindow/MarginContainer/CloseMenuButton" to="." method="_on_close_menu_button_pressed"]
+[connection signal="pressed" from="MenuWindow/MarginContainer/ButtonContainer/ExitButton" to="." method="_on_exit_button_pressed"]
