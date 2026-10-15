@@ -8,6 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://cl7her220nsjq" path="res://Art/UI_Exports/StartMenu/ExitButtonNorm.png" id="6_telyj"]
 [ext_resource type="Texture2D" uid="uid://dc6p00sj4tsmq" path="res://Art/UI_Exports/StartMenu/ExitButtonClick.png" id="7_gct34"]
 [ext_resource type="Texture2D" uid="uid://4iwnttlhpxki" path="res://Art/UI_Exports/StartMenu/ExitButtonHover.png" id="8_1mcr0"]
+[ext_resource type="Texture2D" uid="uid://bwek0vblnulbn" path="res://Art/UI_Exports/InfoBar/MoneyIcon.png" id="9_1mcr0"]
+[ext_resource type="Texture2D" uid="uid://cc7x2d0l3vj44" path="res://Art/UI_Exports/InfoBar/LevelBar.png" id="10_6j8dw"]
+[ext_resource type="Texture2D" uid="uid://douo40tyowrbq" path="res://Art/UI_Exports/InfoBar/LevelBarProgress.png" id="11_6j8dw"]
+[ext_resource type="Texture2D" uid="uid://c7v82mmkf51xb" path="res://Art/UI_Exports/InfoBar/YearBox.png" id="11_uloks"]
+[ext_resource type="Texture2D" uid="uid://botjgi14ds21y" path="res://Art/UI_Exports/InfoBar/MonthDayBox.png" id="12_p4v6u"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ofqy"]
 texture = ExtResource("2_tjp44")
@@ -56,7 +61,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 30
+theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 30
@@ -66,18 +71,6 @@ layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
 theme_override_constants/separation = 500
-
-[node name="GoldLabel" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1499934049]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/font_color = Color(0.7419234, 0.5789323, 0.23495722, 1)
-theme_override_colors/font_outline_color = Color(0.23703721, 0.17634973, 0.043878317, 1)
-theme_override_constants/outline_size = 42
-theme_override_fonts/font = ExtResource("1_dyv43")
-theme_override_font_sizes/font_size = 80
-text = "gold"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="MenuButton" type="Button" parent="MarginContainer/HBoxContainer" unique_id=267222431]
 custom_minimum_size = Vector2(125, 125)
@@ -157,6 +150,59 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_kxbuo")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_5khfc")
 theme_override_styles/hover = SubResource("StyleBoxTexture_0subj")
 text = "EXIT"
+
+[node name="InfoBarContainer" type="MarginContainer" parent="MarginContainer" unique_id=1853016683]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/InfoBarContainer" unique_id=841985958]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/separation = 100
+
+[node name="GoldContainer" type="HBoxContainer" parent="MarginContainer/InfoBarContainer/HBoxContainer" unique_id=154502122]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="GoldIcon" type="TextureRect" parent="MarginContainer/InfoBarContainer/HBoxContainer/GoldContainer" unique_id=1509449234]
+layout_mode = 2
+texture = ExtResource("9_1mcr0")
+stretch_mode = 5
+
+[node name="GoldLabel" type="Label" parent="MarginContainer/InfoBarContainer/HBoxContainer/GoldContainer" unique_id=1499934049]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7419234, 0.5789323, 0.23495722, 1)
+theme_override_colors/font_outline_color = Color(0.23703721, 0.17634973, 0.043878317, 1)
+theme_override_constants/outline_size = 42
+theme_override_fonts/font = ExtResource("1_dyv43")
+theme_override_font_sizes/font_size = 70
+text = "Gold"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="MarginContainer/InfoBarContainer/HBoxContainer" unique_id=1483176820]
+layout_mode = 2
+size_flags_vertical = 4
+texture_under = ExtResource("10_6j8dw")
+texture_progress = ExtResource("11_6j8dw")
+
+[node name="ClockContainer" type="HBoxContainer" parent="MarginContainer/InfoBarContainer/HBoxContainer" unique_id=1593395328]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="YearBox" type="TextureRect" parent="MarginContainer/InfoBarContainer/HBoxContainer/ClockContainer" unique_id=717272442]
+layout_mode = 2
+texture = ExtResource("11_uloks")
+stretch_mode = 5
+
+[node name="MonthDayBox" type="TextureRect" parent="MarginContainer/InfoBarContainer/HBoxContainer/ClockContainer" unique_id=1346516805]
+layout_mode = 2
+texture = ExtResource("12_p4v6u")
+stretch_mode = 4
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="MarginContainer/MenuWindow/MarginContainer/CloseMenuButton" to="." method="_on_close_menu_button_pressed"]
