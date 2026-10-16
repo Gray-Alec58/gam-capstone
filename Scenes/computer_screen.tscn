@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://7w8pm2qskeex"]
 
-[ext_resource type="Script" uid="uid://c6sae4lnjlex7" path="res://GameFiles/Scripts/full_screen_container.gd" id="1_8ptuv"]
-[ext_resource type="Script" uid="uid://bigmwsp1l3ejd" path="res://GameFiles/Scripts/computer_screen.gd" id="1_ntevp"]
+[ext_resource type="Script" uid="uid://c6sae4lnjlex7" path="res://Scenes/Scripts/full_screen_container.gd" id="1_8ptuv"]
+[ext_resource type="Script" uid="uid://bigmwsp1l3ejd" path="res://Scenes/Scripts/computer_screen.gd" id="1_ntevp"]
 [ext_resource type="Texture2D" uid="uid://d2raekvhdvey0" path="res://Art/UI_Exports/ResearchApp/ResearchNormal.png" id="5_3ia82"]
 [ext_resource type="Texture2D" uid="uid://be4tmw4r8s3hs" path="res://Art/UI_Exports/ResearchApp/ResearchClick.png" id="6_svqil"]
 [ext_resource type="Texture2D" uid="uid://wp6nitls2l51" path="res://Art/UI_Exports/ResearchApp/ResearchHover.png" id="7_g3uet"]
@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://h0vshu0lev6o" path="res://Art/UI_Exports/ResearchApp/ResearchAnimalClick.png" id="18_hfv7u"]
 [ext_resource type="Texture2D" uid="uid://hjhase4hckgs" path="res://Art/UI_Exports/ResearchApp/ResearchAnimalHover.png" id="19_sj23p"]
 [ext_resource type="Texture2D" uid="uid://ddbllop8bms4m" path="res://Art/UI_Exports/FundraiserApp/FundraiserNormal.png" id="20_ik20o"]
-[ext_resource type="Script" uid="uid://qukjmbpemdhm" path="res://GameFiles/Scripts/research_window_2.gd" id="20_l6eyl"]
+[ext_resource type="Script" uid="uid://qukjmbpemdhm" path="res://Scenes/Scripts/research_window_2.gd" id="20_l6eyl"]
 [ext_resource type="Texture2D" uid="uid://5ot6oap2in5n" path="res://Art/UI_Exports/ResearchApp/ResearchWindow2/ClicktoResearchClick.png" id="21_j3hoa"]
 [ext_resource type="Texture2D" uid="uid://clcqg817x6c4w" path="res://Art/UI_Exports/FundraiserApp/FundraiserClick.png" id="21_vib8a"]
 [ext_resource type="Texture2D" uid="uid://bb4waucjg1l58" path="res://Art/UI_Exports/ResearchApp/ResearchWindow2/ClicktoResearchHover.png" id="22_qsnkp"]
@@ -35,7 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://d38cxckouklf1" path="res://Art/ChickenUI.png" id="26_qsnkp"]
 [ext_resource type="Texture2D" uid="uid://ckijv5vshure4" path="res://Art/UI_Exports/popupui/YesButton.png" id="27_qsnkp"]
 [ext_resource type="Texture2D" uid="uid://cd0kx1a2kjtpt" path="res://Art/UI_Exports/popupui/NoButton.png" id="28_ffl3h"]
-[ext_resource type="Script" uid="uid://k0subthvjv58" path="res://GameFiles/Scripts/rescue_window.gd" id="30_ffl3h"]
+[ext_resource type="Script" uid="uid://k0subthvjv58" path="res://Scenes/Scripts/rescue_window.gd" id="30_ffl3h"]
 [ext_resource type="Texture2D" uid="uid://bn1dpsfygsfv8" path="res://Art/UI_Exports/ExpandApp/BuildNormal.png" id="31_l6eyl"]
 [ext_resource type="Texture2D" uid="uid://d33j47wd4tlip" path="res://Art/UI_Exports/FundraiserApp/LivestreamUi.png" id="31_svqil"]
 [ext_resource type="Texture2D" uid="uid://wao31hgc1oj7" path="res://Art/UI_Exports/ExpandApp/BuildClick.png" id="32_aiqxx"]
@@ -51,7 +51,6 @@
 [ext_resource type="Texture2D" uid="uid://dwwadpmdp8g61" path="res://Art/UI_Exports/ExpandApp/UpgradeHover.png" id="39_j3hoa"]
 [ext_resource type="Texture2D" uid="uid://q0irlwa3k0bl" path="res://Art/UI_Exports/ExitClick.png" id="41_q7d4u"]
 [ext_resource type="Texture2D" uid="uid://djteu1twus77t" path="res://Art/UI_Exports/ExitHover.png" id="42_lehph"]
-
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6fdxm"]
 texture = ExtResource("15_vfmy3")

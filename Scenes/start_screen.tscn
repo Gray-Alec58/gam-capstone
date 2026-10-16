@@ -1,22 +1,22 @@
 [gd_scene format=3 uid="uid://ddkswpsnmco8s"]
 
-[ext_resource type="Script" uid="uid://dri4vdx3357en" path="res://GameFiles/Scripts/start_screen.gd" id="1_qcpcw"]
-[ext_resource type="Texture2D" uid="uid://ce3tuamjogcnh" path="res://Art/UI_Exports/Computer_Background.png" id="2_buqco"]
-[ext_resource type="Texture2D" uid="uid://b2i0l8bva05gv" path="res://Art/UI_Exports/StartMenu/StartButtonNorm.png" id="3_gdubs"]
-[ext_resource type="Texture2D" uid="uid://cetfsi60k1y6f" path="res://Art/UI_Exports/StartMenu/StartButtonClick.png" id="4_wt3ji"]
-[ext_resource type="Texture2D" uid="uid://cw24jrbil53ck" path="res://Art/UI_Exports/StartMenu/StartButtonHover.png" id="5_47mov"]
-[ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="6_ky868"]
-[ext_resource type="Texture2D" uid="uid://cl7her220nsjq" path="res://Art/UI_Exports/StartMenu/ExitButtonNorm.png" id="7_lwc7e"]
-[ext_resource type="Texture2D" uid="uid://dc6p00sj4tsmq" path="res://Art/UI_Exports/StartMenu/ExitButtonClick.png" id="8_u3cmy"]
-[ext_resource type="Texture2D" uid="uid://4iwnttlhpxki" path="res://Art/UI_Exports/StartMenu/ExitButtonHover.png" id="9_d86hm"]
+[ext_resource type="Script" uid="uid://dri4vdx3357en" path="res://Scenes/Scripts/start_screen.gd" id="1_60ddj"]
+[ext_resource type="Texture2D" uid="uid://ce3tuamjogcnh" path="res://Art/UI_Exports/Computer_Background.png" id="2_5e717"]
+[ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="3_mtlf8"]
+[ext_resource type="Texture2D" uid="uid://b2i0l8bva05gv" path="res://Art/UI_Exports/StartMenu/StartButtonNorm.png" id="3_nqnrp"]
+[ext_resource type="Texture2D" uid="uid://cetfsi60k1y6f" path="res://Art/UI_Exports/StartMenu/StartButtonClick.png" id="4_5a7ho"]
+[ext_resource type="Texture2D" uid="uid://cw24jrbil53ck" path="res://Art/UI_Exports/StartMenu/StartButtonHover.png" id="5_ssogg"]
+[ext_resource type="Texture2D" uid="uid://cl7her220nsjq" path="res://Art/UI_Exports/StartMenu/ExitButtonNorm.png" id="7_akot6"]
+[ext_resource type="Texture2D" uid="uid://dc6p00sj4tsmq" path="res://Art/UI_Exports/StartMenu/ExitButtonClick.png" id="7_ssogg"]
+[ext_resource type="Texture2D" uid="uid://4iwnttlhpxki" path="res://Art/UI_Exports/StartMenu/ExitButtonHover.png" id="8_akot6"]
 
 [node name="StartScreen" type="Node2D" unique_id=330657146]
-script = ExtResource("1_qcpcw")
+script = ExtResource("1_60ddj")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1419812566]
 z_index = -1
 position = Vector2(960, 540)
-texture = ExtResource("2_buqco")
+texture = ExtResource("2_5e717")
 
 [node name="MenuContainer" type="MarginContainer" parent="Background" unique_id=1957658034]
 custom_minimum_size = Vector2(750, 500)
@@ -42,9 +42,9 @@ theme_override_constants/separation = 30
 
 [node name="StartTextB" type="TextureButton" parent="Background/MenuContainer/VBoxContainer" unique_id=1610058862]
 layout_mode = 2
-texture_normal = ExtResource("3_gdubs")
-texture_pressed = ExtResource("4_wt3ji")
-texture_hover = ExtResource("5_47mov")
+texture_normal = ExtResource("3_nqnrp")
+texture_pressed = ExtResource("4_5a7ho")
+texture_hover = ExtResource("5_ssogg")
 
 [node name="Label" type="Label" parent="Background/MenuContainer/VBoxContainer/StartTextB" unique_id=892780039]
 layout_mode = 1
@@ -60,15 +60,15 @@ offset_bottom = 57.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_ky868")
+theme_override_fonts/font = ExtResource("3_mtlf8")
 theme_override_font_sizes/font_size = 42
 text = "START"
 
 [node name="ExitTextB" type="TextureButton" parent="Background/MenuContainer/VBoxContainer" unique_id=566415863]
 layout_mode = 2
-texture_normal = ExtResource("7_lwc7e")
-texture_pressed = ExtResource("8_u3cmy")
-texture_hover = ExtResource("9_d86hm")
+texture_normal = ExtResource("7_akot6")
+texture_pressed = ExtResource("7_ssogg")
+texture_hover = ExtResource("8_akot6")
 
 [node name="Label" type="Label" parent="Background/MenuContainer/VBoxContainer/ExitTextB" unique_id=774223855]
 layout_mode = 1
@@ -84,7 +84,7 @@ offset_bottom = 26.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_ky868")
+theme_override_fonts/font = ExtResource("3_mtlf8")
 theme_override_font_sizes/font_size = 42
 text = "EXIT"
 
