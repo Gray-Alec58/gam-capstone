@@ -14,13 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://c7v82mmkf51xb" path="res://Art/UI_Exports/InfoBar/YearBox.png" id="11_uloks"]
 [ext_resource type="Texture2D" uid="uid://botjgi14ds21y" path="res://Art/UI_Exports/InfoBar/MonthDayBox.png" id="12_p4v6u"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ofqy"]
-texture = ExtResource("2_tjp44")
-texture_margin_left = 10.0
-texture_margin_top = 10.0
-texture_margin_right = 10.0
-texture_margin_bottom = 10.0
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2kmgm"]
 texture = ExtResource("5_gqs03")
 
@@ -45,6 +38,13 @@ texture_margin_top = 15.0
 texture_margin_right = 15.0
 texture_margin_bottom = 15.0
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ofqy"]
+texture = ExtResource("2_tjp44")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
 [node name="OfficeUI" type="Control" unique_id=1844209491]
 layout_mode = 3
 anchors_preset = 15
@@ -65,25 +65,6 @@ theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 30
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=173315675]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
-theme_override_constants/separation = 500
-
-[node name="MenuButton" type="Button" parent="MarginContainer/HBoxContainer" unique_id=267222431]
-custom_minimum_size = Vector2(125, 125)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_dyv43")
-theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxTexture_1ofqy")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_1ofqy")
-theme_override_styles/hover = SubResource("StyleBoxTexture_1ofqy")
-text = "MENU"
 
 [node name="MenuWindow" type="NinePatchRect" parent="MarginContainer" unique_id=1885412971]
 unique_name_in_owner = true
@@ -153,9 +134,8 @@ text = "EXIT"
 
 [node name="InfoBarContainer" type="MarginContainer" parent="MarginContainer" unique_id=1853016683]
 layout_mode = 2
-size_flags_horizontal = 0
 size_flags_vertical = 0
-theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/InfoBarContainer" unique_id=841985958]
 layout_mode = 2
@@ -204,6 +184,19 @@ layout_mode = 2
 texture = ExtResource("12_p4v6u")
 stretch_mode = 4
 
-[connection signal="pressed" from="MarginContainer/HBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
+[node name="MenuButton" type="Button" parent="MarginContainer/InfoBarContainer/HBoxContainer" unique_id=267222431]
+custom_minimum_size = Vector2(125, 125)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_dyv43")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_1ofqy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1ofqy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1ofqy")
+text = "MENU"
+
 [connection signal="pressed" from="MarginContainer/MenuWindow/MarginContainer/CloseMenuButton" to="." method="_on_close_menu_button_pressed"]
 [connection signal="pressed" from="MarginContainer/MenuWindow/MarginContainer/ButtonContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="MarginContainer/InfoBarContainer/HBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
