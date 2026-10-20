@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://3qdmnfiycv3u" path="res://Art/UI_Exports/BuildingScene/ExBuiIdTab.png" id="3_s0r6g"]
 [ext_resource type="Script" uid="uid://ntfnre6lblwy" path="res://Scenes/Scripts/map_exit_area_2d.gd" id="4_rs28u"]
 [ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="5_2pxgx"]
-[ext_resource type="Texture2D" uid="uid://bqfnwgqmlwf14" path="res://Art/catanims/tailspritesheet.png" id="7_2pxgx"]
+[ext_resource type="Texture2D" uid="uid://dx1om4405l3yp" path="res://Art/catanims/tailsheet.png" id="7_2pxgx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ofqy"]
 size = Vector2(356.0614, 201.50003)
@@ -16,19 +16,19 @@ size = Vector2(1917.5413, 1077.9966)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k6nbt"]
 atlas = ExtResource("7_2pxgx")
-region = Rect2(0, 0, 1921, 1081)
+region = Rect2(0, 0, 239, 196)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kjj4x"]
 atlas = ExtResource("7_2pxgx")
-region = Rect2(1921, 0, 1921, 1081)
+region = Rect2(239, 0, 239, 196)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_11kio"]
 atlas = ExtResource("7_2pxgx")
-region = Rect2(0, 1081, 1921, 1081)
+region = Rect2(478, 0, 239, 196)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8aj34"]
 atlas = ExtResource("7_2pxgx")
-region = Rect2(1921, 1081, 1921, 1081)
+region = Rect2(717, 0, 239, 196)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rvnnr"]
 animations = [{
@@ -118,10 +118,11 @@ shape = SubResource("RectangleShape2D_5fshx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=170619737]
 z_index = -1
-position = Vector2(966.00006, 538)
+position = Vector2(217.00006, 844)
 scale = Vector2(0.99999994, 0.9999999)
 sprite_frames = SubResource("SpriteFrames_rvnnr")
 autoplay = "default"
+frame_progress = 0.6412403
 
 [connection signal="input_event" from="Computer" to="Computer" method="_on_input_event"]
 [connection signal="input_event" from="MapExit/MapExitArea2D" to="MapExit/MapExitArea2D" method="_on_input_event"]
