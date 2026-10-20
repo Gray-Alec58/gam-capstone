@@ -23,6 +23,6 @@ func _on_no_button_pressed() -> void:
 func _on_buy_button_pressed() -> void:
 	confirm_window.visible = false
 	chicken_rescue_window.visible = false
-	GlobalScript.gold -= 5
+	GlobalScript.gold_decrease(5)
 func _on_no_buy_button_pressed() -> void:
 	confirm_window.visible = false

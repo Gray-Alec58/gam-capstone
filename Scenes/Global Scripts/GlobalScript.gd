@@ -5,6 +5,7 @@ var points: int = 0
 func add_points() -> void:
 	points += 1
 
+#tracking animals being unlocked
 signal chicken_unlocked_changed
 var chicken_unlocked: bool = false
 func unlock_chicken() -> void:
@@ -19,6 +20,9 @@ signal gold_changed
 var gold: int = 500
 func gold_decrease(x: int) -> void:
 	gold -= x
+	gold_changed.emit()
+func gold_increase(x: int) -> void:
+	gold += x
 	gold_changed.emit()
 
 var have_enclosure: bool = false
