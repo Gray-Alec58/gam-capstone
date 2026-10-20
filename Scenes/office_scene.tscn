@@ -8,12 +8,6 @@
 [ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="5_2pxgx"]
 [ext_resource type="Texture2D" uid="uid://dx1om4405l3yp" path="res://Art/catanims/tailsheet.png" id="7_2pxgx"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ofqy"]
-size = Vector2(356.0614, 201.50003)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5fshx"]
-size = Vector2(1917.5413, 1077.9966)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_k6nbt"]
 atlas = ExtResource("7_2pxgx")
 region = Rect2(0, 0, 239, 196)
@@ -50,6 +44,12 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ofqy"]
+size = Vector2(356.0614, 201.50003)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5fshx"]
+size = Vector2(1917.5413, 1077.9966)
+
 [node name="OfficeScene" type="Node2D" unique_id=1301874127]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1174923474]
@@ -76,9 +76,17 @@ theme_override_constants/margin_bottom = 25
 [node name="OfficeUI" parent="Background/MarginContainer" unique_id=1844209491 instance=ExtResource("2_tnddm")]
 layout_mode = 2
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=170619737]
+z_index = -1
+position = Vector2(217.00006, 844)
+scale = Vector2(0.99999994, 0.9999999)
+sprite_frames = SubResource("SpriteFrames_rvnnr")
+autoplay = "default"
+frame_progress = 0.6412403
+
 [node name="Computer" type="Area2D" parent="." unique_id=238663247]
-position = Vector2(-0.33355713, 0)
-scale = Vector2(1.6669561, 1.6666665)
+position = Vector2(-0.3335572, 0)
+scale = Vector2(1.6669561, 1.6666666)
 script = ExtResource("2_idq54")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Computer" unique_id=1461915325]
@@ -115,14 +123,6 @@ script = ExtResource("4_rs28u")
 position = Vector2(-44.250954, -705.30615)
 scale = Vector2(0.99999964, 0.9999994)
 shape = SubResource("RectangleShape2D_5fshx")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=170619737]
-z_index = -1
-position = Vector2(217.00006, 844)
-scale = Vector2(0.99999994, 0.9999999)
-sprite_frames = SubResource("SpriteFrames_rvnnr")
-autoplay = "default"
-frame_progress = 0.6412403
 
 [connection signal="input_event" from="Computer" to="Computer" method="_on_input_event"]
 [connection signal="input_event" from="MapExit/MapExitArea2D" to="MapExit/MapExitArea2D" method="_on_input_event"]

@@ -984,6 +984,7 @@ theme_override_font_sizes/font_size = 36
 text = "Upgrade"
 
 [node name="FundraiseWindow" type="MarginContainer" parent="FullScreenContainer" unique_id=506375394]
+visible = false
 custom_minimum_size = Vector2(1500, 800)
 layout_mode = 2
 size_flags_horizontal = 8
