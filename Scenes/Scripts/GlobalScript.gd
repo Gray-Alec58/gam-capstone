@@ -11,6 +11,7 @@ func unlock_chicken() -> void:
 	chicken_unlocked = true
 	chicken_unlocked_changed.emit()
 
+#for back button; going back to previous scene
 var previous_scene_path: String = ""
 
 #money tracker

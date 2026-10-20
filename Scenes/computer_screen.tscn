@@ -132,7 +132,7 @@ ResearchWindow1 = NodePath("ResearchWindow1")
 ResearchWindow2 = NodePath("ResearchWindow2")
 RescueWindow = NodePath("RescueWindow")
 ExpandWindow = NodePath("ExpandWindow")
-FundraiseWindow = NodePath("FundraiseWindow")
+FundraiseWindow = NodePath("ExpandWindow/FundraiseWindow")
 
 [node name="AppContainer" type="VBoxContainer" parent="FullScreenContainer" unique_id=505309947]
 custom_minimum_size = Vector2(200, 800)
@@ -854,6 +854,59 @@ layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
 
+[node name="FundraiseWindow" type="MarginContainer" parent="FullScreenContainer/ExpandWindow" unique_id=506375394]
+visible = false
+custom_minimum_size = Vector2(1500, 800)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="NinePatchRect" type="NinePatchRect" parent="FullScreenContainer/ExpandWindow/FundraiseWindow" unique_id=598850034]
+layout_mode = 2
+texture = ExtResource("13_df4cu")
+
+[node name="MarginContainer" type="MarginContainer" parent="FullScreenContainer/ExpandWindow/FundraiseWindow/NinePatchRect" unique_id=843673311]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 45
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 45
+theme_override_constants/margin_bottom = 30
+
+[node name="LeftStreamContainer" type="VBoxContainer" parent="FullScreenContainer/ExpandWindow/FundraiseWindow/NinePatchRect/MarginContainer" unique_id=564792940]
+custom_minimum_size = Vector2(800, 600)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="LiveStreamWindow" type="NinePatchRect" parent="FullScreenContainer/ExpandWindow/FundraiseWindow/NinePatchRect/MarginContainer/LeftStreamContainer" unique_id=1591848304]
+custom_minimum_size = Vector2(800, 600)
+layout_mode = 2
+texture = ExtResource("31_svqil")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FullScreenContainer/ExpandWindow/FundraiseWindow/NinePatchRect/MarginContainer" unique_id=475910866]
+custom_minimum_size = Vector2(500, 400)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="DonationButton" type="NinePatchRect" parent="FullScreenContainer/ExpandWindow/FundraiseWindow/NinePatchRect/MarginContainer/VBoxContainer" unique_id=621863207]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("33_q7d4u")
+
+[node name="FundraiseButton" type="NinePatchRect" parent="FullScreenContainer/ExpandWindow/FundraiseWindow/NinePatchRect/MarginContainer/VBoxContainer" unique_id=1908588335]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("32_g3uet")
+
 [node name="NinePatchRect" type="NinePatchRect" parent="FullScreenContainer/ExpandWindow" unique_id=1947140960]
 layout_mode = 2
 texture = ExtResource("12_8ptuv")
@@ -967,59 +1020,6 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("12_b3akq")
 theme_override_font_sizes/font_size = 36
 text = "Upgrade"
-
-[node name="FundraiseWindow" type="MarginContainer" parent="FullScreenContainer" unique_id=506375394]
-visible = false
-custom_minimum_size = Vector2(1500, 800)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-
-[node name="NinePatchRect" type="NinePatchRect" parent="FullScreenContainer/FundraiseWindow" unique_id=598850034]
-layout_mode = 2
-texture = ExtResource("13_df4cu")
-
-[node name="MarginContainer" type="MarginContainer" parent="FullScreenContainer/FundraiseWindow/NinePatchRect" unique_id=843673311]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 45
-theme_override_constants/margin_top = 60
-theme_override_constants/margin_right = 45
-theme_override_constants/margin_bottom = 30
-
-[node name="LeftStreamContainer" type="VBoxContainer" parent="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer" unique_id=564792940]
-custom_minimum_size = Vector2(800, 600)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 4
-
-[node name="LiveStreamWindow" type="NinePatchRect" parent="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer/LeftStreamContainer" unique_id=1591848304]
-custom_minimum_size = Vector2(800, 600)
-layout_mode = 2
-texture = ExtResource("31_svqil")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer" unique_id=475910866]
-custom_minimum_size = Vector2(500, 400)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-theme_override_constants/separation = 10
-
-[node name="DonationButton" type="NinePatchRect" parent="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer/VBoxContainer" unique_id=621863207]
-custom_minimum_size = Vector2(0, 250)
-layout_mode = 2
-size_flags_vertical = 4
-texture = ExtResource("33_q7d4u")
-
-[node name="FundraiseButton" type="NinePatchRect" parent="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer/VBoxContainer" unique_id=1908588335]
-custom_minimum_size = Vector2(0, 250)
-layout_mode = 2
-size_flags_vertical = 4
-texture = ExtResource("32_g3uet")
 
 [node name="ExitTextB" type="TextureButton" parent="." unique_id=1997126746]
 layout_mode = 1
