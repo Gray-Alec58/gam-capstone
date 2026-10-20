@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://dqx3xidf862li"]
+
+[ext_resource type="Texture2D" uid="uid://3qdmnfiycv3u" path="res://Art/UI_Exports/BuildingScene/ExBuiIdTab.png" id="1_nmyr6"]
+[ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="2_ciasd"]
+[ext_resource type="Texture2D" uid="uid://2r4dx8kbw3cj" path="res://Art/UI_Exports/BuildingScene/BuildSlotNorm.png" id="3_5wrbs"]
+[ext_resource type="Texture2D" uid="uid://b63niww63ix3x" path="res://Art/UI_Exports/BuildingScene/BuildSlotClick.png" id="4_mxvh2"]
+[ext_resource type="Texture2D" uid="uid://b853dckij2b7o" path="res://Art/UI_Exports/BuildingScene/BuildSlotHover.png" id="5_uxmwp"]
+[ext_resource type="Texture2D" uid="uid://ocseojrdjuko" path="res://Art/UI_Exports/BuildingScene/BuildTabBG.png" id="6_ciasd"]
+[ext_resource type="Texture2D" uid="uid://cmad28aext0y1" path="res://Art/UI_Exports/Map/BackArrowNorm.png" id="7_uxmwp"]
+[ext_resource type="Texture2D" uid="uid://e158mk1dsqjb" path="res://Art/UI_Exports/Map/BackArrowClick.png" id="8_5fovv"]
+[ext_resource type="Texture2D" uid="uid://qjlwaujtrhww" path="res://Art/UI_Exports/Map/BackArrowHover.png" id="9_i7cev"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tpboi"]
+texture = ExtResource("3_5wrbs")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hcoug"]
+texture = ExtResource("4_mxvh2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_257qo"]
+texture = ExtResource("5_uxmwp")
+
+[node name="AnimalStats" type="Control" unique_id=819108452]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Sprite2D" parent="." unique_id=922176506]
+position = Vector2(960.25, 540)
+texture = ExtResource("1_nmyr6")
+
+[node name="SceneContainer" type="MarginContainer" parent="Background" unique_id=696251869]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -960.0
+offset_top = -540.0
+offset_right = -960.0
+offset_bottom = -540.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 20
+
+[node name="PlotContainer" type="VBoxContainer" parent="Background/SceneContainer" unique_id=507707841]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 25
+
+[node name="Label" type="Label" parent="Background/SceneContainer/PlotContainer" unique_id=666773561]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ciasd")
+theme_override_font_sizes/font_size = 100
+text = "Starter Plot"
+horizontal_alignment = 1
+
+[node name="TopPlotContainer" type="HBoxContainer" parent="Background/SceneContainer/PlotContainer" unique_id=93166142]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Plot1" type="Button" parent="Background/SceneContainer/PlotContainer/TopPlotContainer" unique_id=1923512572]
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_tpboi")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hcoug")
+theme_override_styles/hover = SubResource("StyleBoxTexture_257qo")
+
+[node name="Plot2" type="Button" parent="Background/SceneContainer/PlotContainer/TopPlotContainer" unique_id=1410377664]
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_tpboi")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hcoug")
+theme_override_styles/hover = SubResource("StyleBoxTexture_257qo")
+
+[node name="BottonPlotContainer" type="HBoxContainer" parent="Background/SceneContainer/PlotContainer" unique_id=55110120]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Plot3" type="Button" parent="Background/SceneContainer/PlotContainer/BottonPlotContainer" unique_id=428483236]
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_tpboi")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hcoug")
+theme_override_styles/hover = SubResource("StyleBoxTexture_257qo")
+
+[node name="Plot4" type="Button" parent="Background/SceneContainer/PlotContainer/BottonPlotContainer" unique_id=1484981008]
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_tpboi")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hcoug")
+theme_override_styles/hover = SubResource("StyleBoxTexture_257qo")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Background/SceneContainer" unique_id=652772195]
+custom_minimum_size = Vector2(525, 800)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture = ExtResource("6_ciasd")
+patch_margin_left = 15
+patch_margin_top = 15
+patch_margin_right = 15
+patch_margin_bottom = 15
+
+[node name="MarginContainer" type="MarginContainer" parent="Background/SceneContainer/NinePatchRect" unique_id=1173556927]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/SceneContainer/NinePatchRect/MarginContainer" unique_id=1976390196]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Background/SceneContainer/NinePatchRect/MarginContainer/VBoxContainer" unique_id=151020405]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ciasd")
+theme_override_font_sizes/font_size = 70
+text = "Plot 1 Animals"
+horizontal_alignment = 1
+
+[node name="BackTextButton" type="TextureButton" parent="Background/SceneContainer" unique_id=1868327138]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture_normal = ExtResource("7_uxmwp")
+texture_pressed = ExtResource("8_5fovv")
+texture_hover = ExtResource("9_i7cev")
