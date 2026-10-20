@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://xh0dirwa0e74"]
+[gd_scene load_steps=10 format=3 uid="uid://xh0dirwa0e74"]
 
 [ext_resource type="Texture2D" uid="uid://sle74y1rok8w" path="res://Art/OfficeBackgroundbch.png" id="1_tnddm"]
 [ext_resource type="Script" uid="uid://3oou6046lhpe" path="res://Scenes/Scripts/computer.gd" id="2_idq54"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://3qdmnfiycv3u" path="res://Art/UI_Exports/BuildingScene/ExBuiIdTab.png" id="3_s0r6g"]
 [ext_resource type="Script" uid="uid://ntfnre6lblwy" path="res://Scenes/Scripts/map_exit_area_2d.gd" id="4_rs28u"]
 [ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="5_2pxgx"]
+[ext_resource type="PackedScene" uid="uid://c43s5lnnwgdhm" path="res://Scenes/Cat.tscn" id="7_2pxgx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ofqy"]
 size = Vector2(356.0614, 201.50003)
@@ -78,6 +79,9 @@ script = ExtResource("4_rs28u")
 position = Vector2(-44.250954, -705.30615)
 scale = Vector2(0.99999964, 0.9999994)
 shape = SubResource("RectangleShape2D_5fshx")
+
+[node name="Cat" parent="." instance=ExtResource("7_2pxgx")]
+position = Vector2(174, 647)
 
 [connection signal="input_event" from="Computer" to="Computer" method="_on_input_event"]
 [connection signal="input_event" from="MapExit/MapExitArea2D" to="MapExit/MapExitArea2D" method="_on_input_event"]
