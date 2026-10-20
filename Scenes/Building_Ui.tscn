@@ -139,14 +139,14 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_bjgtc")
 layout_mode = 2
 theme_override_constants/separation = 25
 
-[node name="Plot1" type="Button" parent="Background/BuildSceneContainer/PlotContainer/BottomPlotContainer" unique_id=1871191065]
+[node name="Plot3" type="Button" parent="Background/BuildSceneContainer/PlotContainer/BottomPlotContainer" unique_id=1871191065]
 custom_minimum_size = Vector2(600, 400)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_2kmgm")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_b58sg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_bjgtc")
 
-[node name="Plot2" type="Button" parent="Background/BuildSceneContainer/PlotContainer/BottomPlotContainer" unique_id=1061611333]
+[node name="Plot4" type="Button" parent="Background/BuildSceneContainer/PlotContainer/BottomPlotContainer" unique_id=1061611333]
 custom_minimum_size = Vector2(600, 400)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_2kmgm")
