@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dubxatp0bhjvh"]
+
+[ext_resource type="Script" uid="uid://bmhc0nlnv1jvu" path="res://Scenes/toy_mouse.gd" id="1_uoasc"]
+[ext_resource type="Texture2D" uid="uid://c0s6phtvhid0j" path="res://Art/mouse.png" id="2_1nl3g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p0qov"]
+radius = 86.66
+
+[node name="ToyMouse" type="Area2D"]
+script = ExtResource("1_uoasc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(33, -6)
+texture = ExtResource("2_1nl3g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 31)
+shape = SubResource("CircleShape2D_p0qov")
