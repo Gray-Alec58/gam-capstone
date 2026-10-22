@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://ntfnre6lblwy" path="res://Scenes/Scripts/map_exit_area_2d.gd" id="4_rs28u"]
 [ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="5_2pxgx"]
 [ext_resource type="Texture2D" uid="uid://dx1om4405l3yp" path="res://Art/catanims/tailsheet.png" id="7_2pxgx"]
+[ext_resource type="PackedScene" uid="uid://k27cmgf60qcn" path="res://Scenes/ComputerTransition.tscn" id="8_k6nbt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k6nbt"]
 atlas = ExtResource("7_2pxgx")
@@ -75,6 +76,7 @@ theme_override_constants/margin_bottom = 25
 
 [node name="OfficeUI" parent="Background/MarginContainer" unique_id=1844209491 instance=ExtResource("2_tnddm")]
 layout_mode = 2
+mouse_filter = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=170619737]
 z_index = -1
@@ -92,6 +94,11 @@ script = ExtResource("2_idq54")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Computer" unique_id=1461915325]
 position = Vector2(645.2265, 271.25003)
 shape = SubResource("RectangleShape2D_1ofqy")
+
+[node name="ComputerTransitionAnim" parent="Computer" unique_id=1203946895 instance=ExtResource("8_k6nbt")]
+z_index = 1
+position = Vector2(0.20009957, 0)
+scale = Vector2(0.59989583, 0.6)
 
 [node name="MapExit" type="Sprite2D" parent="." unique_id=802230950]
 position = Vector2(1679, 383)
