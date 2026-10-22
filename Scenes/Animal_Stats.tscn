@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dqx3xidf862li"]
 
 [ext_resource type="Texture2D" uid="uid://3qdmnfiycv3u" path="res://Art/UI_Exports/BuildingScene/ExBuiIdTab.png" id="1_nmyr6"]
+[ext_resource type="Script" uid="uid://bdhu7yi7utnwk" path="res://Scenes/Scripts/Animal_Stats.gd" id="2_5fovv"]
 [ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="2_ciasd"]
 [ext_resource type="Texture2D" uid="uid://2r4dx8kbw3cj" path="res://Art/UI_Exports/BuildingScene/BuildSlotNorm.png" id="3_5wrbs"]
 [ext_resource type="Texture2D" uid="uid://b63niww63ix3x" path="res://Art/UI_Exports/BuildingScene/BuildSlotClick.png" id="4_mxvh2"]
@@ -30,6 +31,7 @@ grow_vertical = 2
 [node name="Background" type="Sprite2D" parent="." unique_id=922176506]
 position = Vector2(960.25, 540)
 texture = ExtResource("1_nmyr6")
+script = ExtResource("2_5fovv")
 
 [node name="SceneContainer" type="MarginContainer" parent="Background" unique_id=696251869]
 anchors_preset = 15
@@ -137,3 +139,5 @@ size_flags_vertical = 8
 texture_normal = ExtResource("7_uxmwp")
 texture_pressed = ExtResource("8_5fovv")
 texture_hover = ExtResource("9_i7cev")
+
+[connection signal="pressed" from="Background/SceneContainer/BackTextButton" to="Background" method="_on_back_text_button_pressed"]
