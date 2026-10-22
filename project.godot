@@ -19,12 +19,13 @@ config/icon="res://icon.svg"
 
 AudioStreamPlayerGlobal="*uid://b08of13clj0wn"
 GlobalScript="*uid://ddjk6jwjhjhed"
+GlobalClock="*uid://do4g1lefb7dx8"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=3
+window/size/mode=1
 window/size/initial_position_type=0
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"

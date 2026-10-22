@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://douo40tyowrbq" path="res://Art/UI_Exports/InfoBar/LevelBarProgress.png" id="11_6j8dw"]
 [ext_resource type="Texture2D" uid="uid://c7v82mmkf51xb" path="res://Art/UI_Exports/InfoBar/YearBox.png" id="11_uloks"]
 [ext_resource type="Texture2D" uid="uid://botjgi14ds21y" path="res://Art/UI_Exports/InfoBar/MonthDayBox.png" id="12_p4v6u"]
+[ext_resource type="Script" uid="uid://c06j6lv00eye6" path="res://Scenes/year_label.gd" id="12_x553p"]
+[ext_resource type="Script" uid="uid://cr2av0mxp4it1" path="res://Scenes/month_label.gd" id="13_uloks"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2kmgm"]
 texture = ExtResource("5_gqs03")
@@ -52,6 +54,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_tjp44")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1164235452]
@@ -179,10 +182,50 @@ layout_mode = 2
 texture = ExtResource("11_uloks")
 stretch_mode = 5
 
+[node name="YearLabel" type="Label" parent="MarginContainer/InfoBarContainer/HBoxContainer/ClockContainer/YearBox" unique_id=148133316]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_dyv43")
+theme_override_font_sizes/font_size = 46
+text = "YEAR 1"
+script = ExtResource("12_x553p")
+
 [node name="MonthDayBox" type="TextureRect" parent="MarginContainer/InfoBarContainer/HBoxContainer/ClockContainer" unique_id=1346516805]
 layout_mode = 2
 texture = ExtResource("12_p4v6u")
 stretch_mode = 4
+
+[node name="MonthLabel" type="Label" parent="MarginContainer/InfoBarContainer/HBoxContainer/ClockContainer/MonthDayBox" unique_id=1687547177]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_dyv43")
+theme_override_font_sizes/font_size = 42
+text = "JANUARY"
+script = ExtResource("13_uloks")
 
 [node name="MenuButton" type="Button" parent="MarginContainer/InfoBarContainer/HBoxContainer" unique_id=267222431]
 custom_minimum_size = Vector2(125, 125)

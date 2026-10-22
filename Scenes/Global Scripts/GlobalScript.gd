@@ -7,10 +7,22 @@ func add_points() -> void:
 
 #tracking animals being unlocked
 signal chicken_unlocked_changed
+var total_chickens: int = 0
 var chicken_unlocked: bool = false
 func unlock_chicken() -> void:
 	chicken_unlocked = true
 	chicken_unlocked_changed.emit()
+func get_total_chicken():
+	total_chickens+=1
+
+signal pig_unlocked_changed
+var total_pigs: int = 0
+var pig_unlocked: bool = false
+func unlock_pig() -> void:
+	pig_unlocked = true
+	pig_unlocked_changed.emit()
+func get_total_pig():
+	total_pigs+=1
 
 #for back button; going back to previous scene
 var previous_scene_path: String = ""
