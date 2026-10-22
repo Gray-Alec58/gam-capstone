@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dx1om4405l3yp" path="res://Art/catanims/tailsheet.png" id="7_2pxgx"]
 [ext_resource type="PackedScene" uid="uid://cfpjf8tbpulry" path="res://cat.tscn" id="8_k6nbt"]
 [ext_resource type="Texture2D" uid="uid://bp0vk78oodjq3" path="res://Art/catanims/CatJumpSheet.png" id="9_11kio"]
+[ext_resource type="Script" uid="uid://bdxjy0mekxfay" path="res://Scenes/area_2d.gd" id="10_11kio"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k6nbt"]
 atlas = ExtResource("7_2pxgx")
@@ -54,11 +55,11 @@ size = Vector2(1917.5413, 1077.9966)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g436d"]
 atlas = ExtResource("9_11kio")
-region = Rect2(0, 0, 806, 820)
+region = Rect2(806, 0, 806, 820)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gmoxv"]
 atlas = ExtResource("9_11kio")
-region = Rect2(806, 0, 806, 820)
+region = Rect2(0, 0, 806, 820)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2nra7"]
 atlas = ExtResource("9_11kio")
@@ -118,6 +119,11 @@ region = Rect2(2418, 2460, 806, 820)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nv111"]
 animations = [{
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_g436d")
@@ -168,9 +174,12 @@ animations = [{
 "texture": SubResource("AtlasTexture_j741o")
 }],
 "loop": 1,
-"name": &"default",
-"speed": 6.0
+"name": &"jump",
+"speed": 5.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rvnnr"]
+size = Vector2(380.80368, 264.3493)
 
 [node name="OfficeScene" type="Node2D" unique_id=1301874127]
 
@@ -251,11 +260,20 @@ shape = SubResource("RectangleShape2D_5fshx")
 [node name="Cat" parent="." unique_id=626207124 instance=ExtResource("8_k6nbt")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Cat" unique_id=1384421743]
-position = Vector2(390, 657)
+position = Vector2(398, 687)
 scale = Vector2(0.9100496, 0.9042683)
 sprite_frames = SubResource("SpriteFrames_nv111")
+animation = &"jump"
 autoplay = "default"
-frame_progress = 0.10034784
+frame = 2
+frame_progress = 0.42505255
+
+[node name="Area2D" type="Area2D" parent="Cat/AnimatedSprite2D" unique_id=1090180375]
+script = ExtResource("10_11kio")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cat/AnimatedSprite2D/Area2D" unique_id=1121705180]
+position = Vector2(43.651337, 126.06879)
+shape = SubResource("RectangleShape2D_rvnnr")
 
 [connection signal="input_event" from="Computer" to="Computer" method="_on_input_event"]
 [connection signal="input_event" from="MapExit/MapExitArea2D" to="MapExit/MapExitArea2D" method="_on_input_event"]
