@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cfpjf8tbpulry"]
+
+[ext_resource type="Script" uid="uid://bljwsc56jqrtx" path="res://cat.gd" id="1_hcucf"]
+
+[node name="Cat" type="Node2D" unique_id=626207124]
+script = ExtResource("1_hcucf")
