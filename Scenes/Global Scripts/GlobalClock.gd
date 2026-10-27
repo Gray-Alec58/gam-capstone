@@ -1,6 +1,7 @@
 extends Node
 
 var total_time: float = 0.0
+#causes timer to constantly run despite scene changes
 var timer_running: bool = true
 var total_months: int = 1
 var total_years: int = 1
@@ -10,7 +11,7 @@ func _process(delta):
 		total_time+= delta
 
 func get_total_months() -> String:
-	if total_time > 5:
+	if total_time > 30.0: #seconds that pass for a month
 		total_months+=1
 		total_time = 0.0;
 	if total_months > 12:

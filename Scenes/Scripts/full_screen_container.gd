@@ -38,7 +38,7 @@ func _on_fundraise_texture_button_pressed() -> void:
 	RescueWindow.visible = false
 	ExpandWindow.visible = false
 	FundraiseWindow.visible = true
-	if %StartStreamButton.visible == false:
+	if %StartStreamButton.visible == false: #shows animal animation in live stream based whether or not the animal is unlocked and bought
 		if GlobalScript.total_chickens >= 1:
 			%ChickenSprite.visible = true
 		if GlobalScript.total_pigs >=1:
