@@ -1156,6 +1156,7 @@ theme_override_font_sizes/font_size = 36
 text = "Upgrade"
 
 [node name="FundraiseWindow" type="MarginContainer" parent="FullScreenContainer" unique_id=506375394]
+visible = false
 custom_minimum_size = Vector2(1500, 800)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -1215,6 +1216,7 @@ text = "START"
 
 [node name="PigSprite" type="AnimatedSprite2D" parent="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer/LeftStreamContainer/LiveStreamWindow" unique_id=1531528345]
 unique_name_in_owner = true
+visible = false
 position = Vector2(191, 423)
 scale = Vector2(0.15078607, 0.15468633)
 sprite_frames = SubResource("SpriteFrames_ygkgy")
@@ -1223,6 +1225,7 @@ script = ExtResource("51_nr7wr")
 
 [node name="ChickenSprite" type="AnimatedSprite2D" parent="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer/LeftStreamContainer/LiveStreamWindow" unique_id=724612624]
 unique_name_in_owner = true
+visible = false
 position = Vector2(942.3594, 474.70316)
 scale = Vector2(0.23504625, 0.22717912)
 sprite_frames = SubResource("SpriteFrames_n8b2h")
