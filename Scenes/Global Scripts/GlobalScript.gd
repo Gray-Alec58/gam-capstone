@@ -27,7 +27,6 @@ func get_total_pig():
 	total_pigs+=1
 
 #for back button; going back to previous scene
-
 var scene_history: Array[String] = []
 func open_scene(path: String) -> void:
 	var current = get_tree().current_scene
