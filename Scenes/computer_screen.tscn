@@ -54,6 +54,8 @@
 [ext_resource type="Script" uid="uid://bsi51f8c6gr8e" path="res://Scenes/Scripts/fundraise_window.gd" id="45_4wy8y"]
 [ext_resource type="Texture2D" uid="uid://b670ubl8rlws4" path="res://Art/chickenanims/chickenidle.png" id="48_bjoxt"]
 [ext_resource type="Script" uid="uid://bcjmo6b1x1vao" path="res://Scenes/chicken_sprite.gd" id="49_ik20o"]
+[ext_resource type="Texture2D" uid="uid://b8p3kl0p2bxnp" path="res://Art/PigAnims/PigIdleSpritesheet.png" id="50_x0hwp"]
+[ext_resource type="Script" uid="uid://cagvx8iib8eh1" path="res://Scenes/pig_sprite.gd" id="51_nr7wr"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6fdxm"]
 texture = ExtResource("15_vfmy3")
@@ -110,23 +112,66 @@ texture_margin_top = 10.0
 texture_margin_right = 10.0
 texture_margin_bottom = 10.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ik20o"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_daa0c"]
+atlas = ExtResource("50_x0hwp")
+region = Rect2(0, 0, 1435, 1093)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8i0n"]
+atlas = ExtResource("50_x0hwp")
+region = Rect2(1435, 0, 1435, 1093)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcmml"]
+atlas = ExtResource("50_x0hwp")
+region = Rect2(2870, 0, 1435, 1093)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkcdy"]
+atlas = ExtResource("50_x0hwp")
+region = Rect2(0, 1093, 1435, 1093)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbord"]
+atlas = ExtResource("50_x0hwp")
+region = Rect2(1435, 1093, 1435, 1093)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ygkgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_daa0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8i0n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcmml")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkcdy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbord")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkcql"]
 atlas = ExtResource("48_bjoxt")
 region = Rect2(0, 0, 1001, 1001)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vib8a"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_c71i5"]
 atlas = ExtResource("48_bjoxt")
 region = Rect2(1001, 0, 1001, 1001)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x0hwp"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbkt3"]
 atlas = ExtResource("48_bjoxt")
 region = Rect2(2002, 0, 1001, 1001)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nr7wr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8oo3"]
 atlas = ExtResource("48_bjoxt")
 region = Rect2(0, 1001, 1001, 1001)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tkcql"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_q16fu"]
 atlas = ExtResource("48_bjoxt")
 region = Rect2(1001, 1001, 1001, 1001)
 
@@ -134,19 +179,19 @@ region = Rect2(1001, 1001, 1001, 1001)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ik20o")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vib8a")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x0hwp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nr7wr")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_tkcql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c71i5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbkt3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x8oo3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q16fu")
 }],
 "loop": 1,
 "name": &"idle",
@@ -499,6 +544,7 @@ icon = ExtResource("16_820yq")
 icon_alignment = 1
 
 [node name="AnimalButton2" type="Button" parent="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer/TopAnimalButtonContainer" unique_id=1739993467]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -614,9 +660,9 @@ theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 15
 
 [node name="AnimalPic" type="Sprite2D" parent="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer/AnimalFactbase/AnimalFactContainer" unique_id=467424827]
-position = Vector2(-18, -7)
-scale = Vector2(0.06077043, 0.054514345)
-texture = ExtResource("26_qsnkp")
+unique_name_in_owner = true
+position = Vector2(3.9999998, 5.5)
+scale = Vector2(0.15488565, 0.14)
 centered = false
 
 [node name="AnimalFact" type="Label" parent="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer/AnimalFactbase/AnimalFactContainer" unique_id=1237138953]
@@ -1110,7 +1156,6 @@ theme_override_font_sizes/font_size = 36
 text = "Upgrade"
 
 [node name="FundraiseWindow" type="MarginContainer" parent="FullScreenContainer" unique_id=506375394]
-visible = false
 custom_minimum_size = Vector2(1500, 800)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -1168,11 +1213,18 @@ theme_override_fonts/font = ExtResource("12_b3akq")
 theme_override_font_sizes/font_size = 62
 text = "START"
 
+[node name="PigSprite" type="AnimatedSprite2D" parent="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer/LeftStreamContainer/LiveStreamWindow" unique_id=1531528345]
+unique_name_in_owner = true
+position = Vector2(191, 423)
+scale = Vector2(0.15078607, 0.15468633)
+sprite_frames = SubResource("SpriteFrames_ygkgy")
+animation = &"idle"
+script = ExtResource("51_nr7wr")
+
 [node name="ChickenSprite" type="AnimatedSprite2D" parent="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer/LeftStreamContainer/LiveStreamWindow" unique_id=724612624]
 unique_name_in_owner = true
-visible = false
-position = Vector2(866, 474.00003)
-scale = Vector2(0.23688814, 0.22340164)
+position = Vector2(942.3594, 474.70316)
+scale = Vector2(0.23504625, 0.22717912)
 sprite_frames = SubResource("SpriteFrames_n8b2h")
 animation = &"idle"
 script = ExtResource("49_ik20o")
@@ -1235,6 +1287,7 @@ stretch_mode = 5
 [connection signal="pressed" from="FullScreenContainer/ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/TopButtonContainer/FarmAnimalTextB" to="FullScreenContainer" method="_on_farm_animal_texture_button_pressed"]
 [connection signal="pressed" from="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/LeftResearchContainer/ResearchPointTexB" to="FullScreenContainer/ResearchWindow2" method="_on_research_point_tex_b_pressed"]
 [connection signal="pressed" from="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer/TopAnimalButtonContainer/AnimalButton1" to="FullScreenContainer/ResearchWindow2" method="_on_animal_button_1_pressed"]
+[connection signal="pressed" from="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer/TopAnimalButtonContainer/AnimalButton2" to="FullScreenContainer/ResearchWindow2" method="_on_animal_button_2_pressed"]
 [connection signal="pressed" from="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/ConfirmUI/MarginContainer/VBoxContainer/HBoxContainer/YesButton" to="FullScreenContainer/ResearchWindow2" method="_on_yes_button_pressed"]
 [connection signal="pressed" from="FullScreenContainer/ResearchWindow2/WindowBackground/ScreenContainer/ConfirmUI/MarginContainer/VBoxContainer/HBoxContainer/NoButton" to="FullScreenContainer/ResearchWindow2" method="_on_no_button_pressed"]
 [connection signal="pressed" from="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer/AdoptButtonContainer/YesButton" to="FullScreenContainer/RescueWindow" method="_on_yes_button_pressed"]

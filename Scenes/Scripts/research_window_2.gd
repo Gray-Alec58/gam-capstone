@@ -10,6 +10,11 @@ var clicks: int = 0
 @onready var question_label: Label = %QuestionUI
 @onready var animal_fact_label: Label = %AnimalFact
 
+var research_points: int = 100
+
+var chicken_texture = load("res://Art/ChickenUI.png")
+var pig_texture = load("res://Art/PigUI.png")
+
 #ready function for all custom functions created
 func _ready() -> void:
 	question_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
@@ -32,17 +37,34 @@ func _on_research_point_tex_b_pressed() -> void:
 func _on_animal_button_1_pressed() -> void:
 	question_label.text = "Unlock Chicken (5 Research Points)"
 	animal_fact_label.text = "Studies show that young chicks can demonstrate basic arithmetic and understand mental number lines."
+	research_points = 5
 	if (GlobalScript.chicken_unlocked == false):
 		confirm_popup.visible = true
 		fact_popup.visible = false
 	if(GlobalScript.chicken_unlocked == true):
 		confirm_popup.visible = false
 		fact_popup.visible = true
-		
+	%AnimalPic.texture = chicken_texture
+
+func _on_animal_button_2_pressed() -> void:
+	question_label.text = "Unlock Pig (10 Research Points)"
+	animal_fact_label.text = "Pigs are widely considered smarter than dogs, human toddlers, and some primates."
+	research_points = 10
+	if (GlobalScript.pig_unlocked == false):
+		confirm_popup.visible = true
+		fact_popup.visible = false
+	if(GlobalScript.pig_unlocked == true):
+		confirm_popup.visible = false
+		fact_popup.visible = true
+	%AnimalPic.texture = pig_texture
+
 func _on_yes_button_pressed() -> void:
-	if(GlobalScript.points >= 5): #change to five after testing
-		GlobalScript.points -= 5 #change to five after testing
-		GlobalScript.unlock_chicken()
+	if(GlobalScript.points >= research_points): #change to five after testing
+		if(research_points == 5):
+			GlobalScript.unlock_chicken()
+		if(research_points == 10):
+			GlobalScript.unlock_pig()
+		GlobalScript.points -= research_points #change to five after testing 
 		point_label.text = "Research Points: " + str(GlobalScript.points)
 		animal_button_1.icon = null
 		confirm_popup.visible = false
@@ -51,5 +73,7 @@ func _on_yes_button_pressed() -> void:
 func _on_no_button_pressed() -> void:
 	confirm_popup.visible = false
 func is_unlocked() -> void:
-	if (GlobalScript.chicken_unlocked == true):
+	if (GlobalScript.chicken_unlocked):
 		animal_button_1.icon = null
+	if (GlobalScript.pig_unlocked):
+		%AnimalButton2.icon = null

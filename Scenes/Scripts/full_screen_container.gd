@@ -40,7 +40,9 @@ func _on_fundraise_texture_button_pressed() -> void:
 	FundraiseWindow.visible = true
 	if %StartStreamButton.visible == false:
 		if GlobalScript.total_chickens >= 1:
-				%ChickenSprite.visible = true
+			%ChickenSprite.visible = true
+		if GlobalScript.total_pigs >=1:
+			%PigSprite.visble = true
 #farm animal button reveals the second research window
 #sets visability of other windows to false
 func _on_farm_animal_texture_button_pressed() -> void:
