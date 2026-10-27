@@ -25,17 +25,20 @@ func get_total_pig():
 	total_pigs+=1
 
 #for back button; going back to previous scene
-var previous_scene_path: String = ""
-func _go_to_scene(target_path: String) -> void:
-	var current_scene = get_tree().current_scene
-	if current_scene:
-		previous_scene_path = current_scene.scene_file_path
-		get_tree().change_scene_to_file(target_path)
-func _go_to_previous_scene() -> void:
-	if not previous_scene_path.is_empty():
-		var current_path = get_tree().current_scene.scene_file_path
-		get_tree().change_scene_to_file(previous_scene_path)
-		previous_scene_path = current_path
+
+var scene_history: Array[String] = []
+func open_scene(path: String) -> void:
+	var current = get_tree().current_scene
+	if current != null:
+		var current_path = current.scene_file_path
+		if current_path !="":
+			scene_history.append(current_path)
+	get_tree().change_scene_to_file(path)
+func go_back() -> void:
+	if scene_history.is_empty():
+		return
+	var previous_path = scene_history.pop_back()
+	get_tree().change_scene_to_file(previous_path)
 
 #money tracker
 signal gold_changed
