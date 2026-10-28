@@ -37,6 +37,11 @@ func open_scene(path: String) -> void:
 			scene_history.append(current_path)
 	get_tree().change_scene_to_file(path)
 	
+func get_previous_scene_path() -> String:
+	if scene_history.is_empty():
+		return ""
+	return scene_history.back()
+	
 	#go back to previous scene
 func go_back() -> void:
 	if scene_history.is_empty():

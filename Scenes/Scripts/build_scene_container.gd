@@ -3,8 +3,9 @@ extends MarginContainer
 func _on_plot_1_pressed() -> void:
 	%BuildWindowTab.visible = true
 
+#Back to previous scene
 func _on_back_arrow_text_b_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Map_Scene.tscn")
+	GlobalScript.go_back()
 
 @onready var confirm_window: NinePatchRect = %ConfirmWindow
 @onready var question_label: Label = %QuestionLabel
