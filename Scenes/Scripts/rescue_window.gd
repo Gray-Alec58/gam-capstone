@@ -16,7 +16,7 @@ func display_rescue() -> void:
 	if (GlobalScript.have_enclosure):
 		%NeedEnclosureWindow.visible = false
 		chicken_rescue_window.visible = GlobalScript.chicken_unlocked
-		pig_rescue_window.visble = GlobalScript.pig_unlocked
+		pig_rescue_window.visible = GlobalScript.pig_unlocked
 	else:
 		%NeedEnclosureWindow.visible = true
 
