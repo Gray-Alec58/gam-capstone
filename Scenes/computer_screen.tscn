@@ -151,23 +151,27 @@ region = Rect2(4002, 4002, 2001, 2001)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mkcdy"]
 atlas = ExtResource("50_x0hwp")
-region = Rect2(0, 0, 1435, 1093)
+region = Rect2(0, 0, 1501, 1501)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vbord"]
 atlas = ExtResource("50_x0hwp")
-region = Rect2(1435, 0, 1435, 1093)
+region = Rect2(1501, 0, 1501, 1501)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4gqgv"]
 atlas = ExtResource("50_x0hwp")
-region = Rect2(2870, 0, 1435, 1093)
+region = Rect2(3002, 0, 1501, 1501)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m8ysh"]
 atlas = ExtResource("50_x0hwp")
-region = Rect2(0, 1093, 1435, 1093)
+region = Rect2(0, 1501, 1501, 1501)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ordwh"]
 atlas = ExtResource("50_x0hwp")
-region = Rect2(1435, 1093, 1435, 1093)
+region = Rect2(1501, 1501, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ynrv6"]
+atlas = ExtResource("50_x0hwp")
+region = Rect2(3002, 1501, 1501, 1501)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ygkgy"]
 animations = [{
@@ -218,42 +222,38 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ordwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ynrv6")
 }],
 "loop": 1,
 "name": &"idle",
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ynrv6"]
-atlas = ExtResource("48_bjoxt")
-region = Rect2(0, 0, 2001, 2001)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_0nwis"]
 atlas = ExtResource("48_bjoxt")
-region = Rect2(2001, 0, 2001, 2001)
+region = Rect2(0, 0, 1501, 1501)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hta31"]
 atlas = ExtResource("48_bjoxt")
-region = Rect2(4002, 0, 2001, 2001)
+region = Rect2(1501, 0, 1501, 1501)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7dk7k"]
 atlas = ExtResource("48_bjoxt")
-region = Rect2(0, 2001, 2001, 2001)
+region = Rect2(3002, 0, 1501, 1501)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m833q"]
 atlas = ExtResource("48_bjoxt")
-region = Rect2(2001, 2001, 2001, 2001)
+region = Rect2(0, 1501, 1501, 1501)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_12ia8"]
 atlas = ExtResource("48_bjoxt")
-region = Rect2(4002, 2001, 2001, 2001)
+region = Rect2(1501, 1501, 1501, 1501)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n8b2h"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ynrv6")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0nwis")
 }, {
@@ -1300,8 +1300,8 @@ script = ExtResource("51_nr7wr")
 
 [node name="ChickenSprite" type="AnimatedSprite2D" parent="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer/LeftStreamContainer/LiveStreamWindow" unique_id=724612624]
 unique_name_in_owner = true
-position = Vector2(895, 478)
-scale = Vector2(0.08, 0.08)
+position = Vector2(908.5, 479)
+scale = Vector2(0.12858093, 0.13057962)
 sprite_frames = SubResource("SpriteFrames_n8b2h")
 animation = &"idle"
 script = ExtResource("49_ik20o")
