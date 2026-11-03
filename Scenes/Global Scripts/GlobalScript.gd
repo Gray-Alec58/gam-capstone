@@ -62,3 +62,6 @@ func gold_increase(x: int) -> void: #function to increasa gold by any amount giv
 var have_enclosure: bool = false
 func built_enclosure() -> void:
 	have_enclosure = true
+
+#for keeping state of enclosure when built
+var build_enclosure = {}
