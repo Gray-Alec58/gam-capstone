@@ -17,9 +17,9 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-AudioStreamPlayerGlobal="*uid://b08of13clj0wn"
 GlobalScript="*uid://ddjk6jwjhjhed"
 GlobalClock="*uid://do4g1lefb7dx8"
+BackgroundAudioStreamPlayer2="*uid://bm3pwwjgs7dr2"
 
 [display]
 

@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/BADBrightPiano.mp3-8228208b0c422c87c2ffe57a7f
 [params]
 
 loop=false
-loop_offset=0
-bpm=0
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4
