@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://g3rd1clv0j2b"
+path="res://.godot/imported/Click Two.mp3-8a3b545cd68e7c93575a5e4dd91aa386.mp3str"
+
+[deps]
+
+source_file="res://Audio/Sound effects/Click Two.mp3"
+dest_files=["res://.godot/imported/Click Two.mp3-8a3b545cd68e7c93575a5e4dd91aa386.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
