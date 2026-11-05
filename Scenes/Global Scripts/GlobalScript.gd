@@ -69,3 +69,11 @@ func built_enclosure() -> void:
 
 #for keeping state of enclosure when built
 var build_enclosure = {}
+
+var rescued_chickens = []
+
+func rescued_chicken():
+	rescued_chickens.append("Chicken")
+
+func get_chicken_count():
+	return rescued_chickens.size()
