@@ -302,6 +302,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 19.0
+offset_top = -20.0
+offset_right = 19.0
+offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 40
@@ -1232,6 +1236,7 @@ theme_override_font_sizes/font_size = 36
 text = "Upgrade"
 
 [node name="FundraiseWindow" type="MarginContainer" parent="FullScreenContainer" unique_id=506375394]
+visible = false
 custom_minimum_size = Vector2(1500, 800)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -1291,6 +1296,7 @@ text = "START"
 
 [node name="PigSprite" type="AnimatedSprite2D" parent="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer/LeftStreamContainer/LiveStreamWindow" unique_id=1531528345]
 unique_name_in_owner = true
+visible = false
 position = Vector2(691, 478)
 scale = Vector2(0.13, 0.13)
 sprite_frames = SubResource("SpriteFrames_ygkgy")
@@ -1300,6 +1306,7 @@ script = ExtResource("51_nr7wr")
 
 [node name="ChickenSprite" type="AnimatedSprite2D" parent="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer/LeftStreamContainer/LiveStreamWindow" unique_id=724612624]
 unique_name_in_owner = true
+visible = false
 position = Vector2(908.5, 479)
 scale = Vector2(0.12858093, 0.13057962)
 sprite_frames = SubResource("SpriteFrames_n8b2h")
@@ -1325,7 +1332,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_rbco8")
 theme_override_styles/hover = SubResource("StyleBoxTexture_rbco8")
 text = "Feed"
 
-[node name="DonateButton" type="Button" parent="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer/VBoxContainer" unique_id=2045888217]
+[node name="ADButton" type="Button" parent="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer/VBoxContainer" unique_id=2045888217]
 custom_minimum_size = Vector2(250, 200)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -1336,7 +1343,7 @@ theme_override_font_sizes/font_size = 42
 theme_override_styles/normal = SubResource("StyleBoxTexture_ndgsj")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ndgsj")
 theme_override_styles/hover = SubResource("StyleBoxTexture_ndgsj")
-text = "Donate"
+text = "Play AD"
 
 [node name="ExitTextB" type="TextureButton" parent="." unique_id=1997126746]
 layout_mode = 1
@@ -1375,6 +1382,4 @@ stretch_mode = 5
 [connection signal="pressed" from="FullScreenContainer/RescueWindow/WindowBackground/MarginContainer/ConfirmUI/MarginContainer/VBoxContainer/HBoxContainer/NoBuyButton" to="FullScreenContainer/RescueWindow" method="_on_no_buy_button_pressed"]
 [connection signal="pressed" from="FullScreenContainer/ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/ButtonContainer/BuildTextB" to="FullScreenContainer" method="_on_build_text_b_pressed"]
 [connection signal="pressed" from="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer/LeftStreamContainer/LiveStreamWindow/StartStreamButton" to="FullScreenContainer/FundraiseWindow" method="_on_start_stream_button_pressed"]
-[connection signal="pressed" from="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer/VBoxContainer/FeedButton" to="FullScreenContainer/FundraiseWindow" method="_on_feed_button_pressed"]
-[connection signal="pressed" from="FullScreenContainer/FundraiseWindow/NinePatchRect/MarginContainer/VBoxContainer/DonateButton" to="FullScreenContainer/FundraiseWindow" method="_on_donate_button_pressed"]
 [connection signal="pressed" from="ExitTextB" to="." method="_on_exit_texture_button_pressed"]

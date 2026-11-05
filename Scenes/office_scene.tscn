@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://xh0dirwa0e74"]
 
+[ext_resource type="Script" uid="uid://bd41au3hsrlot" path="res://Scenes/office_scene.gd" id="1_kjj4x"]
 [ext_resource type="Texture2D" uid="uid://b0yao7opcsfd6" path="res://Art/OfficeBackground.png" id="1_lj5is"]
 [ext_resource type="Script" uid="uid://3oou6046lhpe" path="res://Scenes/Scripts/computer.gd" id="2_idq54"]
 [ext_resource type="PackedScene" uid="uid://dy30jg28ep16d" path="res://Scenes/office_ui.tscn" id="2_tnddm"]
@@ -52,6 +53,7 @@ size = Vector2(356.0614, 201.50003)
 size = Vector2(1917.5413, 1077.9966)
 
 [node name="OfficeScene" type="Node2D" unique_id=1301874127]
+script = ExtResource("1_kjj4x")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1174923474]
 z_index = -1
@@ -129,6 +131,10 @@ script = ExtResource("4_rs28u")
 position = Vector2(-44.250954, -705.30615)
 scale = Vector2(0.99999964, 0.9999994)
 shape = SubResource("RectangleShape2D_5fshx")
+
+[node name="DisplayMoneyCounter" type="Node2D" parent="." unique_id=1031093409]
+unique_name_in_owner = true
+position = Vector2(1072, 269)
 
 [connection signal="input_event" from="Computer" to="Computer" method="_on_input_event"]
 [connection signal="input_event" from="MapExit/MapExitArea2D" to="MapExit/MapExitArea2D" method="_on_input_event"]

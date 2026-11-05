@@ -5,6 +5,10 @@ var points: int = 0
 func add_points() -> void:
 	points += 1
 
+var total_animals: int = 0
+func get_total_animals():
+	total_animals = total_chickens + total_pigs
+
 #tracking animals being unlocked
 signal chicken_unlocked_changed
 var total_chickens: int = 0
@@ -53,7 +57,7 @@ var gold: int = 500 #starting gold = 500
 func gold_decrease(x: int) -> void: #function to decrease gold by any amount given
 	gold -= x
 	gold_changed.emit()
-func gold_increase(x: int) -> void: #function to increasa gold by any amount given
+func gold_increase(x: int) -> void: #function to increase gold by any amount given
 	gold += x
 	gold_changed.emit()
 

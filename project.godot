@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 AudioStreamPlayerGlobal="*uid://b08of13clj0wn"
 GlobalScript="*uid://ddjk6jwjhjhed"
 GlobalClock="*uid://do4g1lefb7dx8"
+MoneyNumbers="*uid://ce020kw5ia53a"
 
 [display]
 
