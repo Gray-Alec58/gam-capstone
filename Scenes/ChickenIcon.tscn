@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dl7wbxooqqrkq"]
 
 [ext_resource type="Texture2D" uid="uid://d38cxckouklf1" path="res://Art/ChickenUI.png" id="1_63fvd"]
+[ext_resource type="Script" uid="uid://bbdwb5uq05lr2" path="res://Scenes/InvChicken.gd" id="2_w548r"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xjid8"]
 texture = ExtResource("1_63fvd")
@@ -19,3 +20,4 @@ offset_bottom = 200.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_xjid8")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_63fvd")
 theme_override_styles/hover = SubResource("StyleBoxTexture_w548r")
+script = ExtResource("2_w548r")

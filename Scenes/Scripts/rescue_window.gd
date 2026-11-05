@@ -32,6 +32,7 @@ func _on_buy_button_pressed() -> void:
 	chicken_rescue_window.visible = false
 	GlobalScript.gold_decrease(5) #chicken = 5, pig = 10
 	GlobalScript.get_total_chicken()
+	GlobalScript.rescued_chicken()
 	queue_free()
 func _on_no_buy_button_pressed() -> void:
 	confirm_window.visible = false
