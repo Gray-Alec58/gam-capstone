@@ -11,14 +11,37 @@ func _ready():
 		GlobalScript. build_enclosure ["Enclosure1"] = "small_enclosure1"
 		update_enclosure_1()
 		inventory_panel.hide()
+	
 
 func update_enclosure_1():
 	if GlobalScript.build_enclosure.has("Enclosure1"):
 		$SceneContainer/EnclosureContainer/TopEnclosureContainer/TopRowControl/SmallEnclosure1.visible = true
 
-#When small enclosure is pressed show Animal stat Ui
+var occupied = false
+var chicken_name = ""
+var chicken_id = GlobalScript.select_chicken_id
+
+#When small enclosure is pressed show inventory
 func _on_small_enclosure_1_pressed() -> void:
-	open_inventory()
+	if occupied: 
+		print("This plot is already occupied!")
+		return
+	if chicken_id == -1:
+		open_inventory()
+		print("select a chicken first")
+		return
+	if chicken_id >=GlobalScript.rescued_chickens.size():
+		return
+	chicken_name = GlobalScript.rescued_chickens[chicken_id]
+	GlobalScript.rescued_chickens.remove_at(chicken_id)
+	occupied = true
+	GlobalScript.select_chicken_id = -1
+	print(chicken_name, " placed in Plot ")
+	var inventory = get_tree().get_first_node_in_group("AnimalInvPatch")
+	if inventory:
+		inventory.update_inventory()
+
+
 
 @export var chicken_icon_scene: PackedScene
 @onready var inventory_panel = $SceneContainer/AnimalInvPatch
@@ -34,7 +57,9 @@ func close_inventory():
 func update_inventory():
 	for child in chicken_grid.get_children():
 		child.queue_free()
+	print("CHICKENS IN ARRAY: ", GlobalScript.rescued_chickens.size())
 	for i in range(GlobalScript.rescued_chickens.size()):
 		var icon = chicken_icon_scene.instantiate()
-		chicken_grid. add_child(icon)
+		chicken_grid.add_child(icon)
 		icon.setup(i)
+	print("ICONS CREATED: ", chicken_grid.get_child_count())

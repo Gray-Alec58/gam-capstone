@@ -70,10 +70,11 @@ func built_enclosure() -> void:
 #for keeping state of enclosure when built
 var build_enclosure = {}
 
+#for chicken appearing in inventory when rescued
 var rescued_chickens = []
-
+var select_chicken_id = -1
 func rescued_chicken():
 	rescued_chickens.append("Chicken")
-
+	print("CHICKENS SAVED: ", rescued_chickens.size())
 func get_chicken_count():
 	return rescued_chickens.size()
