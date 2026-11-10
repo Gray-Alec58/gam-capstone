@@ -11,4 +11,5 @@ func setup(id: int):
 	chicken_button.pressed.connect(_on_pressed)
 
 func _on_pressed():
+	GlobalScript.select_chicken_id = chicken_id
 	print("Selected chicken ID: ",chicken_id)
