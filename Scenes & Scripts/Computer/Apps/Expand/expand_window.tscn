@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://ci7b6qllen1h"]
+
+[ext_resource type="Texture2D" uid="uid://psiloyf4li7g" path="res://Art/UI_Exports/ExpandApp/ExpandWindowBG.png" id="1_rvmfh"]
+[ext_resource type="Texture2D" uid="uid://bn1dpsfygsfv8" path="res://Art/UI_Exports/ExpandApp/BuildNormal.png" id="2_y0ii2"]
+[ext_resource type="Texture2D" uid="uid://wao31hgc1oj7" path="res://Art/UI_Exports/ExpandApp/BuildClick.png" id="3_mhfx1"]
+[ext_resource type="Texture2D" uid="uid://cyg7o66kbafrg" path="res://Art/UI_Exports/ExpandApp/BuildHover.png" id="4_6a4wy"]
+[ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="5_c7eor"]
+[ext_resource type="Texture2D" uid="uid://chwm266sgepm1" path="res://Art/UI_Exports/ExpandApp/DemolishNormal.png" id="6_74mwu"]
+[ext_resource type="Texture2D" uid="uid://uyrguxf63d67" path="res://Art/UI_Exports/ExpandApp/DemolishClick.png" id="7_0vwhf"]
+[ext_resource type="Texture2D" uid="uid://byets3qx4jbgf" path="res://Art/UI_Exports/ExpandApp/DemolishHover.png" id="8_u8d8u"]
+[ext_resource type="Texture2D" uid="uid://6frf6whmii0w" path="res://Art/UI_Exports/ExpandApp/UpgradeNormal.png" id="9_wo5cv"]
+[ext_resource type="Texture2D" uid="uid://dunphymlh7hb8" path="res://Art/UI_Exports/ExpandApp/UpgradeClick.png" id="10_jcd2h"]
+[ext_resource type="Texture2D" uid="uid://dwwadpmdp8g61" path="res://Art/UI_Exports/ExpandApp/UpgradeHover.png" id="11_eh32u"]
+
+[node name="Expand Window" type="Control" unique_id=1598065010]
+custom_minimum_size = Vector2(1500, 800)
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1500.0
+offset_top = -400.0
+offset_bottom = 400.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="ExpandWindow" type="MarginContainer" parent="." unique_id=1758135561]
+custom_minimum_size = Vector2(1500, 800)
+layout_mode = 0
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ExpandWindow" unique_id=1332029145]
+layout_mode = 2
+texture = ExtResource("1_rvmfh")
+
+[node name="MarginContainer" type="MarginContainer" parent="ExpandWindow/NinePatchRect" unique_id=780246424]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 45
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 45
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ExpandWindow/NinePatchRect/MarginContainer" unique_id=1330028757]
+custom_minimum_size = Vector2(1200, 600)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="ButtonContainer" type="HBoxContainer" parent="ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer" unique_id=60822715]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 50
+
+[node name="BuildTextB" type="TextureButton" parent="ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/ButtonContainer" unique_id=811886244]
+custom_minimum_size = Vector2(450, 0)
+layout_mode = 2
+texture_normal = ExtResource("2_y0ii2")
+texture_pressed = ExtResource("3_mhfx1")
+texture_hover = ExtResource("4_6a4wy")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/ButtonContainer/BuildTextB" unique_id=1934718767]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_c7eor")
+theme_override_font_sizes/font_size = 56
+text = "Build"
+
+[node name="DemolishTextB" type="TextureButton" parent="ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/ButtonContainer" unique_id=2084372074]
+custom_minimum_size = Vector2(450, 450)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("6_74mwu")
+texture_pressed = ExtResource("7_0vwhf")
+texture_hover = ExtResource("8_u8d8u")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/ButtonContainer/DemolishTextB" unique_id=1043795943]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_c7eor")
+theme_override_font_sizes/font_size = 54
+text = "Demolish"
+
+[node name="UpgradeTextB" type="TextureButton" parent="ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer" unique_id=813419918]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("9_wo5cv")
+texture_pressed = ExtResource("10_jcd2h")
+texture_hover = ExtResource("11_eh32u")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/UpgradeTextB" unique_id=42943260]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_c7eor")
+theme_override_font_sizes/font_size = 36
+text = "Upgrade"

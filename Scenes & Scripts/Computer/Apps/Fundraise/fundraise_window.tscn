@@ -1,0 +1,319 @@
+[gd_scene format=3 uid="uid://b3mv30rn77o8h"]
+
+[ext_resource type="Script" uid="uid://bsi51f8c6gr8e" path="res://Scenes & Scripts/Computer/Apps/Fundraise/fundraise_window.gd" id="1_5asjw"]
+[ext_resource type="Texture2D" uid="uid://drp8e20hjg2ex" path="res://Art/UI_Exports/FundraiserApp/FundraiserWindowBG.png" id="2_dh48t"]
+[ext_resource type="Texture2D" uid="uid://d33j47wd4tlip" path="res://Art/UI_Exports/FundraiserApp/LivestreamUi.png" id="3_lqgjf"]
+[ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="4_223xa"]
+[ext_resource type="Texture2D" uid="uid://cm2oyvjklg7bf" path="res://Art/Animals/Pig/PigEatSpritesheet.png" id="5_x0q4g"]
+[ext_resource type="Texture2D" uid="uid://b8p3kl0p2bxnp" path="res://Art/Animals/Pig/PigIdleSpritesheet.png" id="6_nkmtj"]
+[ext_resource type="Script" uid="uid://cagvx8iib8eh1" path="res://Scenes & Scripts/Computer/Apps/Fundraise/pig_sprite.gd" id="7_5dmer"]
+[ext_resource type="Texture2D" uid="uid://b670ubl8rlws4" path="res://Art/Animals/Chicken/chickenidle.png" id="8_b4067"]
+[ext_resource type="Script" uid="uid://bcjmo6b1x1vao" path="res://Scenes & Scripts/Computer/Apps/Fundraise/chicken_sprite.gd" id="9_7bvi8"]
+[ext_resource type="Texture2D" uid="uid://wtkq5hnftouy" path="res://Art/UI_Exports/FundraiserApp/DonationsUI.png" id="10_yon3o"]
+[ext_resource type="Texture2D" uid="uid://bgesf7ym0e0e0" path="res://Art/UI_Exports/FundraiserApp/ChatUi.png" id="11_lmsrv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nr7wr"]
+atlas = ExtResource("5_x0q4g")
+region = Rect2(0, 0, 2001, 2001)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkcql"]
+atlas = ExtResource("5_x0q4g")
+region = Rect2(2001, 0, 2001, 2001)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c71i5"]
+atlas = ExtResource("5_x0q4g")
+region = Rect2(4002, 0, 2001, 2001)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbkt3"]
+atlas = ExtResource("5_x0q4g")
+region = Rect2(0, 2001, 2001, 2001)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8oo3"]
+atlas = ExtResource("5_x0q4g")
+region = Rect2(2001, 2001, 2001, 2001)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q16fu"]
+atlas = ExtResource("5_x0q4g")
+region = Rect2(4002, 2001, 2001, 2001)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_daa0c"]
+atlas = ExtResource("5_x0q4g")
+region = Rect2(0, 4002, 2001, 2001)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8i0n"]
+atlas = ExtResource("5_x0q4g")
+region = Rect2(2001, 4002, 2001, 2001)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcmml"]
+atlas = ExtResource("5_x0q4g")
+region = Rect2(4002, 4002, 2001, 2001)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkcdy"]
+atlas = ExtResource("6_nkmtj")
+region = Rect2(0, 0, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbord"]
+atlas = ExtResource("6_nkmtj")
+region = Rect2(1501, 0, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gqgv"]
+atlas = ExtResource("6_nkmtj")
+region = Rect2(3002, 0, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8ysh"]
+atlas = ExtResource("6_nkmtj")
+region = Rect2(0, 1501, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ordwh"]
+atlas = ExtResource("6_nkmtj")
+region = Rect2(1501, 1501, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ynrv6"]
+atlas = ExtResource("6_nkmtj")
+region = Rect2(3002, 1501, 1501, 1501)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tceoj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nr7wr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkcql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c71i5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbkt3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x8oo3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q16fu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_daa0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8i0n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcmml")
+}],
+"loop": 1,
+"name": &"eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkcdy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbord")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4gqgv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8ysh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ordwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ynrv6")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0nwis"]
+atlas = ExtResource("8_b4067")
+region = Rect2(0, 0, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hta31"]
+atlas = ExtResource("8_b4067")
+region = Rect2(1501, 0, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7dk7k"]
+atlas = ExtResource("8_b4067")
+region = Rect2(3002, 0, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m833q"]
+atlas = ExtResource("8_b4067")
+region = Rect2(0, 1501, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12ia8"]
+atlas = ExtResource("8_b4067")
+region = Rect2(1501, 1501, 1501, 1501)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_02lub"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0nwis")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hta31")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7dk7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m833q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12ia8")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 6.0
+}]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g4rmm"]
+texture = ExtResource("10_yon3o")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lskfo"]
+texture = ExtResource("11_lmsrv")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+
+[node name="Fundraise Window" type="Control" unique_id=641669392]
+custom_minimum_size = Vector2(1500, 800)
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="FundraiseWindow" type="MarginContainer" parent="." unique_id=757212396]
+custom_minimum_size = Vector2(1500, 800)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1500.0
+offset_top = -400.0
+offset_bottom = 400.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+script = ExtResource("1_5asjw")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="FundraiseWindow" unique_id=841294912]
+layout_mode = 2
+texture = ExtResource("2_dh48t")
+
+[node name="MarginContainer" type="MarginContainer" parent="FundraiseWindow/NinePatchRect" unique_id=950095722]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 45
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 45
+theme_override_constants/margin_bottom = 30
+
+[node name="LeftStreamContainer" type="VBoxContainer" parent="FundraiseWindow/NinePatchRect/MarginContainer" unique_id=2066891773]
+custom_minimum_size = Vector2(800, 600)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="LiveStreamWindow" type="NinePatchRect" parent="FundraiseWindow/NinePatchRect/MarginContainer/LeftStreamContainer" unique_id=659512199]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1100, 600)
+layout_mode = 2
+texture = ExtResource("3_lqgjf")
+patch_margin_left = 15
+patch_margin_top = 15
+patch_margin_right = 15
+patch_margin_bottom = 15
+
+[node name="StartStreamButton" type="Button" parent="FundraiseWindow/NinePatchRect/MarginContainer/LeftStreamContainer/LiveStreamWindow" unique_id=532190600]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_223xa")
+theme_override_font_sizes/font_size = 62
+text = "START"
+
+[node name="PigSprite" type="AnimatedSprite2D" parent="FundraiseWindow/NinePatchRect/MarginContainer/LeftStreamContainer/LiveStreamWindow" unique_id=564234503]
+unique_name_in_owner = true
+visible = false
+position = Vector2(691, 478)
+scale = Vector2(0.13, 0.13)
+sprite_frames = SubResource("SpriteFrames_tceoj")
+animation = &"idle"
+script = ExtResource("7_5dmer")
+
+[node name="ChickenSprite" type="AnimatedSprite2D" parent="FundraiseWindow/NinePatchRect/MarginContainer/LeftStreamContainer/LiveStreamWindow" unique_id=1913325702]
+unique_name_in_owner = true
+visible = false
+position = Vector2(908.5, 479)
+scale = Vector2(0.12858093, 0.13057962)
+sprite_frames = SubResource("SpriteFrames_02lub")
+animation = &"idle"
+script = ExtResource("9_7bvi8")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FundraiseWindow/NinePatchRect/MarginContainer" unique_id=23144924]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+
+[node name="FeedButton" type="Button" parent="FundraiseWindow/NinePatchRect/MarginContainer/VBoxContainer" unique_id=769314631]
+custom_minimum_size = Vector2(250, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_223xa")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxTexture_g4rmm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_g4rmm")
+theme_override_styles/hover = SubResource("StyleBoxTexture_g4rmm")
+text = "Feed"
+
+[node name="ADButton" type="Button" parent="FundraiseWindow/NinePatchRect/MarginContainer/VBoxContainer" unique_id=244197302]
+custom_minimum_size = Vector2(250, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_223xa")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/normal = SubResource("StyleBoxTexture_lskfo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lskfo")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lskfo")
+text = "Play AD"
+
+[connection signal="pressed" from="FundraiseWindow/NinePatchRect/MarginContainer/LeftStreamContainer/LiveStreamWindow/StartStreamButton" to="FundraiseWindow" method="_on_start_stream_button_pressed"]
