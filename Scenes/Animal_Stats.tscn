@@ -271,6 +271,9 @@ horizontal_alignment = 1
 [node name="ChickenContainer" type="GridContainer" parent="Background/SceneContainer/AnimalInvPatch/MarginContainer/VBoxContainer" unique_id=2052994814]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 20
+accessibility_region = true
 columns = 4
 
 [node name="BackTextButton" type="TextureButton" parent="Background/SceneContainer" unique_id=1868327138]

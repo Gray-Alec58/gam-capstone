@@ -34,7 +34,9 @@ func close_inventory():
 func update_inventory():
 	for child in chicken_grid.get_children():
 		child.queue_free()
+	print("CHICKENS IN ARRAY: ", GlobalScript.rescued_chickens.size())
 	for i in range(GlobalScript.rescued_chickens.size()):
 		var icon = chicken_icon_scene.instantiate()
-		chicken_grid. add_child(icon)
+		chicken_grid.add_child(icon)
 		icon.setup(i)
+	print("ICONS CREATED: ", chicken_grid.get_child_count())
