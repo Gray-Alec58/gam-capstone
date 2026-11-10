@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://dtrh3c0mkfakn" path="res://Art/UI_Exports/Enclosures/SmallEnclosureClick.png" id="8_yh1tl"]
 [ext_resource type="Texture2D" uid="uid://qjlwaujtrhww" path="res://Art/UI_Exports/Map/BackArrowHover.png" id="9_i7cev"]
 [ext_resource type="Texture2D" uid="uid://bhm21rlnro5ds" path="res://Art/UI_Exports/Enclosures/SmallEnclosureHover.png" id="9_k4vsw"]
+[ext_resource type="Texture2D" uid="uid://b670ubl8rlws4" path="res://Art/chickenanims/chickenidle.png" id="11_w3c0j"]
+[ext_resource type="Script" uid="uid://cga21p67ufyog" path="res://Scenes/chickensprite_enclosure.gd" id="12_f0l1j"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tpboi"]
 texture = ExtResource("3_5wrbs")
@@ -32,6 +34,49 @@ texture = ExtResource("8_yh1tl")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p25jh"]
 texture = ExtResource("9_k4vsw")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p25jh"]
+atlas = ExtResource("11_w3c0j")
+region = Rect2(0, 0, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvdtc"]
+atlas = ExtResource("11_w3c0j")
+region = Rect2(1501, 0, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iblum"]
+atlas = ExtResource("11_w3c0j")
+region = Rect2(3002, 0, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0vhe"]
+atlas = ExtResource("11_w3c0j")
+region = Rect2(0, 1501, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nntk3"]
+atlas = ExtResource("11_w3c0j")
+region = Rect2(1501, 1501, 1501, 1501)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xjid8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p25jh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvdtc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iblum")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0vhe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nntk3")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 6.0
+}]
 
 [node name="AnimalStats" type="Control" unique_id=819108452]
 layout_mode = 3
@@ -142,7 +187,6 @@ mouse_filter = 2
 
 [node name="SmallEnclosure1" type="Button" parent="Background/SceneContainer/EnclosureContainer/TopEnclosureContainer/TopRowControl" unique_id=1553421948]
 unique_name_in_owner = true
-visible = false
 custom_minimum_size = Vector2(600, 400)
 layout_mode = 0
 offset_left = -1.25
@@ -199,6 +243,18 @@ offset_bottom = 397.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_w3c0j")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_f0l1j")
 theme_override_styles/hover = SubResource("StyleBoxTexture_p25jh")
+
+[node name="ChickenSprite" type="AnimatedSprite2D" parent="Background/SceneContainer/EnclosureContainer" unique_id=55886177]
+unique_name_in_owner = true
+visible = false
+z_index = 10
+position = Vector2(298.75, 348)
+scale = Vector2(0.07711527, 0.07711527)
+sprite_frames = SubResource("SpriteFrames_xjid8")
+animation = &"Idle"
+frame = 1
+frame_progress = 0.105045974
+script = ExtResource("12_f0l1j")
 
 [node name="AnimalStatPatch" type="NinePatchRect" parent="Background/SceneContainer" unique_id=652772195]
 visible = false

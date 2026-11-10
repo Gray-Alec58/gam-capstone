@@ -37,6 +37,8 @@ func _on_small_enclosure_1_pressed() -> void:
 	chicken_name = GlobalScript.rescued_chickens[chicken_id]
 	GlobalScript.rescued_chickens.remove_at(chicken_id)
 	occupied = true
+	chicken_sprite.visible = true
+	chicken_sprite.play("Idle")
 	GlobalScript.selected_chicken_id = -1
 	print(chicken_name, "placed in Plot")
 	update_inventory()
@@ -63,3 +65,6 @@ func update_inventory():
 		chicken_grid.add_child(icon)
 		icon.setup(i)
 	print("ICONS CREATED: ", chicken_grid.get_child_count())
+
+
+@onready var chicken_sprite = %ChickenSprite
