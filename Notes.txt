@@ -1,0 +1,9 @@
+*Reference all items by UID to prevent issues with pathing
+
+*Preloading the UID for a scene. 
+This makes it to where calling the scene is not path based.
+Can copy string directly into code if passing variable as a string
+	#preloading via UID to safely keep track of scene even if it is moved
+	var next_scene = preload("uid://ddkswpsnmco8s") #copy UID by right-clicking scene
+	#add code into whatever causes scene change
+	get.tree().change_scene_to_packed(next_scene)
