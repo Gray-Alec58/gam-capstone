@@ -141,6 +141,7 @@ layout_mode = 2
 mouse_filter = 2
 
 [node name="SmallEnclosure1" type="Button" parent="Background/SceneContainer/EnclosureContainer/TopEnclosureContainer/TopRowControl" unique_id=1553421948]
+unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(600, 400)
 layout_mode = 0
@@ -175,7 +176,7 @@ custom_minimum_size = Vector2(1225, 400)
 layout_mode = 2
 mouse_filter = 2
 
-[node name="SmallEnclosure1" type="Button" parent="Background/SceneContainer/EnclosureContainer/BottomEnclosureContainer/BottomRowControl" unique_id=1810110810]
+[node name="SmallEnclosure3" type="Button" parent="Background/SceneContainer/EnclosureContainer/BottomEnclosureContainer/BottomRowControl" unique_id=1810110810]
 visible = false
 custom_minimum_size = Vector2(600, 400)
 layout_mode = 0
@@ -187,7 +188,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_w3c0j")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_f0l1j")
 theme_override_styles/hover = SubResource("StyleBoxTexture_p25jh")
 
-[node name="SmallEnclosure2" type="Button" parent="Background/SceneContainer/EnclosureContainer/BottomEnclosureContainer/BottomRowControl" unique_id=1633087843]
+[node name="SmallEnclosure4" type="Button" parent="Background/SceneContainer/EnclosureContainer/BottomEnclosureContainer/BottomRowControl" unique_id=1633087843]
 visible = false
 custom_minimum_size = Vector2(600, 400)
 layout_mode = 0
@@ -269,6 +270,7 @@ text = "Rescued Animals"
 horizontal_alignment = 1
 
 [node name="ChickenContainer" type="GridContainer" parent="Background/SceneContainer/AnimalInvPatch/MarginContainer/VBoxContainer" unique_id=2052994814]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/h_separation = 5
