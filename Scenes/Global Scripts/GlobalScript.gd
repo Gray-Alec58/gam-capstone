@@ -72,7 +72,7 @@ var build_enclosure = {}
 
 #for chicken appearing in inventory when rescued
 var rescued_chickens = []
-var select_chicken_id = -1
+var selected_chicken_id = -1
 func rescued_chicken():
 	rescued_chickens.append("Chicken")
 	print("CHICKENS SAVED: ", rescued_chickens.size())
