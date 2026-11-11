@@ -17,11 +17,16 @@ func update_enclosure_1():
 	if GlobalScript.build_enclosure.has("Enclosure1"):
 		%SmallEnclosure1.visible = true
 
-var occupied = false
-var chicken_name = ""
-
 
 #When small enclosure is pressed show inventory
+#chicekn can be plced in enclosure
+var occupied = false
+var chicken_name = ""
+@export var chicken_icon_scene: PackedScene
+@onready var inventory_panel = $SceneContainer/AnimalInvPatch
+@onready var chicken_grid = %ChickenContainer
+@onready var chicken_sprite = %ChickenSprite
+
 func _on_small_enclosure_1_pressed() -> void:
 	if occupied: 
 		print("This plot is already occupied!")
@@ -43,16 +48,9 @@ func _on_small_enclosure_1_pressed() -> void:
 	print(chicken_name, "placed in Plot")
 	update_inventory()
 
-
-
-@export var chicken_icon_scene: PackedScene
-@onready var inventory_panel = $SceneContainer/AnimalInvPatch
-@onready var chicken_grid = %ChickenContainer
-
 func open_inventory():
 	inventory_panel.show()
 	update_inventory()
-
 func close_inventory():
 	inventory_panel.hide()
 
@@ -65,6 +63,3 @@ func update_inventory():
 		chicken_grid.add_child(icon)
 		icon.setup(i)
 	print("ICONS CREATED: ", chicken_grid.get_child_count())
-
-
-@onready var chicken_sprite = %ChickenSprite

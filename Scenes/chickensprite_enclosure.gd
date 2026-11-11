@@ -18,8 +18,7 @@ func _ready():
 	global_position = rect.get_center()
 	visible = false
 	play("Idle")
-	
-
+#making chicken move in random direction in the enclosure
 func _process(delta):
 	if not visible:
 		return

@@ -31,6 +31,6 @@ func _on_n_build_button_pressed() -> void:
 #Keep enclosure when changing scenes
 func update_Enclosure_1():
 	if GlobalScript.build_enclosure.has("Enclosure1"):
-		$EnclosureContainer/TopEnclosureContainer/TopRowControl/SmallEnclosure1.visible = true
+		%SmallEnclosure1.visible = true
 func _ready():
 	update_Enclosure_1()

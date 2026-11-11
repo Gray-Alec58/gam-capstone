@@ -194,6 +194,7 @@ layout_mode = 2
 mouse_filter = 2
 
 [node name="SmallEnclosure1" type="Button" parent="Background/BuildSceneContainer/EnclosureContainer/TopEnclosureContainer/TopRowControl" unique_id=1036838615]
+unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(600, 400)
 layout_mode = 0
