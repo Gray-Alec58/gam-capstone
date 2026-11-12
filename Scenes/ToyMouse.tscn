@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dubxatp0bhjvh"]
+[gd_scene format=3 uid="uid://dubxatp0bhjvh"]
 
 [ext_resource type="Script" uid="uid://bmhc0nlnv1jvu" path="res://Scenes/toy_mouse.gd" id="1_uoasc"]
 [ext_resource type="Texture2D" uid="uid://c0s6phtvhid0j" path="res://Art/mouse.png" id="2_1nl3g"]
