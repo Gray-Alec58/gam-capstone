@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cmad28aext0y1" path="res://Art/UI_Exports/Map/BackArrowNorm.png" id="6_1asfg"]
 [ext_resource type="Texture2D" uid="uid://e158mk1dsqjb" path="res://Art/UI_Exports/Map/BackArrowClick.png" id="7_w2b8q"]
 [ext_resource type="Texture2D" uid="uid://qjlwaujtrhww" path="res://Art/UI_Exports/Map/BackArrowHover.png" id="8_cv880"]
+[ext_resource type="Texture2D" uid="uid://lfbg1qvtjbxx" path="res://Art/fence/fence.png" id="9_w2b8q"]
 
 [node name="Map_Scene" type="Node2D" unique_id=1997719588]
 
@@ -50,6 +51,11 @@ grow_vertical = 0
 texture_normal = ExtResource("6_1asfg")
 texture_pressed = ExtResource("7_w2b8q")
 texture_hover = ExtResource("8_cv880")
+
+[node name="Fence" type="Sprite2D" parent="." unique_id=389715010]
+position = Vector2(756, 884)
+scale = Vector2(0.32447913, 0.26111114)
+texture = ExtResource("9_w2b8q")
 
 [connection signal="pressed" from="MapBG/StarterPlotTextB" to="MapBG" method="_on_starter_plot_text_b_pressed"]
 [connection signal="pressed" from="MapBG/BackArrowTextB" to="MapBG" method="_on_back_arrow_text_b_pressed"]
