@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ci7b6qllen1h"]
 
 [ext_resource type="Texture2D" uid="uid://psiloyf4li7g" path="res://Art/UI_Exports/ExpandApp/ExpandWindowBG.png" id="1_rvmfh"]
+[ext_resource type="Script" uid="uid://dkeyfx68f61xc" path="res://Scenes & Scripts/Computer/Apps/Expand/expand_window.gd" id="1_y0ii2"]
 [ext_resource type="Texture2D" uid="uid://bn1dpsfygsfv8" path="res://Art/UI_Exports/ExpandApp/BuildNormal.png" id="2_y0ii2"]
 [ext_resource type="Texture2D" uid="uid://wao31hgc1oj7" path="res://Art/UI_Exports/ExpandApp/BuildClick.png" id="3_mhfx1"]
 [ext_resource type="Texture2D" uid="uid://cyg7o66kbafrg" path="res://Art/UI_Exports/ExpandApp/BuildHover.png" id="4_6a4wy"]
@@ -25,6 +26,7 @@ offset_top = -400.0
 offset_bottom = 400.0
 grow_horizontal = 0
 grow_vertical = 2
+script = ExtResource("1_y0ii2")
 
 [node name="ExpandWindow" type="MarginContainer" parent="." unique_id=1758135561]
 custom_minimum_size = Vector2(1500, 800)
@@ -145,3 +147,5 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_c7eor")
 theme_override_font_sizes/font_size = 36
 text = "Upgrade"
+
+[connection signal="pressed" from="ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/ButtonContainer/BuildTextB" to="." method="_on_build_text_b_pressed"]

@@ -269,8 +269,8 @@ text = "START"
 [node name="PigSprite" type="AnimatedSprite2D" parent="FundraiseWindow/NinePatchRect/MarginContainer/LeftStreamContainer/LiveStreamWindow" unique_id=564234503]
 unique_name_in_owner = true
 visible = false
-position = Vector2(691, 478)
-scale = Vector2(0.13, 0.13)
+position = Vector2(100.999985, 477)
+scale = Vector2(0.10164225, 0.096978694)
 sprite_frames = SubResource("SpriteFrames_tceoj")
 animation = &"idle"
 script = ExtResource("7_5dmer")
@@ -278,8 +278,8 @@ script = ExtResource("7_5dmer")
 [node name="ChickenSprite" type="AnimatedSprite2D" parent="FundraiseWindow/NinePatchRect/MarginContainer/LeftStreamContainer/LiveStreamWindow" unique_id=1913325702]
 unique_name_in_owner = true
 visible = false
-position = Vector2(908.5, 479)
-scale = Vector2(0.12858093, 0.13057962)
+position = Vector2(991.00006, 513)
+scale = Vector2(0.08394407, 0.07928051)
 sprite_frames = SubResource("SpriteFrames_02lub")
 animation = &"idle"
 script = ExtResource("9_7bvi8")

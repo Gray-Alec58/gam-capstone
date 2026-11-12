@@ -80,3 +80,5 @@ func rescued_chicken():
 
 func get_chicken_count():
 	return rescued_chickens.size()
+
+var live_stream: bool = false

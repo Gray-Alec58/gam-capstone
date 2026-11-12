@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://0yb0xxr43hbc"]
 
+[ext_resource type="Script" uid="uid://ssqcy83s6535" path="res://Scenes & Scripts/Computer/Apps/Research/research_window_1.gd" id="1_0fqfn"]
 [ext_resource type="Texture2D" uid="uid://dt844j2edivar" path="res://Art/UI_Exports/ResearchApp/ResearchWindowBG.png" id="1_wmm8w"]
 [ext_resource type="Texture2D" uid="uid://mjmsgcdybsyj" path="res://Art/UI_Exports/ResearchApp/ResearchAnimalButton.png" id="2_0fqfn"]
 [ext_resource type="Texture2D" uid="uid://h0vshu0lev6o" path="res://Art/UI_Exports/ResearchApp/ResearchAnimalClick.png" id="3_sjgey"]
@@ -21,6 +22,7 @@ grow_horizontal = 0
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+script = ExtResource("1_0fqfn")
 
 [node name="ResearchWindow1" type="MarginContainer" parent="." unique_id=1834359208]
 custom_minimum_size = Vector2(1500, 800)
@@ -184,3 +186,5 @@ texture_pressed = ExtResource("3_sjgey")
 texture_hover = ExtResource("4_kqmuy")
 ignore_texture_size = true
 stretch_mode = 3
+
+[connection signal="pressed" from="ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/TopButtonContainer/FarmAnimalTextB" to="." method="_on_farm_animal_text_b_pressed"]

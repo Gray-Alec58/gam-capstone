@@ -1,9 +1,7 @@
 extends Control
 
 @onready var gold_label: Label = %GoldLabel
-@onready var computer = %Computer
-
-@onready var menu_window = %MenuWindow
+@onready var menu_window: NinePatchRect = %MenuWindow
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,8 +13,6 @@ func display_gold() -> void:
 
 func _on_menu_button_pressed() -> void:
 	menu_window.visible = true
-	#turns off input
-	computer.input_pickable = false
 
 
 func _on_exit_button_pressed() -> void:
@@ -24,5 +20,3 @@ func _on_exit_button_pressed() -> void:
 
 func _on_close_menu_button_pressed() -> void:
 	menu_window.visible = false
-	#turns on input
-	computer.input_pickable = true
