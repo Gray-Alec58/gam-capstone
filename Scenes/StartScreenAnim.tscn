@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://drhsgb33taw7r"]
+
+[ext_resource type="Texture2D" uid="uid://d38cxckouklf1" path="res://Art/ChickenUI.png" id="1_afa52"]
+
+[sub_resource type="Animation" id="Animation_g61qi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Chimken:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1019.7812, 480.79575)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Chimken:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-6.2831855]
+}
+
+[sub_resource type="Animation" id="Animation_bumg0"]
+resource_name = "StartChickenWalk"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Chimken:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1019.7812, 464.79575), Vector2(-91.00018, 480.79575)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Chimken:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0009999999, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -6.2831855]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hfr1s"]
+_data = {
+&"RESET": SubResource("Animation_g61qi"),
+&"StartChickenWalk": SubResource("Animation_bumg0")
+}
+
+[node name="StartScreenAnim" type="Node2D" unique_id=1792623498]
+
+[node name="Chimken" type="Sprite2D" parent="." unique_id=2005456569]
+position = Vector2(1019.7812, 480.79575)
+rotation = -6.2831855
+scale = Vector2(0.061645895, 0.06164591)
+texture = ExtResource("1_afa52")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=728460612]
+libraries/ = SubResource("AnimationLibrary_hfr1s")

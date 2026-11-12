@@ -5,13 +5,17 @@
 [ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="3_mtlf8"]
 [ext_resource type="Texture2D" uid="uid://b2i0l8bva05gv" path="res://Art/UI_Exports/StartMenu/StartButtonNorm.png" id="3_nqnrp"]
 [ext_resource type="Texture2D" uid="uid://cetfsi60k1y6f" path="res://Art/UI_Exports/StartMenu/StartButtonClick.png" id="4_5a7ho"]
-[ext_resource type="Texture2D" uid="uid://cw24jrbil53ck" path="res://Art/UI_Exports/StartMenu/StartButtonHover.png" id="5_ssogg"]
 [ext_resource type="Texture2D" uid="uid://cl7her220nsjq" path="res://Art/UI_Exports/StartMenu/ExitButtonNorm.png" id="7_akot6"]
 [ext_resource type="Texture2D" uid="uid://dc6p00sj4tsmq" path="res://Art/UI_Exports/StartMenu/ExitButtonClick.png" id="7_ssogg"]
 [ext_resource type="Texture2D" uid="uid://4iwnttlhpxki" path="res://Art/UI_Exports/StartMenu/ExitButtonHover.png" id="8_akot6"]
+[ext_resource type="PackedScene" uid="uid://drhsgb33taw7r" path="res://Scenes/StartScreenAnim.tscn" id="10_rjuq2"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_akot6"]
+load_path = "res://.godot/imported/StartButtonHover.png-c81bd895c9f9b95648e960fcba944c0d.ctex"
 
 [node name="StartScreen" type="Node2D" unique_id=330657146]
 script = ExtResource("1_60ddj")
+new_texture = ExtResource("4_5a7ho")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1419812566]
 z_index = -1
@@ -44,7 +48,7 @@ theme_override_constants/separation = 30
 layout_mode = 2
 texture_normal = ExtResource("3_nqnrp")
 texture_pressed = ExtResource("4_5a7ho")
-texture_hover = ExtResource("5_ssogg")
+texture_hover = SubResource("CompressedTexture2D_akot6")
 
 [node name="Label" type="Label" parent="Background/MenuContainer/VBoxContainer/StartTextB" unique_id=892780039]
 layout_mode = 1
@@ -87,6 +91,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_mtlf8")
 theme_override_font_sizes/font_size = 42
 text = "EXIT"
+
+[node name="StartScreenAnim" parent="." unique_id=1792623498 instance=ExtResource("10_rjuq2")]
+visible = false
+position = Vector2(-1, -32)
 
 [connection signal="pressed" from="Background/MenuContainer/VBoxContainer/StartTextB" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="Background/MenuContainer/VBoxContainer/ExitTextB" to="." method="_on_exit_text_b_pressed"]

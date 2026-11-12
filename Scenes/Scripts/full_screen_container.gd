@@ -38,6 +38,11 @@ func _on_fundraise_texture_button_pressed() -> void:
 	RescueWindow.visible = false
 	ExpandWindow.visible = false
 	FundraiseWindow.visible = true
+	if %StartStreamButton.visible == false: #shows animal animation in live stream based whether or not the animal is unlocked and bought
+		if GlobalScript.total_chickens >= 1:
+			%ChickenSprite.visible = true
+		if GlobalScript.total_pigs >=1:
+			%PigSprite.visble = true
 #farm animal button reveals the second research window
 #sets visability of other windows to false
 func _on_farm_animal_texture_button_pressed() -> void:
@@ -49,6 +54,6 @@ func _on_farm_animal_texture_button_pressed() -> void:
 
 #When build button is pressed goes to map scene
 func _on_build_text_b_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Map_Scene.tscn")
+	GlobalScript.open_scene("res://Scenes/Map_Scene.tscn")
 	
 	

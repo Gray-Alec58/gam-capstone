@@ -8,8 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://ocseojrdjuko" path="res://Art/UI_Exports/BuildingScene/BuildTabBG.png" id="5_x2psr"]
 [ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="6_tbc8r"]
 [ext_resource type="Texture2D" uid="uid://b5rnqd365132v" path="res://Art/UI_Exports/BuildingScene/BuildItemNorm.png" id="7_mkcib"]
+[ext_resource type="Texture2D" uid="uid://cbrgmd4yeq8xh" path="res://Art/UI_Exports/Enclosures/SmallEnclosureNorm.png" id="7_nuk34"]
 [ext_resource type="Texture2D" uid="uid://bexfkbsr3dnj5" path="res://Art/UI_Exports/BuildingScene/BuildItemClick.png" id="8_1inf0"]
+[ext_resource type="Texture2D" uid="uid://dtrh3c0mkfakn" path="res://Art/UI_Exports/Enclosures/SmallEnclosureClick.png" id="8_vvf2v"]
 [ext_resource type="Texture2D" uid="uid://bm57fn8ocngtb" path="res://Art/UI_Exports/BuildingScene/BuildItemHover.png" id="9_14tuw"]
+[ext_resource type="Texture2D" uid="uid://bhm21rlnro5ds" path="res://Art/UI_Exports/Enclosures/SmallEnclosureHover.png" id="9_ycc17"]
 [ext_resource type="Texture2D" uid="uid://cmad28aext0y1" path="res://Art/UI_Exports/Map/BackArrowNorm.png" id="11_14tuw"]
 [ext_resource type="Texture2D" uid="uid://e158mk1dsqjb" path="res://Art/UI_Exports/Map/BackArrowClick.png" id="12_nvbxt"]
 [ext_resource type="Texture2D" uid="uid://qjlwaujtrhww" path="res://Art/UI_Exports/Map/BackArrowHover.png" id="13_rffyn"]
@@ -37,6 +40,15 @@ texture_margin_left = 15.0
 texture_margin_top = 15.0
 texture_margin_right = 15.0
 texture_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xjid8"]
+texture = ExtResource("7_nuk34")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dva8p"]
+texture = ExtResource("8_vvf2v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nn1d3"]
+texture = ExtResource("9_ycc17")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kxbuo"]
 texture = ExtResource("7_mkcib")
@@ -139,19 +151,107 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_bjgtc")
 layout_mode = 2
 theme_override_constants/separation = 25
 
-[node name="Plot1" type="Button" parent="Background/BuildSceneContainer/PlotContainer/BottomPlotContainer" unique_id=1871191065]
+[node name="Plot3" type="Button" parent="Background/BuildSceneContainer/PlotContainer/BottomPlotContainer" unique_id=1871191065]
 custom_minimum_size = Vector2(600, 400)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_2kmgm")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_b58sg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_bjgtc")
 
-[node name="Plot2" type="Button" parent="Background/BuildSceneContainer/PlotContainer/BottomPlotContainer" unique_id=1061611333]
+[node name="Plot4" type="Button" parent="Background/BuildSceneContainer/PlotContainer/BottomPlotContainer" unique_id=1061611333]
 custom_minimum_size = Vector2(600, 400)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_2kmgm")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_b58sg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_bjgtc")
+
+[node name="EnclosureContainer" type="VBoxContainer" parent="Background/BuildSceneContainer" unique_id=844950497]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Label" type="Label" parent="Background/BuildSceneContainer/EnclosureContainer" unique_id=1072288896]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_tbc8r")
+theme_override_font_sizes/font_size = 100
+text = "Starter Plot"
+
+[node name="TopEnclosureContainer" type="HBoxContainer" parent="Background/BuildSceneContainer/EnclosureContainer" unique_id=1395190017]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+theme_override_constants/separation = 25
+
+[node name="TopRowControl" type="Control" parent="Background/BuildSceneContainer/EnclosureContainer/TopEnclosureContainer" unique_id=371777863]
+custom_minimum_size = Vector2(1225, 400)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="SmallEnclosure1" type="Button" parent="Background/BuildSceneContainer/EnclosureContainer/TopEnclosureContainer/TopRowControl" unique_id=1036838615]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 0
+offset_left = -1.25
+offset_top = -3.0
+offset_right = 598.75
+offset_bottom = 397.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_xjid8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dva8p")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nn1d3")
+
+[node name="SmallEnclosure2" type="Button" parent="Background/BuildSceneContainer/EnclosureContainer/TopEnclosureContainer/TopRowControl" unique_id=1324186272]
+visible = false
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 0
+offset_left = 624.75
+offset_top = -3.0
+offset_right = 1224.75
+offset_bottom = 397.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_xjid8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dva8p")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nn1d3")
+
+[node name="BottomEnclosureContainer" type="HBoxContainer" parent="Background/BuildSceneContainer/EnclosureContainer" unique_id=1000652823]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+theme_override_constants/separation = 25
+
+[node name="BottomRowControl" type="Control" parent="Background/BuildSceneContainer/EnclosureContainer/BottomEnclosureContainer" unique_id=597664922]
+custom_minimum_size = Vector2(1225, 400)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="SmallEnclosure1" type="Button" parent="Background/BuildSceneContainer/EnclosureContainer/BottomEnclosureContainer/BottomRowControl" unique_id=1717136422]
+visible = false
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 0
+offset_left = -1.25
+offset_top = -3.0
+offset_right = 598.75
+offset_bottom = 397.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_xjid8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dva8p")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nn1d3")
+
+[node name="SmallEnclosure2" type="Button" parent="Background/BuildSceneContainer/EnclosureContainer/BottomEnclosureContainer/BottomRowControl" unique_id=86679085]
+visible = false
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 0
+offset_left = 624.75
+offset_top = -3.0
+offset_right = 1224.75
+offset_bottom = 397.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_xjid8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dva8p")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nn1d3")
 
 [node name="BuildWindowTab" type="NinePatchRect" parent="Background/BuildSceneContainer" unique_id=1977357285]
 unique_name_in_owner = true

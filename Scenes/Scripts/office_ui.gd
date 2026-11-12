@@ -12,9 +12,13 @@ func display_gold() -> void:
 
 func _on_menu_button_pressed() -> void:
 	%MenuWindow.visible = true
+	#turns off input for computer
+	$"../../../Computer".input_pickable = false
 
 func _on_exit_button_pressed() -> void:
 	get_tree().quit()
 
 func _on_close_menu_button_pressed() -> void:
 	%MenuWindow.visible = false
+	#turns on input for computer
+	$"../../../Computer".input_pickable = true
