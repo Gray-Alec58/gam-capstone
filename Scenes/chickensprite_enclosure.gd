@@ -10,13 +10,21 @@ var destination: Vector2
 var moving: = false
 var wait_timer: float = 0.0
 
-@onready var enclosure = get_parent().get_node("%SmallEnclosure1")
+var enclosure: Control
+var chicken_id: int
+
+func setup(enclosure_node: Control, id: int):
+	enclosure = enclosure_node
+	chicken_id = id
+
 
 func _ready():
 	randomize()
+	if enclosure == null:
+		return
 	var rect = enclosure.get_global_rect()
 	global_position = rect.get_center()
-	visible = false
+	visible = true
 	play("Idle")
 #making chicken move in random direction in the enclosure
 func _process(delta):
@@ -41,6 +49,8 @@ func _process(delta):
 			choose_destination()
 
 func choose_destination():
+	if enclosure == null:
+		return
 	var rect = enclosure.get_global_rect()
 	var min_x = rect.position.x + boundary_margin_x
 	var max_x = rect.end.x - boundary_margin_x
@@ -53,6 +63,7 @@ func choose_destination():
 			)
 		if global_position.distance_to(new_destination) > 150:
 			destination = new_destination
+			GlobalScript.chicken_position[chicken_id] = global_position
 			moving = true
 			play("Idle")
 			return

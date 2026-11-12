@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://cku2hxvgtctoh"]
+
+[ext_resource type="Texture2D" uid="uid://b670ubl8rlws4" path="res://Art/chickenanims/chickenidle.png" id="1_2y3gj"]
+[ext_resource type="Script" uid="uid://cga21p67ufyog" path="res://Scenes/chickensprite_enclosure.gd" id="2_r014k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p25jh"]
+atlas = ExtResource("1_2y3gj")
+region = Rect2(0, 0, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvdtc"]
+atlas = ExtResource("1_2y3gj")
+region = Rect2(1501, 0, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iblum"]
+atlas = ExtResource("1_2y3gj")
+region = Rect2(3002, 0, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0vhe"]
+atlas = ExtResource("1_2y3gj")
+region = Rect2(0, 1501, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nntk3"]
+atlas = ExtResource("1_2y3gj")
+region = Rect2(1501, 1501, 1501, 1501)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xjid8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p25jh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvdtc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iblum")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0vhe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nntk3")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 6.0
+}]
+
+[node name="ChickenSprite" type="AnimatedSprite2D" unique_id=1240850030]
+visible = false
+z_index = 10
+scale = Vector2(0.07711527, 0.07711527)
+sprite_frames = SubResource("SpriteFrames_xjid8")
+animation = &"Idle"
+frame = 1
+frame_progress = 0.105045974
+script = ExtResource("2_r014k")

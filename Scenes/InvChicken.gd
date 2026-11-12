@@ -7,7 +7,7 @@ var chicken_id: int
 #for being able to click on chicken
 func setup(id: int):
 	chicken_id = id
-	chicken_name.text = "McChicken" + str(id +1)
+	chicken_name.text = GlobalScript.rescued_chickens[id]
 	chicken_button.pressed.connect(_on_pressed)
 
 func _on_pressed():
