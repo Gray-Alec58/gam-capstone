@@ -78,3 +78,5 @@ func rescued_chicken():
 	print("CHICKENS SAVED: ", rescued_chickens.size())
 func get_chicken_count():
 	return rescued_chickens.size()
+
+var chicken_position = {}

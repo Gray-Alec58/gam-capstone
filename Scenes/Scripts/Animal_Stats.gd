@@ -10,12 +10,18 @@ func _ready():
 	if GlobalScript.have_enclosure == true:
 		GlobalScript.build_enclosure ["Enclosure1"] = "small_enclosure1"
 		update_enclosure_1()
+		update_chicken_position()
 	inventory_panel.hide()
 	
 
 func update_enclosure_1():
 	if GlobalScript.build_enclosure.has("Enclosure1"):
 		%SmallEnclosure1.visible = true
+
+func update_chicken_position():
+	if GlobalScript.chicken_position.has("McChicken1"):
+		%ChickenSprite.position = GlobalScript.chicken_position["McChicken1"]
+		%ChickenSprite.visible = true
 
 
 #When small enclosure is pressed show inventory
@@ -45,6 +51,7 @@ func _on_small_enclosure_1_pressed() -> void:
 	chicken_sprite.visible = true
 	chicken_sprite.play("Idle")
 	GlobalScript.selected_chicken_id = -1
+	GlobalScript.chicken_position["McChicken1"] = %ChickenSprite.position
 	print(chicken_name, "placed in Plot")
 	update_inventory()
 
