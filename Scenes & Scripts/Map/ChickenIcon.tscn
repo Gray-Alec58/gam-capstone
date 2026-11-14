@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d38cxckouklf1" path="res://Art/Animals/Chicken/ChickenUI.png" id="1_wjvp0"]
 [ext_resource type="Script" uid="uid://bbdwb5uq05lr2" path="res://Scenes & Scripts/Map/InvChicken.gd" id="2_wjvp0"]
+[ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="3_x3aow"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xjid8"]
 texture = ExtResource("1_wjvp0")
@@ -12,12 +13,34 @@ texture = ExtResource("1_wjvp0")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w548r"]
 texture = ExtResource("1_wjvp0")
 
-[node name="ChickenIcon" type="Node2D" unique_id=966371334]
+[node name="ChickenIcon" type="Control" unique_id=1549631418]
+custom_minimum_size = Vector2(120, 130)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("2_wjvp0")
 
-[node name="ChickenButton" type="Button" parent="." unique_id=169327344]
-offset_right = 200.0
-offset_bottom = 200.0
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=665794045]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ChickenButton" type="Button" parent="VBoxContainer" unique_id=169327344]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 110)
+layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_xjid8")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_63fvd")
 theme_override_styles/hover = SubResource("StyleBoxTexture_w548r")
-script = ExtResource("2_wjvp0")
+
+[node name="ChickenName" type="Label" parent="VBoxContainer" unique_id=1168404015]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_x3aow")
+theme_override_font_sizes/font_size = 20
+text = "McChicken"

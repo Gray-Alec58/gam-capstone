@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cbrgmd4yeq8xh" path="res://Art/UI_Exports/Enclosures/SmallEnclosureNorm.png" id="8_apt6p"]
 [ext_resource type="Texture2D" uid="uid://dtrh3c0mkfakn" path="res://Art/UI_Exports/Enclosures/SmallEnclosureClick.png" id="9_3anna"]
 [ext_resource type="Texture2D" uid="uid://bhm21rlnro5ds" path="res://Art/UI_Exports/Enclosures/SmallEnclosureHover.png" id="10_bskf5"]
+[ext_resource type="PackedScene" uid="uid://c3io2b37swp5c" path="res://Scenes & Scripts/Map/Enclosure_chicken_sprite.tscn" id="11_a332c"]
 [ext_resource type="Texture2D" uid="uid://ocseojrdjuko" path="res://Art/UI_Exports/BuildingScene/BuildTabBG.png" id="11_wqunk"]
 [ext_resource type="Texture2D" uid="uid://cmad28aext0y1" path="res://Art/UI_Exports/Map/BackArrowNorm.png" id="12_t8mbg"]
 [ext_resource type="Texture2D" uid="uid://e158mk1dsqjb" path="res://Art/UI_Exports/Map/BackArrowClick.png" id="13_xkgea"]
@@ -46,8 +47,10 @@ position = Vector2(960.25, 540)
 texture = ExtResource("1_ty6o2")
 script = ExtResource("2_i0oie")
 chicken_icon_scene = ExtResource("3_ty6o2")
+enclosure_chicken_scene = ExtResource("11_a332c")
 
 [node name="SceneContainer" type="MarginContainer" parent="Background" unique_id=696251869]
+unique_name_in_owner = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -141,6 +144,7 @@ layout_mode = 2
 mouse_filter = 2
 
 [node name="SmallEnclosure1" type="Button" parent="Background/SceneContainer/EnclosureContainer/TopEnclosureContainer/TopRowControl" unique_id=1553421948]
+unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(600, 400)
 layout_mode = 0
@@ -198,6 +202,11 @@ offset_bottom = 397.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_w3c0j")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_f0l1j")
 theme_override_styles/hover = SubResource("StyleBoxTexture_p25jh")
+
+[node name="ChickenSprite" parent="Background/SceneContainer/EnclosureContainer" unique_id=1763707581 instance=ExtResource("11_a332c")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(316.75, 358)
 
 [node name="AnimalStatPatch" type="NinePatchRect" parent="Background/SceneContainer" unique_id=652772195]
 visible = false
@@ -269,9 +278,12 @@ text = "Rescued Animals"
 horizontal_alignment = 1
 
 [node name="ChickenContainer" type="GridContainer" parent="Background/SceneContainer/AnimalInvPatch/MarginContainer/VBoxContainer" unique_id=2052994814]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-columns = 4
+theme_override_constants/h_separation = 3
+theme_override_constants/v_separation = 20
+columns = 3
 
 [node name="BackTextButton" type="TextureButton" parent="Background/SceneContainer" unique_id=1868327138]
 layout_mode = 2
