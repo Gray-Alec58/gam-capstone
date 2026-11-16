@@ -12,6 +12,16 @@
 [ext_resource type="Texture2D" uid="uid://6frf6whmii0w" path="res://Art/UI_Exports/ExpandApp/UpgradeNormal.png" id="9_wo5cv"]
 [ext_resource type="Texture2D" uid="uid://dunphymlh7hb8" path="res://Art/UI_Exports/ExpandApp/UpgradeClick.png" id="10_jcd2h"]
 [ext_resource type="Texture2D" uid="uid://dwwadpmdp8g61" path="res://Art/UI_Exports/ExpandApp/UpgradeHover.png" id="11_eh32u"]
+[ext_resource type="Texture2D" uid="uid://drhpo4a0fogej" path="res://Art/UI_Exports/AppWindowButtons/XButton.png" id="13_mhfx1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6a4wy"]
+texture = ExtResource("13_mhfx1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c7eor"]
+texture = ExtResource("13_mhfx1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_74mwu"]
+texture = ExtResource("13_mhfx1")
 
 [node name="Expand Window" type="Control" unique_id=1598065010]
 custom_minimum_size = Vector2(1500, 800)
@@ -29,6 +39,7 @@ grow_vertical = 2
 script = ExtResource("1_y0ii2")
 
 [node name="ExpandWindow" type="MarginContainer" parent="." unique_id=1758135561]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(1500, 800)
 layout_mode = 0
 size_flags_horizontal = 8
@@ -148,4 +159,15 @@ theme_override_fonts/font = ExtResource("5_c7eor")
 theme_override_font_sizes/font_size = 36
 text = "Upgrade"
 
+[node name="CloseWindowButton" type="Button" parent="ExpandWindow" unique_id=2039932111]
+visible = false
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_6a4wy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_c7eor")
+theme_override_styles/hover = SubResource("StyleBoxTexture_74mwu")
+
 [connection signal="pressed" from="ExpandWindow/NinePatchRect/MarginContainer/VBoxContainer/ButtonContainer/BuildTextB" to="." method="_on_build_text_b_pressed"]
+[connection signal="pressed" from="ExpandWindow/CloseWindowButton" to="." method="_on_close_window_button_pressed"]

@@ -6,6 +6,16 @@
 [ext_resource type="Texture2D" uid="uid://h0vshu0lev6o" path="res://Art/UI_Exports/ResearchApp/ResearchAnimalClick.png" id="3_sjgey"]
 [ext_resource type="Texture2D" uid="uid://hjhase4hckgs" path="res://Art/UI_Exports/ResearchApp/ResearchAnimalHover.png" id="4_kqmuy"]
 [ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="5_34r3x"]
+[ext_resource type="Texture2D" uid="uid://drhpo4a0fogej" path="res://Art/UI_Exports/AppWindowButtons/XButton.png" id="7_sjgey"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xjid8"]
+texture = ExtResource("7_sjgey")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dva8p"]
+texture = ExtResource("7_sjgey")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nn1d3"]
+texture = ExtResource("7_sjgey")
 
 [node name="Research Window 1" type="Control" unique_id=1040437686]
 custom_minimum_size = Vector2(1500, 800)
@@ -40,7 +50,6 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
-theme_override_constants/margin_right = 0
 
 [node name="WindowBackground" type="NinePatchRect" parent="ResearchWindow1" unique_id=318900160]
 layout_mode = 2
@@ -187,4 +196,15 @@ texture_hover = ExtResource("4_kqmuy")
 ignore_texture_size = true
 stretch_mode = 3
 
+[node name="CloseWindowButton" type="Button" parent="ResearchWindow1" unique_id=1156040035]
+visible = false
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_xjid8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dva8p")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nn1d3")
+
 [connection signal="pressed" from="ResearchWindow1/WindowBackground/ScreenContainer/ButtonContainer/TopButtonContainer/FarmAnimalTextB" to="." method="_on_farm_animal_text_b_pressed"]
+[connection signal="pressed" from="ResearchWindow1/CloseWindowButton" to="." method="_on_close_window_button_pressed"]

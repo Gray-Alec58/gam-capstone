@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://pgurlerf3n2t" path="res://Art/UI_Exports/popupui/PopUpBG.png" id="8_fl31h"]
 [ext_resource type="Texture2D" uid="uid://ckijv5vshure4" path="res://Art/UI_Exports/popupui/YesButton.png" id="9_85r5b"]
 [ext_resource type="Texture2D" uid="uid://cd0kx1a2kjtpt" path="res://Art/UI_Exports/popupui/NoButton.png" id="10_ivfha"]
+[ext_resource type="Texture2D" uid="uid://drhpo4a0fogej" path="res://Art/UI_Exports/AppWindowButtons/XButton.png" id="11_o4lus"]
 
 [sub_resource type="FontVariation" id="FontVariation_gn2j2"]
 base_font = ExtResource("5_n5vl2")
@@ -45,6 +46,15 @@ texture_margin_top = 10.0
 texture_margin_right = 10.0
 texture_margin_bottom = 10.0
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l5r3x"]
+texture = ExtResource("11_o4lus")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eingd"]
+texture = ExtResource("11_o4lus")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n5vl2"]
+texture = ExtResource("11_o4lus")
+
 [node name="Rescue Window" type="Control" unique_id=1570214081]
 custom_minimum_size = Vector2(1500, 800)
 layout_mode = 3
@@ -61,6 +71,7 @@ grow_vertical = 2
 size_flags_horizontal = 8
 
 [node name="RescueWindow" type="MarginContainer" parent="." unique_id=1085501765]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(1500, 800)
 layout_mode = 0
 size_flags_horizontal = 8
@@ -350,9 +361,20 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
+[node name="CloseWindowButton" type="Button" parent="RescueWindow" unique_id=1062606642]
+visible = false
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_l5r3x")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_eingd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_n5vl2")
+
 [connection signal="pressed" from="RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer/AdoptButtonContainer/YesButton" to="RescueWindow" method="_on_yes_button_pressed"]
 [connection signal="pressed" from="RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer/AdoptButtonContainer/NoButton" to="RescueWindow" method="_on_no_button_pressed"]
 [connection signal="pressed" from="RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo2/MarginContainer/AdoptButtonContainer/YesButton" to="RescueWindow" method="_on_yes_button_pressed"]
 [connection signal="pressed" from="RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo2/MarginContainer/AdoptButtonContainer/NoButton" to="RescueWindow" method="_on_no_button_pressed"]
 [connection signal="pressed" from="RescueWindow/WindowBackground/MarginContainer/ConfirmUI/MarginContainer/VBoxContainer/HBoxContainer/BuyButton" to="RescueWindow" method="_on_buy_button_pressed"]
 [connection signal="pressed" from="RescueWindow/WindowBackground/MarginContainer/ConfirmUI/MarginContainer/VBoxContainer/HBoxContainer/NoBuyButton" to="RescueWindow" method="_on_no_buy_button_pressed"]
+[connection signal="pressed" from="RescueWindow/CloseWindowButton" to="RescueWindow" method="_on_close_window_button_pressed"]

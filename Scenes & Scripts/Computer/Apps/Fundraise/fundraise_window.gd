@@ -18,3 +18,7 @@ func _on_start_stream_button_pressed() -> void:
 		%StartStreamButton.hide()
 		%LiveStreamWindow.texture = load("uid://bxdmufjm8k6lj") #changes background of live stream window to lowest tier of enclosure
 		#upgrades based on the highest upgrade of enclosure 
+
+
+#func _on_close_window_button_pressed() -> void:
+	#%"FundraiseWindow".visible = false

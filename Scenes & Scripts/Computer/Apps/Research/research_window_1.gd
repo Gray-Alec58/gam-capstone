@@ -6,3 +6,7 @@ func _on_farm_animal_text_b_pressed() -> void:
 	%"Rescue Window".visible = false
 	%"Expand Window".visible = false
 	%"Fundraise Window".visible = false
+
+
+#func _on_close_window_button_pressed() -> void:
+	#%"Research Window 1".visible = false

@@ -49,6 +49,7 @@ grow_horizontal = 0
 grow_vertical = 2
 
 [node name="ResearchWindow2" type="MarginContainer" parent="." unique_id=591312970 node_paths=PackedStringArray("animal_button_1", "confirm_popup", "fact_popup")]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(1500, 800)
 layout_mode = 0
 size_flags_horizontal = 8

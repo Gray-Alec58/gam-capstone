@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://bcjmo6b1x1vao" path="res://Scenes & Scripts/Computer/Apps/Fundraise/chicken_sprite.gd" id="9_7bvi8"]
 [ext_resource type="Texture2D" uid="uid://wtkq5hnftouy" path="res://Art/UI_Exports/FundraiserApp/DonationsUI.png" id="10_yon3o"]
 [ext_resource type="Texture2D" uid="uid://bgesf7ym0e0e0" path="res://Art/UI_Exports/FundraiserApp/ChatUi.png" id="11_lmsrv"]
+[ext_resource type="Texture2D" uid="uid://drhpo4a0fogej" path="res://Art/UI_Exports/AppWindowButtons/XButton.png" id="12_dh48t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nr7wr"]
 atlas = ExtResource("5_x0q4g")
@@ -187,6 +188,15 @@ texture_margin_top = 15.0
 texture_margin_right = 15.0
 texture_margin_bottom = 15.0
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lqgjf"]
+texture = ExtResource("12_dh48t")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_223xa"]
+texture = ExtResource("12_dh48t")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x0q4g"]
+texture = ExtResource("12_dh48t")
+
 [node name="Fundraise Window" type="Control" unique_id=641669392]
 custom_minimum_size = Vector2(1500, 800)
 layout_mode = 3
@@ -199,6 +209,7 @@ grow_horizontal = 0
 grow_vertical = 2
 
 [node name="FundraiseWindow" type="MarginContainer" parent="." unique_id=757212396]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(1500, 800)
 layout_mode = 1
 anchors_preset = 6
@@ -316,4 +327,15 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_lskfo")
 theme_override_styles/hover = SubResource("StyleBoxTexture_lskfo")
 text = "Play AD"
 
+[node name="CloseWindowButton" type="Button" parent="FundraiseWindow" unique_id=253220291]
+visible = false
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_lqgjf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_223xa")
+theme_override_styles/hover = SubResource("StyleBoxTexture_x0q4g")
+
 [connection signal="pressed" from="FundraiseWindow/NinePatchRect/MarginContainer/LeftStreamContainer/LiveStreamWindow/StartStreamButton" to="FundraiseWindow" method="_on_start_stream_button_pressed"]
+[connection signal="pressed" from="FundraiseWindow/CloseWindowButton" to="FundraiseWindow" method="_on_close_window_button_pressed"]
