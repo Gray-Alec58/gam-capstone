@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://7w8pm2qskeex"]
+
+[ext_resource type="Script" uid="uid://c6sae4lnjlex7" path="res://Scenes & Scripts/Computer/full_screen_container.gd" id="1_8ptuv"]
+[ext_resource type="Script" uid="uid://bigmwsp1l3ejd" path="res://Scenes & Scripts/Computer/computer_screen.gd" id="1_ntevp"]
+[ext_resource type="Texture2D" uid="uid://d2raekvhdvey0" path="res://Art/UI_Exports/ResearchApp/ResearchNormal.png" id="5_3ia82"]
+[ext_resource type="Texture2D" uid="uid://be4tmw4r8s3hs" path="res://Art/UI_Exports/ResearchApp/ResearchClick.png" id="6_svqil"]
+[ext_resource type="Texture2D" uid="uid://wp6nitls2l51" path="res://Art/UI_Exports/ResearchApp/ResearchHover.png" id="7_g3uet"]
+[ext_resource type="Texture2D" uid="uid://bvgcybt3rgik3" path="res://Art/UI_Exports/RescueApp/RescueNormal.png" id="10_xmxri"]
+[ext_resource type="Texture2D" uid="uid://b4j5xh55cpa4b" path="res://Art/UI_Exports/RescueApp/RescueClick.png" id="11_j3hoa"]
+[ext_resource type="Texture2D" uid="uid://bp2gha1vhajc5" path="res://Art/UI_Exports/RescueApp/RescueHover.png" id="12_qsnkp"]
+[ext_resource type="PackedScene" uid="uid://0yb0xxr43hbc" path="res://Scenes & Scripts/Computer/Apps/Research/research_window_1.tscn" id="15_1m2ho"]
+[ext_resource type="Texture2D" uid="uid://bamnw2pepvb8v" path="res://Art/UI_Exports/ExpandApp/ExpandNormal.png" id="15_ffl3h"]
+[ext_resource type="Texture2D" uid="uid://cel23hv46urri" path="res://Art/UI_Exports/ExpandApp/ExpandClick.png" id="16_4wy8y"]
+[ext_resource type="PackedScene" uid="uid://c7ote22pg1a8l" path="res://Scenes & Scripts/Computer/Apps/Research/research_window_2.tscn" id="16_xtpjs"]
+[ext_resource type="Texture2D" uid="uid://w6chahe3k0dp" path="res://Art/UI_Exports/ExpandApp/ExpandHover.png" id="17_bjoxt"]
+[ext_resource type="PackedScene" uid="uid://d4gsnbbiot6nb" path="res://Scenes & Scripts/Computer/Apps/Rescue/rescue_window.tscn" id="17_g3mod"]
+[ext_resource type="PackedScene" uid="uid://ci7b6qllen1h" path="res://Scenes & Scripts/Computer/Apps/Expand/expand_window.tscn" id="18_jd225"]
+[ext_resource type="PackedScene" uid="uid://b3mv30rn77o8h" path="res://Scenes & Scripts/Computer/Apps/Fundraise/fundraise_window.tscn" id="19_k3cir"]
+[ext_resource type="Texture2D" uid="uid://ddbllop8bms4m" path="res://Art/UI_Exports/FundraiserApp/FundraiserNormal.png" id="20_ik20o"]
+[ext_resource type="Texture2D" uid="uid://clcqg817x6c4w" path="res://Art/UI_Exports/FundraiserApp/FundraiserClick.png" id="21_vib8a"]
+[ext_resource type="Texture2D" uid="uid://b1pm0eb2s6hvd" path="res://Art/UI_Exports/FundraiserApp/FundraiserHover.png" id="22_x0hwp"]
+[ext_resource type="Texture2D" uid="uid://dp8b6eo68xeyr" path="res://Art/UI_Exports/ExitButton.png" id="35_avqr3"]
+[ext_resource type="Texture2D" uid="uid://q0irlwa3k0bl" path="res://Art/UI_Exports/ExitClick.png" id="41_q7d4u"]
+[ext_resource type="Texture2D" uid="uid://djteu1twus77t" path="res://Art/UI_Exports/ExitHover.png" id="42_lehph"]
+
+[node name="ComputerScreen" type="Control" unique_id=26936767]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ntevp")
+
+[node name="FullScreenContainer" type="MarginContainer" parent="." unique_id=3034331]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 70
+script = ExtResource("1_8ptuv")
+
+[node name="AppContainer" type="VBoxContainer" parent="FullScreenContainer" unique_id=505309947]
+custom_minimum_size = Vector2(200, 800)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 30
+
+[node name="ResearchTextB" type="TextureButton" parent="FullScreenContainer/AppContainer" unique_id=1001687078]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("5_3ia82")
+texture_pressed = ExtResource("6_svqil")
+texture_hover = ExtResource("7_g3uet")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="RescueTextB" type="TextureButton" parent="FullScreenContainer/AppContainer" unique_id=1657409499]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("10_xmxri")
+texture_pressed = ExtResource("11_j3hoa")
+texture_hover = ExtResource("12_qsnkp")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BuildTextB" type="TextureButton" parent="FullScreenContainer/AppContainer" unique_id=280470128]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("15_ffl3h")
+texture_pressed = ExtResource("16_4wy8y")
+texture_hover = ExtResource("17_bjoxt")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="FundraiseTextB" type="TextureButton" parent="FullScreenContainer/AppContainer" unique_id=862157612]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("20_ik20o")
+texture_pressed = ExtResource("21_vib8a")
+texture_hover = ExtResource("22_x0hwp")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Research Window 1" parent="FullScreenContainer" unique_id=1040437686 instance=ExtResource("15_1m2ho")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Research Window 2" parent="FullScreenContainer" unique_id=1288550825 instance=ExtResource("16_xtpjs")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="Rescue Window" parent="FullScreenContainer" unique_id=1570214081 instance=ExtResource("17_g3mod")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Expand Window" parent="FullScreenContainer" unique_id=1598065010 instance=ExtResource("18_jd225")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="Fundraise Window" parent="FullScreenContainer" unique_id=641669392 instance=ExtResource("19_k3cir")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="ExitTextB" type="TextureButton" parent="." unique_id=1997126746]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -51.0
+offset_top = -64.0
+offset_right = 38.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("35_avqr3")
+texture_pressed = ExtResource("41_q7d4u")
+texture_hover = ExtResource("42_lehph")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="pressed" from="FullScreenContainer/AppContainer/ResearchTextB" to="FullScreenContainer" method="_on_research_texture_button_pressed"]
+[connection signal="pressed" from="FullScreenContainer/AppContainer/RescueTextB" to="FullScreenContainer" method="_on_rescue_texture_button_pressed"]
+[connection signal="pressed" from="FullScreenContainer/AppContainer/BuildTextB" to="FullScreenContainer" method="_on_build_texture_button_pressed"]
+[connection signal="pressed" from="FullScreenContainer/AppContainer/FundraiseTextB" to="FullScreenContainer" method="_on_fundraise_texture_button_pressed"]
+[connection signal="pressed" from="ExitTextB" to="." method="_on_exit_texture_button_pressed"]

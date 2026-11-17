@@ -13,7 +13,6 @@ config_version=5
 config/name="GAM_Capstone"
 run/main_scene="uid://ddkswpsnmco8s"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [autoload]
 
