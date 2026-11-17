@@ -1,38 +1,38 @@
 [gd_scene format=3 uid="uid://dqx3xidf862li"]
 
-[ext_resource type="Texture2D" uid="uid://3qdmnfiycv3u" path="res://Art/UI_Exports/BuildingScene/ExBuiIdTab.png" id="1_nmyr6"]
-[ext_resource type="Script" uid="uid://bdhu7yi7utnwk" path="res://Scenes/Scripts/Animal_Stats.gd" id="2_5fovv"]
-[ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="2_ciasd"]
-[ext_resource type="Texture2D" uid="uid://2r4dx8kbw3cj" path="res://Art/UI_Exports/BuildingScene/BuildSlotNorm.png" id="3_5wrbs"]
-[ext_resource type="PackedScene" uid="uid://dl7wbxooqqrkq" path="res://Scenes/ChickenIcon.tscn" id="3_yh1tl"]
-[ext_resource type="PackedScene" uid="uid://cku2hxvgtctoh" path="res://Scenes/Enclosure_chicken_sprite.tscn" id="4_k4vsw"]
-[ext_resource type="Texture2D" uid="uid://b63niww63ix3x" path="res://Art/UI_Exports/BuildingScene/BuildSlotClick.png" id="4_mxvh2"]
-[ext_resource type="Texture2D" uid="uid://b853dckij2b7o" path="res://Art/UI_Exports/BuildingScene/BuildSlotHover.png" id="5_uxmwp"]
-[ext_resource type="Texture2D" uid="uid://ocseojrdjuko" path="res://Art/UI_Exports/BuildingScene/BuildTabBG.png" id="6_ciasd"]
-[ext_resource type="Texture2D" uid="uid://cmad28aext0y1" path="res://Art/UI_Exports/Map/BackArrowNorm.png" id="7_uxmwp"]
-[ext_resource type="Texture2D" uid="uid://cbrgmd4yeq8xh" path="res://Art/UI_Exports/Enclosures/SmallEnclosureNorm.png" id="7_y4ot5"]
-[ext_resource type="Texture2D" uid="uid://e158mk1dsqjb" path="res://Art/UI_Exports/Map/BackArrowClick.png" id="8_5fovv"]
-[ext_resource type="Texture2D" uid="uid://dtrh3c0mkfakn" path="res://Art/UI_Exports/Enclosures/SmallEnclosureClick.png" id="8_yh1tl"]
-[ext_resource type="Texture2D" uid="uid://qjlwaujtrhww" path="res://Art/UI_Exports/Map/BackArrowHover.png" id="9_i7cev"]
-[ext_resource type="Texture2D" uid="uid://bhm21rlnro5ds" path="res://Art/UI_Exports/Enclosures/SmallEnclosureHover.png" id="9_k4vsw"]
+[ext_resource type="Texture2D" uid="uid://3qdmnfiycv3u" path="res://Art/UI_Exports/BuildingScene/ExBuiIdTab.png" id="1_ty6o2"]
+[ext_resource type="Script" uid="uid://bdhu7yi7utnwk" path="res://Scenes & Scripts/Map/Animal_Stats.gd" id="2_i0oie"]
+[ext_resource type="PackedScene" uid="uid://dl7wbxooqqrkq" path="res://Scenes & Scripts/Map/ChickenIcon.tscn" id="3_ty6o2"]
+[ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="4_kaa6y"]
+[ext_resource type="Texture2D" uid="uid://2r4dx8kbw3cj" path="res://Art/UI_Exports/BuildingScene/BuildSlotNorm.png" id="5_jkq8k"]
+[ext_resource type="Texture2D" uid="uid://b63niww63ix3x" path="res://Art/UI_Exports/BuildingScene/BuildSlotClick.png" id="6_7ix04"]
+[ext_resource type="Texture2D" uid="uid://b853dckij2b7o" path="res://Art/UI_Exports/BuildingScene/BuildSlotHover.png" id="7_wrrrn"]
+[ext_resource type="Texture2D" uid="uid://cbrgmd4yeq8xh" path="res://Art/UI_Exports/Enclosures/SmallEnclosureNorm.png" id="8_apt6p"]
+[ext_resource type="Texture2D" uid="uid://dtrh3c0mkfakn" path="res://Art/UI_Exports/Enclosures/SmallEnclosureClick.png" id="9_3anna"]
+[ext_resource type="Texture2D" uid="uid://bhm21rlnro5ds" path="res://Art/UI_Exports/Enclosures/SmallEnclosureHover.png" id="10_bskf5"]
+[ext_resource type="PackedScene" uid="uid://c3io2b37swp5c" path="res://Scenes & Scripts/Map/Enclosure_chicken_sprite.tscn" id="11_a332c"]
+[ext_resource type="Texture2D" uid="uid://ocseojrdjuko" path="res://Art/UI_Exports/BuildingScene/BuildTabBG.png" id="11_wqunk"]
+[ext_resource type="Texture2D" uid="uid://cmad28aext0y1" path="res://Art/UI_Exports/Map/BackArrowNorm.png" id="12_t8mbg"]
+[ext_resource type="Texture2D" uid="uid://e158mk1dsqjb" path="res://Art/UI_Exports/Map/BackArrowClick.png" id="13_xkgea"]
+[ext_resource type="Texture2D" uid="uid://qjlwaujtrhww" path="res://Art/UI_Exports/Map/BackArrowHover.png" id="14_v8slh"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tpboi"]
-texture = ExtResource("3_5wrbs")
+texture = ExtResource("5_jkq8k")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hcoug"]
-texture = ExtResource("4_mxvh2")
+texture = ExtResource("6_7ix04")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_257qo"]
-texture = ExtResource("5_uxmwp")
+texture = ExtResource("7_wrrrn")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w3c0j"]
-texture = ExtResource("7_y4ot5")
+texture = ExtResource("8_apt6p")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f0l1j"]
-texture = ExtResource("8_yh1tl")
+texture = ExtResource("9_3anna")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p25jh"]
-texture = ExtResource("9_k4vsw")
+texture = ExtResource("10_bskf5")
 
 [node name="AnimalStats" type="Control" unique_id=819108452]
 layout_mode = 3
@@ -44,10 +44,10 @@ grow_vertical = 2
 
 [node name="Background" type="Sprite2D" parent="." unique_id=922176506]
 position = Vector2(960.25, 540)
-texture = ExtResource("1_nmyr6")
-script = ExtResource("2_5fovv")
-chicken_icon_scene = ExtResource("3_yh1tl")
-enclosure_chicken_scene = ExtResource("4_k4vsw")
+texture = ExtResource("1_ty6o2")
+script = ExtResource("2_i0oie")
+chicken_icon_scene = ExtResource("3_ty6o2")
+enclosure_chicken_scene = ExtResource("11_a332c")
 
 [node name="SceneContainer" type="MarginContainer" parent="Background" unique_id=696251869]
 unique_name_in_owner = true
@@ -74,7 +74,7 @@ theme_override_constants/separation = 25
 [node name="Label" type="Label" parent="Background/SceneContainer/PlotContainer" unique_id=666773561]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_ciasd")
+theme_override_fonts/font = ExtResource("4_kaa6y")
 theme_override_font_sizes/font_size = 100
 text = "Starter Plot"
 horizontal_alignment = 1
@@ -128,7 +128,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_ciasd")
+theme_override_fonts/font = ExtResource("4_kaa6y")
 theme_override_font_sizes/font_size = 100
 text = "Starter Plot"
 
@@ -145,6 +145,7 @@ mouse_filter = 2
 
 [node name="SmallEnclosure1" type="Button" parent="Background/SceneContainer/EnclosureContainer/TopEnclosureContainer/TopRowControl" unique_id=1553421948]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(600, 400)
 layout_mode = 0
 offset_left = -1.25
@@ -178,7 +179,7 @@ custom_minimum_size = Vector2(1225, 400)
 layout_mode = 2
 mouse_filter = 2
 
-[node name="SmallEnclosure3" type="Button" parent="Background/SceneContainer/EnclosureContainer/BottomEnclosureContainer/BottomRowControl" unique_id=1810110810]
+[node name="SmallEnclosure1" type="Button" parent="Background/SceneContainer/EnclosureContainer/BottomEnclosureContainer/BottomRowControl" unique_id=1810110810]
 visible = false
 custom_minimum_size = Vector2(600, 400)
 layout_mode = 0
@@ -190,7 +191,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_w3c0j")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_f0l1j")
 theme_override_styles/hover = SubResource("StyleBoxTexture_p25jh")
 
-[node name="SmallEnclosure4" type="Button" parent="Background/SceneContainer/EnclosureContainer/BottomEnclosureContainer/BottomRowControl" unique_id=1633087843]
+[node name="SmallEnclosure2" type="Button" parent="Background/SceneContainer/EnclosureContainer/BottomEnclosureContainer/BottomRowControl" unique_id=1633087843]
 visible = false
 custom_minimum_size = Vector2(600, 400)
 layout_mode = 0
@@ -202,9 +203,10 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_w3c0j")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_f0l1j")
 theme_override_styles/hover = SubResource("StyleBoxTexture_p25jh")
 
-[node name="ChickenSprite" parent="Background/SceneContainer/EnclosureContainer" unique_id=1240850030 instance=ExtResource("4_k4vsw")]
+[node name="ChickenSprite" parent="Background/SceneContainer/EnclosureContainer" unique_id=1763707581 instance=ExtResource("11_a332c")]
 unique_name_in_owner = true
-position = Vector2(298.75, 348)
+visible = false
+position = Vector2(316.75, 358)
 
 [node name="AnimalStatPatch" type="NinePatchRect" parent="Background/SceneContainer" unique_id=652772195]
 visible = false
@@ -212,7 +214,7 @@ custom_minimum_size = Vector2(525, 800)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
-texture = ExtResource("6_ciasd")
+texture = ExtResource("11_wqunk")
 patch_margin_left = 15
 patch_margin_top = 15
 patch_margin_right = 15
@@ -236,7 +238,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="Background/SceneContainer/AnimalStatPatch/MarginContainer/VBoxContainer" unique_id=151020405]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_ciasd")
+theme_override_fonts/font = ExtResource("4_kaa6y")
 theme_override_font_sizes/font_size = 70
 text = "Plot 1 Animals"
 horizontal_alignment = 1
@@ -246,7 +248,7 @@ custom_minimum_size = Vector2(525, 800)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
-texture = ExtResource("6_ciasd")
+texture = ExtResource("11_wqunk")
 patch_margin_left = 15
 patch_margin_top = 15
 patch_margin_right = 15
@@ -270,7 +272,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="Background/SceneContainer/AnimalInvPatch/MarginContainer/VBoxContainer" unique_id=1651812117]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_ciasd")
+theme_override_fonts/font = ExtResource("4_kaa6y")
 theme_override_font_sizes/font_size = 58
 text = "Rescued Animals"
 horizontal_alignment = 1
@@ -279,18 +281,17 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/h_separation = 5
+theme_override_constants/h_separation = 3
 theme_override_constants/v_separation = 20
-accessibility_region = true
-columns = 4
+columns = 3
 
 [node name="BackTextButton" type="TextureButton" parent="Background/SceneContainer" unique_id=1868327138]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
-texture_normal = ExtResource("7_uxmwp")
-texture_pressed = ExtResource("8_5fovv")
-texture_hover = ExtResource("9_i7cev")
+texture_normal = ExtResource("12_t8mbg")
+texture_pressed = ExtResource("13_xkgea")
+texture_hover = ExtResource("14_v8slh")
 
 [connection signal="pressed" from="Background/SceneContainer/EnclosureContainer/TopEnclosureContainer/TopRowControl/SmallEnclosure1" to="Background" method="_on_small_enclosure_1_pressed"]
 [connection signal="pressed" from="Background/SceneContainer/BackTextButton" to="Background" method="_on_back_text_button_pressed"]

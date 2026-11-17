@@ -1,13 +1,14 @@
 extends Node
 
-#creating variables fro reasearch points based on button clicks
+#creating variables for reasearch points based on button clicks
 var points: int = 0
 func add_points() -> void:
 	points += 1
 
+#gets total animals
 var total_animals: int = 0
 func get_total_animals():
-	total_animals = total_chickens + total_pigs
+	total_animals+=1
 
 #tracking animals being unlocked
 signal chicken_unlocked_changed
@@ -19,6 +20,7 @@ func unlock_chicken() -> void:
 	#automative updates bool
 func get_total_chicken(): #called when animal is bought
 	total_chickens+=1
+	get_total_animals()
 
 signal pig_unlocked_changed
 var total_pigs: int = 0
@@ -29,27 +31,28 @@ func unlock_pig() -> void:
 	#automative updates bool
 func get_total_pig():
 	total_pigs+=1
+	get_total_animals()
 
 #for back button; going back to previous scene
 var scene_history: Array[String] = []
-#Saves scene when changing to another scene
 func open_scene(path: String) -> void:
 	var current = get_tree().current_scene
 	if current != null:
 		var current_path = current.scene_file_path
-		if current_path !="":
-			scene_history.append(current_path)
+		if current_path != "":
+			var current_uid = ResourceUID.path_to_uid(current_path)
+			if current_uid != "":
+				scene_history.append(current_uid)
 	get_tree().change_scene_to_file(path)
 func get_previous_scene_path() -> String:
 	if scene_history.is_empty():
 		return ""
 	return scene_history.back()
-	#go back to previous scene
 func go_back() -> void:
 	if scene_history.is_empty():
 		return
-	var previous_path = scene_history.pop_back()
-	get_tree().change_scene_to_file(previous_path)
+	var previous_scene = scene_history.pop_back()
+	get_tree().change_scene_to_file(previous_scene)
 
 #money tracker
 signal gold_changed
@@ -76,11 +79,12 @@ var rescued_chickens = []
 var selected_chicken_id = -1
 func rescued_chicken():
 	var chicken_name = "McChicken" + str(next_chicken_number)
-	rescued_chickens.append("Chicken")
+	rescued_chickens.append(chicken_name)
 	next_chicken_number += 1
 	print("NEW CHICKEN: ", chicken_name)
 func get_chicken_count():
 	return rescued_chickens.size()
-
 var chicken_position = {}
 var enclosure_chickens = []
+
+var live_stream: bool = false
