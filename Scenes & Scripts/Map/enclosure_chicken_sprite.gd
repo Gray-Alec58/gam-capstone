@@ -2,7 +2,7 @@ extends AnimatedSprite2D
 
 
 @export var move_speed: float = 45.0
-@export var wait_time: float = 1.0
+@export var wait_time: float = 2.5
 @export var boundary_margin_x: float = 85.0
 @export var boundary_margin_y: float = 75.0
 
@@ -65,5 +65,5 @@ func choose_destination():
 			destination = new_destination
 			GlobalScript.chicken_position[chicken_id] = global_position
 			moving = true
-			play("Idle")
+			play("Walk")
 			return
