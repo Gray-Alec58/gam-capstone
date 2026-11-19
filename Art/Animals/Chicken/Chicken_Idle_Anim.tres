@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bretrdmr5jdo"]
+
+[ext_resource type="Texture2D" uid="uid://b670ubl8rlws4" path="res://Art/Animals/Chicken/chickenidle.png" id="1_jxpcd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bioai"]
+atlas = ExtResource("1_jxpcd")
+region = Rect2(0, 0, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkolx"]
+atlas = ExtResource("1_jxpcd")
+region = Rect2(1501, 0, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nsjeu"]
+atlas = ExtResource("1_jxpcd")
+region = Rect2(3002, 0, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yopit"]
+atlas = ExtResource("1_jxpcd")
+region = Rect2(0, 1501, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7l8mu"]
+atlas = ExtResource("1_jxpcd")
+region = Rect2(1501, 1501, 1501, 1501)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bioai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkolx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nsjeu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yopit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7l8mu")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 6.0
+}]

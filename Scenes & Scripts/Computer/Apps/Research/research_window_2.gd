@@ -15,8 +15,8 @@ var clicks: int = 0
 var research_points: int = 100
 
 #texture for animal 
-var chicken_texture = load("uid://d38cxckouklf1")
-var pig_texture = load("uid://bqbdtyyb5w8mr")
+var chicken_anim = load("uid://bretrdmr5jdo")
+var pig_anim = load("uid://bhvbmu2ifpoj6")
 
 #ready function for all custom functions created
 func _ready() -> void:
@@ -48,7 +48,8 @@ func _on_animal_button_1_pressed() -> void:
 	if(GlobalScript.chicken_unlocked == true):
 		confirm_popup.visible = false
 		fact_popup.visible = true
-	%AnimalPic.texture = chicken_texture #changes aniaml fact sprite to correct animal
+	%AnimalPic.sprite_frames = chicken_anim #changes aniaml fact sprite to correct animal
+	%AnimalPic.play("Idle")
 
 func _on_animal_button_2_pressed() -> void:
 	question_label.text = "Unlock Pig (10 Research Points)"
@@ -60,7 +61,8 @@ func _on_animal_button_2_pressed() -> void:
 	if(GlobalScript.pig_unlocked == true):
 		confirm_popup.visible = false
 		fact_popup.visible = true
-	%AnimalPic.texture = pig_texture #changes aniaml fact sprite to correct animal
+	%AnimalPic.sprite_frames = pig_anim #changes aniaml fact sprite to correct animal
+	%AnimalPic.play("Pig(Idle)")
 
 func _on_yes_button_pressed() -> void:
 	if(GlobalScript.points >= research_points): 

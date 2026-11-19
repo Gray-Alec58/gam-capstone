@@ -1,0 +1,53 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bhvbmu2ifpoj6"]
+
+[ext_resource type="Texture2D" uid="uid://b8p3kl0p2bxnp" path="res://Art/Animals/Pig/PigIdleSpritesheet.png" id="1_t3xw1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2dnp"]
+atlas = ExtResource("1_t3xw1")
+region = Rect2(0, 0, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vyhm"]
+atlas = ExtResource("1_t3xw1")
+region = Rect2(1501, 0, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqly8"]
+atlas = ExtResource("1_t3xw1")
+region = Rect2(3002, 0, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_43kx7"]
+atlas = ExtResource("1_t3xw1")
+region = Rect2(0, 1501, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bcnwj"]
+atlas = ExtResource("1_t3xw1")
+region = Rect2(1501, 1501, 1501, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cca12"]
+atlas = ExtResource("1_t3xw1")
+region = Rect2(3002, 1501, 1501, 1501)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2dnp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vyhm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqly8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_43kx7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bcnwj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cca12")
+}],
+"loop": 1,
+"name": &"Pig(Idle)",
+"speed": 6.5
+}]

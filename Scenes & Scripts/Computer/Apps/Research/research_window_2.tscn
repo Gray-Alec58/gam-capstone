@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://hbnyaow6hgqh" path="res://Art/UI_Exports/ResearchApp/ResearchWindow2/AnimalButton.png" id="7_7l8mu"]
 [ext_resource type="Texture2D" uid="uid://b7wlllgppjcnj" path="res://Art/UI_Exports/ResearchApp/ResearchWindow2/LockIcon.png" id="8_s8s51"]
 [ext_resource type="Texture2D" uid="uid://mjmsgcdybsyj" path="res://Art/UI_Exports/ResearchApp/ResearchAnimalButton.png" id="9_qip5e"]
+[ext_resource type="SpriteFrames" uid="uid://bhvbmu2ifpoj6" path="res://Art/Animals/Pig/Pig_idle_anim.tres" id="10_3v8wo"]
 [ext_resource type="Texture2D" uid="uid://pgurlerf3n2t" path="res://Art/UI_Exports/popupui/PopUpBG.png" id="10_vvrgv"]
 [ext_resource type="Texture2D" uid="uid://ckijv5vshure4" path="res://Art/UI_Exports/popupui/YesButton.png" id="11_cmuxi"]
 [ext_resource type="Texture2D" uid="uid://cd0kx1a2kjtpt" path="res://Art/UI_Exports/popupui/NoButton.png" id="12_kyrlr"]
@@ -272,10 +273,14 @@ theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 15
 
-[node name="AnimalPic" type="Sprite2D" parent="ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer/AnimalFactbase/AnimalFactContainer" unique_id=171746252]
+[node name="AnimalPic" type="AnimatedSprite2D" parent="ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer/AnimalFactbase/AnimalFactContainer" unique_id=646256268]
 unique_name_in_owner = true
 position = Vector2(3.9999998, 5.5)
-scale = Vector2(0.15488565, 0.14)
+scale = Vector2(0.10259825, 0.0927378)
+sprite_frames = ExtResource("10_3v8wo")
+animation = &"Pig(Idle)"
+frame = 2
+frame_progress = 0.6292962
 centered = false
 
 [node name="AnimalFact" type="Label" parent="ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer/AnimalFactbase/AnimalFactContainer" unique_id=589589104]
