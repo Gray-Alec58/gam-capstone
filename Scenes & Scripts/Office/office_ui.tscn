@@ -3,7 +3,9 @@
 [ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="1_dyv43"]
 [ext_resource type="Script" uid="uid://biualx634hvum" path="res://Scenes & Scripts/Office/office_ui.gd" id="1_tjp44"]
 [ext_resource type="Texture2D" uid="uid://mjmsgcdybsyj" path="res://Art/UI_Exports/ResearchApp/ResearchAnimalButton.png" id="2_tjp44"]
+[ext_resource type="Texture2D" uid="uid://dg7doiujpbm64" path="res://Art/UI_Exports/AppWindowButtons/XHover.png" id="3_3kmqj"]
 [ext_resource type="Texture2D" uid="uid://y6e5qi1uqo1m" path="res://Art/UI_Exports/ResearchApp/ResearchWindow2/AnimalFactUi.png" id="4_1sq2d"]
+[ext_resource type="Texture2D" uid="uid://be4meaxwbbb0e" path="res://Art/UI_Exports/AppWindowButtons/XClick.png" id="4_r014d"]
 [ext_resource type="Texture2D" uid="uid://drhpo4a0fogej" path="res://Art/UI_Exports/AppWindowButtons/XButton.png" id="5_gqs03"]
 [ext_resource type="Texture2D" uid="uid://cl7her220nsjq" path="res://Art/UI_Exports/StartMenu/ExitButtonNorm.png" id="6_telyj"]
 [ext_resource type="Texture2D" uid="uid://dc6p00sj4tsmq" path="res://Art/UI_Exports/StartMenu/ExitButtonClick.png" id="7_gct34"]
@@ -15,9 +17,17 @@
 [ext_resource type="Texture2D" uid="uid://botjgi14ds21y" path="res://Art/UI_Exports/InfoBar/MonthDayBox.png" id="12_p4v6u"]
 [ext_resource type="Script" uid="uid://c06j6lv00eye6" path="res://Scenes & Scripts/Office/year_label.gd" id="12_x553p"]
 [ext_resource type="Script" uid="uid://cr2av0mxp4it1" path="res://Scenes & Scripts/Office/month_label.gd" id="13_uloks"]
+[ext_resource type="Texture2D" uid="uid://hjhase4hckgs" path="res://Art/UI_Exports/ResearchApp/ResearchAnimalHover.png" id="17_r014d"]
+[ext_resource type="Texture2D" uid="uid://h0vshu0lev6o" path="res://Art/UI_Exports/ResearchApp/ResearchAnimalClick.png" id="18_gl4p4"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2kmgm"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_foy5x"]
 texture = ExtResource("5_gqs03")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r014d"]
+texture = ExtResource("4_r014d")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cpgv0"]
+texture = ExtResource("3_3kmqj")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kxbuo"]
 texture = ExtResource("6_telyj")
@@ -40,12 +50,14 @@ texture_margin_top = 15.0
 texture_margin_right = 15.0
 texture_margin_bottom = 15.0
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ofqy"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gl4p4"]
 texture = ExtResource("2_tjp44")
-texture_margin_left = 10.0
-texture_margin_top = 10.0
-texture_margin_right = 10.0
-texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dco0x"]
+texture = ExtResource("18_gl4p4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pjsa1"]
+texture = ExtResource("17_r014d")
 
 [node name="OfficeUI" type="Control" unique_id=1844209491]
 layout_mode = 3
@@ -103,9 +115,9 @@ custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxTexture_2kmgm")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_2kmgm")
-theme_override_styles/hover = SubResource("StyleBoxTexture_2kmgm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_foy5x")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_r014d")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cpgv0")
 
 [node name="ButtonContainer" type="VBoxContainer" parent="MarginContainer/MenuWindow/MarginContainer" unique_id=839197532]
 layout_mode = 2
@@ -237,11 +249,13 @@ layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_dyv43")
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxTexture_1ofqy")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_1ofqy")
-theme_override_styles/hover = SubResource("StyleBoxTexture_1ofqy")
+theme_override_styles/normal = SubResource("StyleBoxTexture_gl4p4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dco0x")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pjsa1")
 text = "MENU"
 
 [connection signal="pressed" from="MarginContainer/MenuWindow/MarginContainer/CloseMenuButton" to="." method="_on_close_menu_button_pressed"]
