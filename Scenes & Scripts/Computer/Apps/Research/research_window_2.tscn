@@ -250,6 +250,7 @@ icon = ExtResource("8_s8s51")
 icon_alignment = 1
 
 [node name="AnimalFactbase" type="NinePatchRect" parent="ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer" unique_id=1066906711]
+visible = false
 custom_minimum_size = Vector2(600, 150)
 layout_mode = 2
 size_flags_horizontal = 4
