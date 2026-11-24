@@ -37,6 +37,8 @@ func _on_buy_button_pressed() -> void:
 func _on_no_buy_button_pressed() -> void:
 	confirm_window.visible = false
 
+#needs to place animal in enclousre as soon as purchased
+
 
 #func _on_close_window_button_pressed() -> void:
 	#%"RescueWindow".visible = false#
