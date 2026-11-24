@@ -28,7 +28,7 @@ func _ready():
 	play("Idle")
 #making chicken move in random direction in the enclosure
 func _process(delta):
-	if not visible:
+	if not visible or enclosure == null:
 		return
 	if moving:
 		var direction = destination - global_position
@@ -63,7 +63,7 @@ func choose_destination():
 			)
 		if global_position.distance_to(new_destination) > 150:
 			destination = new_destination
-			GlobalScript.chicken_position[chicken_id] = global_position
+			#GlobalScript.chicken_position[chicken_id] = global_position
 			moving = true
 			play("Walk")
 			return

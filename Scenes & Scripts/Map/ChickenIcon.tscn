@@ -3,15 +3,17 @@
 [ext_resource type="Texture2D" uid="uid://d38cxckouklf1" path="res://Art/Animals/Chicken/ChickenUI.png" id="1_wjvp0"]
 [ext_resource type="Script" uid="uid://bbdwb5uq05lr2" path="res://Scenes & Scripts/Map/InvChicken.gd" id="2_wjvp0"]
 [ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="3_x3aow"]
+[ext_resource type="Texture2D" uid="uid://ch7kcdldu18v3" path="res://Art/Animals/Chicken/ChickenUIClick.png" id="3_ytrpl"]
+[ext_resource type="Texture2D" uid="uid://dwsxowejt7jb8" path="res://Art/Animals/Chicken/ChickenUIHover.png" id="4_4i8cf"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xjid8"]
 texture = ExtResource("1_wjvp0")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_63fvd"]
-texture = ExtResource("1_wjvp0")
+texture = ExtResource("3_ytrpl")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w548r"]
-texture = ExtResource("1_wjvp0")
+texture = ExtResource("4_4i8cf")
 
 [node name="ChickenIcon" type="Control" unique_id=1549631418]
 custom_minimum_size = Vector2(120, 130)
