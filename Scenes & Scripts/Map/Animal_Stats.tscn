@@ -297,4 +297,5 @@ texture_pressed = ExtResource("13_xkgea")
 texture_hover = ExtResource("14_v8slh")
 
 [connection signal="pressed" from="Background/SceneContainer/EnclosureContainer/TopEnclosureContainer/TopRowControl/SmallEnclosure1" to="Background" method="_on_small_enclosure_1_pressed"]
+[connection signal="pressed" from="Background/SceneContainer/EnclosureContainer/TopEnclosureContainer/TopRowControl/SmallEnclosure2" to="Background" method="_on_small_enclosure_2_pressed"]
 [connection signal="pressed" from="Background/SceneContainer/BackTextButton" to="Background" method="_on_back_text_button_pressed"]

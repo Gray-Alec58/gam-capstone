@@ -85,6 +85,11 @@ func rescued_chicken():
 func get_chicken_count():
 	return rescued_chickens.size()
 var chicken_position = {}
-var enclosure_chickens = []
+var enclosure_chickens = {
+	"SnallEnclosure1":[],
+	"SmallEnclosure2":[],
+	"SmallEnclosure3":[],
+	"SmallEnclosure4":[]
+}
 
 var live_stream: bool = false
