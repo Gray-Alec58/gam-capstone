@@ -207,6 +207,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_dva8p")
 theme_override_styles/hover = SubResource("StyleBoxTexture_nn1d3")
 
 [node name="SmallEnclosure2" type="Button" parent="Background/BuildSceneContainer/EnclosureContainer/TopEnclosureContainer/TopRowControl" unique_id=1324186272]
+unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(600, 400)
 layout_mode = 0
@@ -229,7 +230,8 @@ custom_minimum_size = Vector2(1225, 400)
 layout_mode = 2
 mouse_filter = 2
 
-[node name="SmallEnclosure1" type="Button" parent="Background/BuildSceneContainer/EnclosureContainer/BottomEnclosureContainer/BottomRowControl" unique_id=1717136422]
+[node name="SmallEnclosure3" type="Button" parent="Background/BuildSceneContainer/EnclosureContainer/BottomEnclosureContainer/BottomRowControl" unique_id=1717136422]
+unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(600, 400)
 layout_mode = 0
@@ -241,7 +243,8 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_xjid8")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_dva8p")
 theme_override_styles/hover = SubResource("StyleBoxTexture_nn1d3")
 
-[node name="SmallEnclosure2" type="Button" parent="Background/BuildSceneContainer/EnclosureContainer/BottomEnclosureContainer/BottomRowControl" unique_id=86679085]
+[node name="SmallEnclosure4" type="Button" parent="Background/BuildSceneContainer/EnclosureContainer/BottomEnclosureContainer/BottomRowControl" unique_id=86679085]
+unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(600, 400)
 layout_mode = 0
@@ -378,6 +381,9 @@ texture_pressed = ExtResource("18_8dexl")
 texture_hover = ExtResource("19_45o2q")
 
 [connection signal="pressed" from="Background/BuildSceneContainer/PlotContainer/TopPlotContainer/Plot1" to="Background/BuildSceneContainer" method="_on_plot_1_pressed"]
+[connection signal="pressed" from="Background/BuildSceneContainer/PlotContainer/TopPlotContainer/Plot2" to="Background/BuildSceneContainer" method="_on_plot_2_pressed"]
+[connection signal="pressed" from="Background/BuildSceneContainer/PlotContainer/BottomPlotContainer/Plot3" to="Background/BuildSceneContainer" method="_on_plot_3_pressed"]
+[connection signal="pressed" from="Background/BuildSceneContainer/PlotContainer/BottomPlotContainer/Plot4" to="Background/BuildSceneContainer" method="_on_plot_4_pressed"]
 [connection signal="pressed" from="Background/BuildSceneContainer/BuildWindowTab/MarginContainer/VBoxContainer/SEnclosureButton" to="Background/BuildSceneContainer" method="_on_s_enclosure_button_pressed"]
 [connection signal="pressed" from="Background/BuildSceneContainer/ConfirmWindow/MarginContainer/VBoxContainer/ButtonContainer/YBuildButton" to="Background/BuildSceneContainer" method="_on_y_build_button_pressed"]
 [connection signal="pressed" from="Background/BuildSceneContainer/ConfirmWindow/MarginContainer/VBoxContainer/ButtonContainer/NBuildButton" to="Background/BuildSceneContainer" method="_on_n_build_button_pressed"]

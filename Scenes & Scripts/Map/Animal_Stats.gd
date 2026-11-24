@@ -7,17 +7,21 @@ func _on_back_text_button_pressed() -> void:
 
 #When enclosure is built in build scene updates also in animal Stat scene
 func _ready():
-	if GlobalScript.have_enclosure == true:
-		GlobalScript.build_enclosure ["Enclosure1"] = "small_enclosure1"
-		update_enclosure_1()
-		update_chicken_position()
-		restore_enclosure_chickens()
+	update_enclosures()
+	update_chicken_position()
+	restore_enclosure_chickens()
 	inventory_panel.hide()
 	%ChickenSprite.hide()
 
-func update_enclosure_1():
-	if GlobalScript.build_enclosure.has("Enclosure1"):
-		%SmallEnclosure1.visible = true
+func update_enclosures():
+	for i in range(1,5):
+		var enclosure_id = "Enclosure" + str(i)
+		var enclosure_node = get_node_or_null("%SmallEnclosure" + str(i))
+		if enclosure_node != null:
+			if GlobalScript.build_enclosure.has(enclosure_id):
+				enclosure_node.visible = true
+			else:
+				enclosure_node.visible = false
 
 func update_chicken_position():
 	if GlobalScript.chicken_position.has("McChicken1"):
