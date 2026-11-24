@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://qukjmbpemdhm" path="res://Scenes & Scripts/Computer/Apps/Research/research_window_2.gd" id="1_pagdx"]
 [ext_resource type="Texture2D" uid="uid://dt844j2edivar" path="res://Art/UI_Exports/ResearchApp/ResearchWindowBG.png" id="2_3v8wo"]
 [ext_resource type="FontFile" uid="uid://cg0sgnllbk1h7" path="res://Art/Fonts/more-sugar.thin.ttf" id="3_bioai"]
-[ext_resource type="Texture2D" uid="uid://d1eukqsgfc8aq" path="res://Art/UI_Exports/ResearchApp/ResearchWindow2/ClickToResearchButton.png" id="4_wkolx"]
-[ext_resource type="Texture2D" uid="uid://5ot6oap2in5n" path="res://Art/UI_Exports/ResearchApp/ResearchWindow2/ClicktoResearchClick.png" id="5_nsjeu"]
-[ext_resource type="Texture2D" uid="uid://bb4waucjg1l58" path="res://Art/UI_Exports/ResearchApp/ResearchWindow2/ClicktoResearchHover.png" id="6_yopit"]
+[ext_resource type="Texture2D" uid="uid://b0grwcjt1br0b" path="res://Art/Book/ChickenBookFlat.png" id="4_3v8wo"]
+[ext_resource type="Texture2D" uid="uid://dem6os3by7u7q" path="res://Art/Book/ChickenPage2.png" id="5_bioai"]
+[ext_resource type="Texture2D" uid="uid://coe4s04gfxus3" path="res://Art/Book/ChickenPage1.png" id="6_wkolx"]
 [ext_resource type="Texture2D" uid="uid://hbnyaow6hgqh" path="res://Art/UI_Exports/ResearchApp/ResearchWindow2/AnimalButton.png" id="7_7l8mu"]
 [ext_resource type="Texture2D" uid="uid://b7wlllgppjcnj" path="res://Art/UI_Exports/ResearchApp/ResearchWindow2/LockIcon.png" id="8_s8s51"]
 [ext_resource type="Texture2D" uid="uid://mjmsgcdybsyj" path="res://Art/UI_Exports/ResearchApp/ResearchAnimalButton.png" id="9_qip5e"]
@@ -97,9 +97,9 @@ custom_minimum_size = Vector2(450, 400)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture_normal = ExtResource("4_wkolx")
-texture_pressed = ExtResource("5_nsjeu")
-texture_hover = ExtResource("6_yopit")
+texture_normal = ExtResource("4_3v8wo")
+texture_pressed = ExtResource("5_bioai")
+texture_hover = ExtResource("6_wkolx")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -250,7 +250,6 @@ icon = ExtResource("8_s8s51")
 icon_alignment = 1
 
 [node name="AnimalFactbase" type="NinePatchRect" parent="ResearchWindow2/WindowBackground/ScreenContainer/RightReserachContainer" unique_id=1066906711]
-visible = false
 custom_minimum_size = Vector2(600, 150)
 layout_mode = 2
 size_flags_horizontal = 4

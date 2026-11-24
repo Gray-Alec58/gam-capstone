@@ -14,7 +14,6 @@ func display_gold() -> void:
 func _on_menu_button_pressed() -> void:
 	menu_window.visible = true
 
-
 func _on_exit_button_pressed() -> void:
 	get_tree().quit()
 

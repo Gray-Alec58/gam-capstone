@@ -296,6 +296,7 @@ animation = &"idle"
 script = ExtResource("9_7bvi8")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="FundraiseWindow/NinePatchRect/MarginContainer" unique_id=23144924]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4

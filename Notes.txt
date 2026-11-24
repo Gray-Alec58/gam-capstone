@@ -7,3 +7,17 @@ Can copy string directly into code if passing variable as a string
 	var next_scene = preload("uid://ddkswpsnmco8s") #copy UID by right-clicking scene
 	#add code into whatever causes scene change
 	get.tree().change_scene_to_packed(next_scene)
+
+random number generator
+# Random integer between 1 and 10 (inclusive)
+	var random_int = randi_range(1, 10)
+	
+	# Random float between 0.0 and 1.0
+	var random_float = randf()
+	
+	# Random float within a custom range
+	var custom_float = randf_range(-5.5, 5.5)
+	
+	# Pick a random item from an array
+	var loot = ["Sword", "Shield", "Potion"]
+	var chosen_item = loot.pick_random()

@@ -12,6 +12,7 @@ func get_total_animals():
 
 #tracking animals being unlocked
 signal chicken_unlocked_changed
+signal chicken_visible
 var total_chickens: int = 0
 var chicken_unlocked: bool = false
 func unlock_chicken() -> void: 
@@ -20,6 +21,7 @@ func unlock_chicken() -> void:
 	#automative updates bool
 func get_total_chicken(): #called when animal is bought
 	total_chickens+=1
+	chicken_visible.emit()
 	get_total_animals()
 
 signal pig_unlocked_changed
@@ -56,7 +58,7 @@ func go_back() -> void:
 
 #money tracker
 signal gold_changed
-var gold: int = 500 #starting gold = 500
+var gold: int = 300 #starting gold
 func gold_decrease(x: int) -> void: #function to decrease gold by any amount given
 	gold -= x
 	gold_changed.emit()
@@ -86,5 +88,3 @@ func get_chicken_count():
 	return rescued_chickens.size()
 var chicken_position = {}
 var enclosure_chickens = []
-
-var live_stream: bool = false

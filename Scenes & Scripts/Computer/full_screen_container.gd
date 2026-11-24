@@ -6,8 +6,8 @@ func _ready() -> void:
 #reserach button reveals the reserach window
 #sets visability of other windows to false
 func _on_research_texture_button_pressed() -> void:
-	%"Research Window 1".visible = true
-	%"Research Window 2".visible = false
+	%"Research Window 1".visible = false
+	%"Research Window 2".visible = true
 	%"Rescue Window".visible = false
 	%"Expand Window".visible = false
 	%"Fundraise Window".visible = false

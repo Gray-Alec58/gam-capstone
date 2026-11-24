@@ -100,7 +100,6 @@ theme_override_constants/separation = 4
 
 [node name="RescueAnimalInfo" type="NinePatchRect" parent="RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList" unique_id=861123427]
 unique_name_in_owner = true
-visible = false
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 texture = ExtResource("3_l5r3x")
@@ -118,8 +117,8 @@ theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 5
 
 [node name="AnimalPicture" type="Sprite2D" parent="RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer" unique_id=690048004]
-position = Vector2(-24.999992, -15.000004)
-scale = Vector2(0.064229585, 0.056470025)
+position = Vector2(-2.9999914, 8)
+scale = Vector2(0.09266666, 0.08980336)
 texture = ExtResource("4_eingd")
 centered = false
 
@@ -134,11 +133,17 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_n5vl2")
-theme_override_font_sizes/font_size = 32
-text = "Name: McChicken
-From: Owner can no longer take  
-care of chicken due to moving"
+theme_override_font_sizes/font_size = 60
+text = "Chicken"
 paragraph_separator = "/"
+
+[node name="AnimalAmountLabel" type="Label" parent="RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer/AnimalInfoContainer" unique_id=1723823543]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_n5vl2")
+theme_override_font_sizes/font_size = 60
+text = "0/4"
 
 [node name="AdoptButtonContainer" type="HBoxContainer" parent="RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer" unique_id=1689103213]
 custom_minimum_size = Vector2(175, 75)
@@ -148,6 +153,7 @@ size_flags_vertical = 4
 theme_override_constants/separation = 25
 
 [node name="AnimalInfoLabel" type="Label" parent="RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer/AdoptButtonContainer" unique_id=1590908879]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -157,6 +163,7 @@ text = "Price: 5g"
 horizontal_alignment = 1
 
 [node name="YesButton" type="Button" parent="RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer/AdoptButtonContainer" unique_id=1251996782]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -168,6 +175,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_yibif")
 text = "Yes"
 
 [node name="NoButton" type="Button" parent="RescueWindow/WindowBackground/MarginContainer/ResearchAnimalList/RescueAnimalInfo/MarginContainer/AdoptButtonContainer" unique_id=1099763441]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
